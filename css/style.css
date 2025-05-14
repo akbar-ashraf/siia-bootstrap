@@ -4289,9 +4289,9 @@ textarea.form-control-lg {
   --si-card-subtitle-color: ;
   --si-card-border-width: var(--si-border-width);
   --si-card-border-color: var(--si-border-color-translucent);
-  --si-card-border-radius: var(--si-border-radius);
+  --si-card-border-radius: 1rem;
   --si-card-box-shadow: ;
-  --si-card-inner-border-radius: calc(var(--si-border-radius) - (var(--si-border-width)));
+  --si-card-inner-border-radius: calc(1rem - (var(--si-border-width)));
   --si-card-cap-padding-y: 0.5rem;
   --si-card-cap-padding-x: 1rem;
   --si-card-cap-bg: rgba(var(--si-body-color-rgb), 0.03);
@@ -11777,6 +11777,11 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.error-text {
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
