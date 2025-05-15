@@ -60,6 +60,7 @@
   --si-heading: #242424;
   --si-body: #575757;
   --si-border: #bdbdbd;
+  --si-danger: #dc3545;
   --si-primary-rgb: 0, 97, 152;
   --si-secondary-rgb: 87, 87, 87;
   --si-tertiary-rgb: 240, 240, 240;
@@ -67,6 +68,7 @@
   --si-heading-rgb: 36, 36, 36;
   --si-body-rgb: 87, 87, 87;
   --si-border-rgb: 189, 189, 189;
+  --si-danger-rgb: 220, 53, 69;
   --si-primary-text-emphasis: rgb(0, 38.8, 60.8);
   --si-secondary-text-emphasis: rgb(43.2, 46.8, 50);
   --si-success-text-emphasis: rgb(10, 54, 33.6);
@@ -3109,6 +3111,23 @@ textarea.form-control-lg {
   --si-btn-disabled-border-color: #bdbdbd;
 }
 
+.btn-danger {
+  --si-btn-color: #fff;
+  --si-btn-bg: #dc3545;
+  --si-btn-border-color: #dc3545;
+  --si-btn-hover-color: #fff;
+  --si-btn-hover-bg: rgb(187, 45.05, 58.65);
+  --si-btn-hover-border-color: rgb(176, 42.4, 55.2);
+  --si-btn-focus-shadow-rgb: 225, 83, 97;
+  --si-btn-active-color: #fff;
+  --si-btn-active-bg: rgb(176, 42.4, 55.2);
+  --si-btn-active-border-color: rgb(165, 39.75, 51.75);
+  --si-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --si-btn-disabled-color: #fff;
+  --si-btn-disabled-bg: #dc3545;
+  --si-btn-disabled-border-color: #dc3545;
+}
+
 .btn-outline-primary {
   --si-btn-color: #006198;
   --si-btn-border-color: #006198;
@@ -3225,6 +3244,23 @@ textarea.form-control-lg {
   --si-btn-disabled-color: #bdbdbd;
   --si-btn-disabled-bg: transparent;
   --si-btn-disabled-border-color: #bdbdbd;
+  --si-gradient: none;
+}
+
+.btn-outline-danger {
+  --si-btn-color: #dc3545;
+  --si-btn-border-color: #dc3545;
+  --si-btn-hover-color: #fff;
+  --si-btn-hover-bg: #dc3545;
+  --si-btn-hover-border-color: #dc3545;
+  --si-btn-focus-shadow-rgb: 220, 53, 69;
+  --si-btn-active-color: #fff;
+  --si-btn-active-bg: #dc3545;
+  --si-btn-active-border-color: #dc3545;
+  --si-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --si-btn-disabled-color: #dc3545;
+  --si-btn-disabled-bg: transparent;
+  --si-btn-disabled-border-color: #dc3545;
   --si-gradient: none;
 }
 
@@ -4846,6 +4882,13 @@ textarea.form-control-lg {
   --si-alert-link-color: var(--si-border-text-emphasis);
 }
 
+.alert-danger {
+  --si-alert-color: var(--si-danger-text-emphasis);
+  --si-alert-bg: var(--si-danger-bg-subtle);
+  --si-alert-border-color: var(--si-danger-border-subtle);
+  --si-alert-link-color: var(--si-danger-text-emphasis);
+}
+
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: var(--si-progress-height);
@@ -5236,6 +5279,19 @@ textarea.form-control-lg {
   --si-list-group-active-color: var(--si-border-bg-subtle);
   --si-list-group-active-bg: var(--si-border-text-emphasis);
   --si-list-group-active-border-color: var(--si-border-text-emphasis);
+}
+
+.list-group-item-danger {
+  --si-list-group-color: var(--si-danger-text-emphasis);
+  --si-list-group-bg: var(--si-danger-bg-subtle);
+  --si-list-group-border-color: var(--si-danger-border-subtle);
+  --si-list-group-action-hover-color: var(--si-emphasis-color);
+  --si-list-group-action-hover-bg: var(--si-danger-border-subtle);
+  --si-list-group-action-active-color: var(--si-emphasis-color);
+  --si-list-group-action-active-bg: var(--si-danger-border-subtle);
+  --si-list-group-active-color: var(--si-danger-bg-subtle);
+  --si-list-group-active-bg: var(--si-danger-text-emphasis);
+  --si-list-group-active-border-color: var(--si-danger-text-emphasis);
 }
 
 .btn-close {
@@ -6759,6 +6815,11 @@ textarea.form-control-lg {
   background-color: RGBA(var(--si-border-rgb), var(--si-bg-opacity, 1)) !important;
 }
 
+.text-bg-danger {
+  color: #fff !important;
+  background-color: RGBA(var(--si-danger-rgb), var(--si-bg-opacity, 1)) !important;
+}
+
 .link-primary {
   color: RGBA(var(--si-primary-rgb), var(--si-link-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--si-primary-rgb), var(--si-link-underline-opacity, 1)) !important;
@@ -6820,6 +6881,15 @@ textarea.form-control-lg {
 .link-border:hover, .link-border:focus {
   color: RGBA(202, 202, 202, var(--si-link-opacity, 1)) !important;
   text-decoration-color: RGBA(202, 202, 202, var(--si-link-underline-opacity, 1)) !important;
+}
+
+.link-danger {
+  color: RGBA(var(--si-danger-rgb), var(--si-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--si-danger-rgb), var(--si-link-underline-opacity, 1)) !important;
+}
+.link-danger:hover, .link-danger:focus {
+  color: RGBA(176, 42, 55, var(--si-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(176, 42, 55, var(--si-link-underline-opacity, 1)) !important;
 }
 
 .link-body-emphasis {
@@ -7253,6 +7323,10 @@ textarea.form-control-lg {
   --si-focus-ring-color: rgba(var(--si-border-rgb), var(--si-focus-ring-opacity));
 }
 
+.focus-ring-danger {
+  --si-focus-ring-color: rgba(var(--si-danger-rgb), var(--si-focus-ring-opacity));
+}
+
 .position-static {
   position: static !important;
 }
@@ -7406,6 +7480,11 @@ textarea.form-control-lg {
 .border-border {
   --si-border-opacity: 1;
   border-color: rgba(var(--si-border-rgb), var(--si-border-opacity)) !important;
+}
+
+.border-danger {
+  --si-border-opacity: 1;
+  border-color: rgba(var(--si-danger-rgb), var(--si-border-opacity)) !important;
 }
 
 .border-black {
@@ -8354,6 +8433,11 @@ textarea.form-control-lg {
   color: rgba(var(--si-border-rgb), var(--si-text-opacity)) !important;
 }
 
+.text-danger {
+  --si-text-opacity: 1;
+  color: rgba(var(--si-danger-rgb), var(--si-text-opacity)) !important;
+}
+
 .text-black {
   --si-text-opacity: 1;
   color: rgba(var(--si-black-rgb), var(--si-text-opacity)) !important;
@@ -8546,6 +8630,11 @@ textarea.form-control-lg {
   text-decoration-color: rgba(var(--si-border-rgb), var(--si-link-underline-opacity)) !important;
 }
 
+.link-underline-danger {
+  --si-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--si-danger-rgb), var(--si-link-underline-opacity)) !important;
+}
+
 .link-underline {
   --si-link-underline-opacity: 1;
   text-decoration-color: rgba(var(--si-link-color-rgb), var(--si-link-underline-opacity, 1)) !important;
@@ -8632,6 +8721,11 @@ textarea.form-control-lg {
 .bg-border {
   --si-bg-opacity: 1;
   background-color: rgba(var(--si-border-rgb), var(--si-bg-opacity)) !important;
+}
+
+.bg-danger {
+  --si-bg-opacity: 1;
+  background-color: rgba(var(--si-danger-rgb), var(--si-bg-opacity)) !important;
 }
 
 .bg-black {

@@ -22,6 +22,7 @@ $text-color-body: #575757;
 $text-color-secondary: #575757;
 $text-color-tertiary: #f0f0f0;
 $text-color-emphasis: #242424;
+$text-color-danger: #dc3545;
 
 // Override Bootstrap's defaults
 $body-color: $text-color-body;
@@ -35,6 +36,7 @@ $theme-colors: (
   "heading": $text-color-heading,
   "body": $text-color-body,
   "border": $border-color,
+  "danger": $text-color-danger,
 );
 
 // Button styles
