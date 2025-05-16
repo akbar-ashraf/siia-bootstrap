@@ -1,13 +1,41 @@
-$prefix: "si-";
-$primary: #006198;
+// Branding Colors
+$primary-color: #006198; // Main brand color (buttons, links, active states)
+$secondary-color: #f0f0f0; // Light background color
+$accent-color: #242424; // Used for publish badge
+$text-color: #575757; // Main text color
+$light-gray: #f0f0f0; // Used for hover states, backgrounds
+$border-color: #bdbdbd; // Used for borders, dividers
+$success-color: #28a745; // Used for complete badge
+$warning-color: #ffc107; // For warnings or important notices
+$danger-color: #dc3545; // For errors or critical actions
+$info-color: #17a2b8; // For informational elements
+
+// Base text colors
+$primary: $primary-color;
+$body-color: $text-color;
+$headings-color: $accent-color;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary-color,
+  //"tertiary": $text-color-tertiary,
+  "emphasis": $accent-color,
+  "heading": $accent-color,
+  "body": $text-color,
+  "border": $border-color,
+  "success": $success-color,
+  "info": $info-color,
+  "warning": $warning-color,
+  "danger": $danger-color,
+  "light": $light-gray,
+);
 
 $font-family-base: "DIN Next LT Arabic", sans-serif;
-
-$border-color: #bdbdbd;
-
 $headings-font-family: $font-family-base;
 
+// Lead Text
 $lead-font-weight: 300;
+
 // Heading Font
 $h1-font-size: 2.5rem; // 40px
 $h2-font-size: 2rem; // 32px
@@ -16,27 +44,70 @@ $h4-font-size: 1.5rem; // 24px
 $h5-font-size: 1.25rem; // 20px
 $h6-font-size: 1rem; // 16px
 
-// Base text colors
-$text-color-heading: #242424;
-$text-color-body: #575757;
-$text-color-secondary: #575757;
-$text-color-tertiary: #f0f0f0;
-$text-color-emphasis: #242424;
-$text-color-danger: #dc3545;
+// Table-specific variables
+$table-border: $border-color;
+$table-cell-vertical-align: middle;
+$table-hover-bg: $secondary-color;
+$table-color: $text-color;
 
-// Override Bootstrap's defaults
-$body-color: $text-color-body;
-$headings-color: $text-color-heading;
+// Spacers
 
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $text-color-secondary,
-  "tertiary": $text-color-tertiary,
-  "emphasis": $text-color-emphasis,
-  "heading": $text-color-heading,
-  "body": $text-color-body,
-  "border": $border-color,
-  "danger": $text-color-danger,
+$spacer: 0.25rem; // Base unit = 4px
+
+$spacers: (
+  0: 0,
+  //0.5: $spacer * 0.5,
+  // 2px
+  1: $spacer * 1,
+  // 4px
+  //1.5: $spacer * 1.5,
+  // 6px
+  2: $spacer * 2,
+  // 8px
+  //2.5: $spacer * 2.5,
+  // 10px
+  3: $spacer * 3,
+  // 12px
+  //3.5: $spacer * 3.5,
+  // 14px
+  4: $spacer * 4,
+  // 16px
+  5: $spacer * 5,
+  // 20px
+  6: $spacer * 6,
+  // 24px
+  7: $spacer * 7,
+  // 28px
+  8: $spacer * 8,
+  // 32px
+  9: $spacer * 9,
+  // 36px
+  10: $spacer * 10,
+  // 40px
+  11: $spacer * 11,
+  // 44px
+  12: $spacer * 12,
+  // 48px
+  14: $spacer * 14,
+  // 56px
+  16: $spacer * 16,
+  // 64px
+  20: $spacer * 20,
+  // 80px
+  24: $spacer * 24,
+  // 96px
+  28: $spacer * 28,
+  // 112px
+  32: $spacer * 32,
+  // 128px
+  36: $spacer * 36,
+  // 144px
+  40: $spacer * 40,
+  // 160px
+  44: $spacer * 44,
+  // 176px
+  48: $spacer * 48
+    // 192px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 // Button styles
@@ -54,18 +125,26 @@ $btn-padding-y-lg: 0.5rem;
 $btn-padding-x-lg: 1rem;
 $btn-font-size-lg: 1rem;
 
-$btn-border-radius: 0.6rem;
+$btn-border-radius: 0.5rem;
 $btn-border-radius-sm: 0.5rem;
 $btn-border-radius-lg: 0.8rem;
 
-// Input styles
+// $btn-secondary-color: $primary;
+// $btn-secondary-bg: transparent;
+// $btn-secondary-border-color: #bdbdbd;
 
+// $btn-secondary-hover-color: #fff;
+// $btn-secondary-hover-bg: $primary;
+// $btn-secondary-hover-border-color: $primary;
+
+// Input styles
 $input-padding-y: 0.5rem;
 $input-padding-x: 1rem;
 $input-font-size: 1rem;
-$input-color: $text-color-heading;
+$input-color: $accent-color;
 $input-bg: #fff;
 $input-border-radius: 0.5rem;
+$input-border-radius-sm: 0.5rem;
 
 // Focus state
 $input-focus-border-color: #006198;
@@ -77,4 +156,4 @@ $form-label-font-weight: 400;
 $form-label-font-size: 16px;
 
 // Card
-$card-border-radius: 1rem;
+$card-border-radius: 0.6rem;

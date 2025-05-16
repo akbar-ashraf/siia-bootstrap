@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SIIA - Sign In</title>
-    <link href="/css/style.css" rel="stylesheet" />
+    <title>SIIA</title>
+    <link href="../css/style.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
@@ -15,7 +15,10 @@
     <header class="py-3 border-bottom bg-white">
       <div class="container d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-2">
-          <div class="header-logo-placeholder"></div>
+          <div
+            class="rounded-circle bg-light"
+            style="width: 50px; height: 50px"
+          ></div>
         </div>
 
         <!-- Right Actions -->
@@ -24,7 +27,7 @@
           <form class="position-relative d-none d-lg-block">
             <input
               type="search"
-              class="form-control form-control-sm ps-4"
+              class="form-control form-control-sm ps-8"
               placeholder="Search"
             />
             <i
@@ -35,7 +38,7 @@
           <!-- Language Dropdown -->
           <div class="dropdown">
             <button
-              class="btn btn-sm btn-outline-secondary dropdown-toggle"
+              class="btn btn-sm btn-outline-secondary dropdown-toggle border text-body"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -55,12 +58,12 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container py-5">
+    <div class="container py-10">
       <div class="row align-items-center">
         <!-- Welcome Message -->
         <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
           <h2 class="fw-bold">Welcome to the SIIA</h2>
-          <p class="text-muted">
+          <p class="">
             Lörem ipsum bebonar bongen, transaktiv.<br />
             Curlingförälder maspedat däloling om nelig.
           </p>
@@ -68,7 +71,7 @@
 
         <!-- Sign In Form -->
         <div class="col-lg-5">
-          <div class="card px-5 py-4">
+          <div class="card px-10 py-5">
             <h3 class="mb-4 text-center">Sign in</h3>
 
             <form novalidate>
@@ -78,7 +81,7 @@
                 >
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control is-invalid"
                   id="email"
                   placeholder="Enter email or phone"
                 />
@@ -96,11 +99,7 @@
                 <div class="error-text">Incorrect password</div>
               </div>
 
-              <button
-                id="loginToast"
-                type="submit"
-                class="btn btn-primary w-100 mb-3"
-              >
+              <button type="submit" class="btn btn-primary w-100 mb-3">
                 Log in
               </button>
 
@@ -111,7 +110,7 @@
               </p>
 
               <div class="text-end">
-                <a href="#" class="small">Forget password</a>
+                <a href="forgot-password.html" class="small">Forget password</a>
               </div>
             </form>
           </div>
@@ -128,34 +127,7 @@
         </div>
       </div>
     </div>
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
-      <div
-        id="loginToast"
-        class="toast align-items-center text-bg-success border-0"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="d-flex">
-          <div class="toast-body">✅ Login successful</div>
-          <button
-            type="button"
-            class="btn-close btn-close-white me-2 m-auto"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
-        </div>
-      </div>
-    </div>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    ></script>
-    <script>
-      // Show the toast manually
-      const toastEl = document.getElementById("loginToast");
-      const toast = new bootstrap.Toast(toastEl, { delay: 3000 }); // optional: auto-hide after 3s
-      toast.show();
-    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
