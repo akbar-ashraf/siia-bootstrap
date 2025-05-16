@@ -9,6 +9,29 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+
+    <style>
+      .sitemap-section {
+        border: 1px solid #dee2e6;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        background-color: #f8f9fa;
+      }
+
+      .sitemap-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.25rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        transition: background-color 0.2s;
+      }
+
+      .sitemap-link:hover {
+        background-color: #e9ecef;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -57,73 +80,36 @@
       </div>
     </header>
 
-    <!-- Page Content -->
-    <div class="container py-10">
-      <div class="row align-items-center">
-        <!-- Welcome Message -->
-        <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
-          <h2 class="fw-bold">Welcome to the SIIA</h2>
-          <p class="">
-            Lörem ipsum bebonar bongen, transaktiv.<br />
-            Curlingförälder maspedat däloling om nelig.
-          </p>
+    <div class="container my-5">
+      <h2 class="mb-4">📌 Sitemap</h2>
+
+      <div class="row g-4">
+        <!-- Admin -->
+        <div class="col-md-6">
+          <div class="sitemap-section">
+            <h5 class="mb-3">🛠️ Admin Pages</h5>
+            <a href="admin/login.html" class="sitemap-link">Login</a>
+            <a href="admin/forgot-password.html" class="sitemap-link"
+              >Forgot Password</a
+            >
+            <a href="admin/courses.html" class="sitemap-link">Courses</a>
+          </div>
         </div>
 
-        <!-- Sign In Form -->
-        <div class="col-lg-5">
-          <div class="card px-10 py-5">
-            <h3 class="mb-4 text-center">Sign in</h3>
-
-            <form novalidate>
-              <div class="mb-3">
-                <label for="email" class="form-label"
-                  >Email or mobile phone number</label
-                >
-                <input
-                  type="email"
-                  class="form-control is-invalid"
-                  id="email"
-                  placeholder="Enter email or phone"
-                />
-                <div class="error-text">Email did not match our database</div>
-              </div>
-
-              <div class="mb-3">
-                <label for="password" class="form-label">Your password</label>
-                <input
-                  type="password"
-                  class="form-control is-invalid"
-                  id="password"
-                  value="123456"
-                />
-                <div class="error-text">Incorrect password</div>
-              </div>
-
-              <button type="submit" class="btn btn-primary w-100 mb-3">
-                Log in
-              </button>
-
-              <p class="text-center small">
-                By continuing, you agree to the
-                <a href="#" class="">Terms of use</a> and
-                <a href="#" class="">Privacy Policy</a>.
-              </p>
-
-              <div class="text-end">
-                <a href="forgot-password.html" class="small">Forget password</a>
-              </div>
-            </form>
-          </div>
-
-          <div class="text-center my-4 position-relative">
-            <span class="bg-white px-3 position-relative z-1 small text-muted"
-              >New to our community</span
+        <!-- Trainer -->
+        <div class="col-md-6">
+          <div class="sitemap-section">
+            <h5 class="mb-3">👨‍🏫 Trainer Pages</h5>
+            <a href="/trainer/signup-personalInfo.html" class="sitemap-link"
+              >Signup Personal Info</a
             >
-
-            <hr class="my-0 position-absolute top-50 start-0 w-100" />
+            <a href="/trainer/signup-qualifications.html" class="sitemap-link"
+              >Signup Qualifications</a
+            >
+            <a href="/trainer/signup-experience.html" class="sitemap-link"
+              >Signup Experience</a
+            >
           </div>
-
-          <button class="btn btn-primary w-100">Request for account</button>
         </div>
       </div>
     </div>
