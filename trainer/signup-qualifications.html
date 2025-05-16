@@ -58,7 +58,7 @@
     <div class="container py-5">
       <div class="row align-items-center">
         <!-- Welcome Message -->
-        <div class="col-lg-5 text-center mb-4 mb-lg-0">
+        <div class="col-lg-5  mb-4 mb-lg-0">
           <h2 class="fw-bold">Join us</h2>
           <p class="text-muted">
             There are many variations of passages of Lorem Ipsum<br />
@@ -134,19 +134,20 @@
               <div class="row mb-3">
                 <!-- Academic Degree -->
                 <div class="col-md-6">
-                  <label class="form-label">
+                  <label for="academic-degree" class="form-label">
                     <span class="text-danger">*</span> Academic Degree
                   </label>
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="e.g Masters or PHD"
                     id="academic-degree"
+                    placeholder="e.g Masters or PHD"
+                    required
                   />
                 </div>
                 <!-- Institute-->
                 <div class="col-md-6">
-                  <label class="form-label">
+                  <label for="institute" class="form-label">
                     <span class="text-danger">*</span> Institute
                   </label>
                   <input
@@ -154,7 +155,7 @@
                     class="form-control"
                     id="institute"
                     placeholder="Enter institute"
-                    autocomplete="off"
+                    required
                   />
 
                   <!-- Dropdown Suggestions -->
@@ -181,20 +182,22 @@
               <div class="row mb-3">
                 <!-- Professional Certificates -->
                 <div class="col-md-6">
-                  <label class="form-label"
+                  <label for="professional-certificates" class="form-label"
                     >Professional Certificates (Optional)</label
                   >
                   <input
                     type="text"
                     class="form-control"
                     placeholder="e.g. CIA, PMP"
-                    id="middlename-eng"
+                    id="professional-certificates"
                   />
                 </div>
               </div>
 
               <div class="text-end">
-                <button type="button" class="btn btn-outline-primary px-5 mx-4">Back</button>
+                <button type="button" class="btn btn-outline-primary px-5 mx-4">
+                  Back
+                </button>
                 <button type="submit" class="btn btn-primary px-5">Next</button>
               </div>
             </form>
