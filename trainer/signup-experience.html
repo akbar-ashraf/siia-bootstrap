@@ -132,29 +132,31 @@
               <p class="error-text">*All fields required.</p>
             </div>
 
-            <form>
+            <form id="signup-form" onsubmit="validateForm(event)">
               <div class="row mb-3">
                 <!-- Current Employer -->
                 <div class="col-md-6">
-                  <label class="form-label">
+                  <label for="current-employer" class="form-label">
                     <span class="text-danger">*</span> Current Employer
                   </label>
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Organization name here"
                     id="current-employer"
+                    placeholder="Organization name here"
+                    required
                   />
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">
+                  <label for="job-title" class="form-label">
                     <span class="text-danger">*</span> Job Title</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Your job title here"
                     id="job-title"
+                    placeholder="Your job title here"
+                    required
                   />
                 </div>
               </div>
@@ -162,26 +164,28 @@
               <div class="row mb-3">
                 <!-- Field Experience -->
                 <div class="col-md-6">
-                  <label class="form-label"
+                  <label for="experience-field" class="form-label"
                     ><span class="text-danger">*</span> Field Experience</label
                   >
                   <input
                     type="number"
                     class="form-control"
-                    placeholder="Number of years experience in the field"
                     id="experience-field"
+                    placeholder="Number of years experience in the field"
+                    required
                   />
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label"
+                  <label for="experience-training" class="form-label"
                     ><span class="text-danger">*</span> Training
                     Experience</label
                   >
                   <input
                     type="number"
                     class="form-control"
-                    placeholder="Number of years experience in training"
                     id="experience-training"
+                    placeholder="Number of years experience in training"
+                    required
                   />
                 </div>
               </div>
@@ -189,84 +193,126 @@
               <div class="row mb-3">
                 <!-- Area of Expertise -->
                 <div class="col-md-6">
-                  <label class="form-label"
+                  <label for="area-of-expertise" class="form-label"
                     ><span class="text-danger">*</span> Training Areas of
                     Expertise</label
                   >
-                  <input
-                    type="text"
-                    class="form-control dropdown bi-arrow-bar-right"
-                    placeholder="Choose"
-                    id="area-of-expertise"
-                  />
+
+                  <div class="dropdown">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="area-of-expertise"
+                      placeholder="Choose"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      required
+                    />
+                    <ul class="dropdown-menu text-nowrap px-2">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="setExpertise('Internal Audit')"
+                          >Internal Audit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="setExpertise('Governance')"
+                          >Governance</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="setExpertise('Extra')"
+                          >Extra</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="setExpertise('Risk')"
+                          >Risk</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <div class="row mb-3">
-                <!-- Training Experience -->
                 <div class="col-md-12">
-                  <label class="form-label"
+                  <label for="previous-training" class="form-label"
                     >Previously delivered tarining courses (Optional)</label
                   >
                   <textarea
-                    type="text"
                     class="form-control"
+                    id="previous-training"
                     placeholder="Number of years experience in training"
-                    id="experience-training"
                     rows="5"
                   ></textarea>
                 </div>
               </div>
 
               <div class="row mb-3">
-                <!-- Training Experience -->
                 <div class="col-md-4 mb-3 mb-md-0">
-                  <label class="form-label">Training related file (Optional)</label>
-                  <input type="file" id="trainingFileInput" class="d-none" />
-              
-                  <!-- Button that opens file dialog -->
+                  <label for="training-file" class="form-label"
+                    >Training related file (Optional)</label
+                  >
+                  <input type="file" id="training-file" class="d-none" />
+
                   <button
                     type="button"
                     class="btn btn-outline-primary w-100 upload-btn"
                     id="uploadTrainingBtn"
-                    data-target="trainingFileInput">
+                    data-target="training-file"
+                  >
                     Upload File
                   </button>
-                  <small id="trainingFileName" class="form-text text-muted text-truncate d-block mt-1"></small>
                 </div>
-              
+
                 <div class="col-md-4 mb-3 mb-md-0">
                   <label class="form-label">Picture (Optional)</label>
-                  <input type="file" id="pictureFileInput" class="d-none" accept="image/*" />
-              
-                  <!-- Button that opens file dialog -->
+                  <input
+                    type="file"
+                    id="pictureFileInput"
+                    class="d-none"
+                    accept="image/*"
+                  />
+
                   <button
                     type="button"
                     class="btn btn-outline-primary w-100 upload-btn"
                     id="uploadPictureBtn"
-                    data-target="pictureFileInput">
+                    data-target="pictureFileInput"
+                  >
                     Upload File
                   </button>
-                  <small id="pictureFileName" class="form-text text-muted text-truncate d-block mt-1"></small>
                 </div>
-              
+
                 <div class="col-md-4">
-                  <label class="form-label"><span class="text-danger">*</span> Updated CV</label>
+                  <label class="form-label"
+                    ><span class="text-danger">*</span> Updated CV</label
+                  >
                   <input type="file" id="cvFileInput" class="d-none" />
-              
-                  <!-- Button that opens file dialog -->
+
                   <button
                     type="button"
                     class="btn btn-outline-primary w-100 upload-btn"
                     id="uploadCvBtn"
-                    data-target="cvFileInput">
+                    data-target="cvFileInput"
+                  >
                     Upload File
                   </button>
-                  <small id="cvFileName" class="form-text text-muted text-truncate d-block mt-1"></small>
                 </div>
               </div>
               <div class="row mb-3">
-                <!-- Upload File -->
                 <div class="col-md-6 d-flex gap-2 text-center">
                   <input
                     type="checkbox"
@@ -275,17 +321,81 @@
                     required
                   />
                   <label class="form-check-label" for="terms-conditions">
-                     I accept the
+                    I accept the
                     <a href="#" class="text-primary">Terms and Conditions</a>
                   </label>
                 </div>
               </div>
               <div class="row text-center m-5">
-                <button type="submit" class="btn btn-primary">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thankyou-modal"
+                >
                   Submit Request
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="thankyou-modal"
+      tabindex="-1"
+      aria-labelledby="thankyou-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 p-4 border-0 shadow-sm">
+          <div class="modal-body text-center">
+            <h4 class="fw-bold text-primary mb-3">Thank you!</h4>
+
+            <p class="text-muted mb-2">
+              Your application is now under review by the SIIA team. You will
+              receive an<br />
+              email as soon as you are accepted among the trainers.
+            </p>
+            <p class="text-muted">
+              Please confirm your email (check your spam if you do not find the
+              confirmation email)
+            </p>
+
+            <div class="input-group my-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="abc@xyz.com"
+                required
+                aria-label="Email"
+              />
+              <span class="input-group-text">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.634l5.803-3.483L0 5.383zm6.761 3.9L0 12.017A2 2 0 0 0 2 14h12a2 2 0 0 0 2-1.983l-6.761-2.734L8 10.583l-1.239-.742zm3.436-.383L16 12.017V5.383l-5.803 3.517z"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary w-100 rounded-pill mt-3"
+              data-bs-dismiss="modal"
+            >
+              Okay
+            </button>
           </div>
         </div>
       </div>
@@ -296,6 +406,7 @@
     ></script>
 
     <script>
+      
       document.querySelectorAll(".upload-btn").forEach((button) => {
         button.addEventListener("click", () => {
           const targetId = button.getAttribute("data-target");
@@ -303,6 +414,22 @@
           if (fileInput) fileInput.click();
         });
       });
+      function setExpertise(value) {
+        document.getElementById("area-of-expertise").value = value;
+      }
+      function validateForm(event) {
+        console.log("Validation is called");
+        const form = document.getElementById("signup-form");
+        console.log("Form is: ", form);
+        if (!form.checkValidity()) {
+          // Prevent form submission
+          event.preventDefault();
+          event.stopPropagation();
+
+          // Add Bootstrap validation styles
+          form.classList.add("was-validated");
+        }
+      }
     </script>
   </body>
 </html>
