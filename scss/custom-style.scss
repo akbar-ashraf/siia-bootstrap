@@ -89,3 +89,42 @@ button,
     border-bottom-right-radius: 0.4rem;
   }
 }
+
+// Common styles for all custom dropdowns
+%custom-dropdown-base {
+  background-color: $secondary-color;
+  width: 100%;
+
+  li {
+    padding: 0.25rem 0;
+    cursor: pointer;
+
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+// Custom dropdown
+.dropdown-menu.custom-dropdown {
+  @extend %custom-dropdown-base;
+  padding: 0.5rem 1.5rem;
+}
+
+// Custom dropdown with checkboxes
+.dropdown-menu.custom-dropdown-multi-select {
+  @extend %custom-dropdown-base;
+  padding: 0 1.5rem;
+
+  li:last-child {
+    margin: 1rem 0;
+  }
+}
+
+/* Custom switch with On/Off text inside */
+.form-switch .form-check-input {
+  width: 4rem;
+  height: 2rem;
+}

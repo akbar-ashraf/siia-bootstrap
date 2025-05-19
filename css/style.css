@@ -18990,4 +18990,35 @@ button,
   border-bottom-right-radius: 0.4rem;
 }
 
+.dropdown-menu.custom-dropdown-multi-select, .dropdown-menu.custom-dropdown {
+  background-color: #f0f0f0;
+  width: 100%;
+}
+.dropdown-menu.custom-dropdown-multi-select li, .dropdown-menu.custom-dropdown li {
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+.dropdown-menu.custom-dropdown-multi-select li:not(:last-child)::after, .dropdown-menu.custom-dropdown li:not(:last-child)::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.dropdown-menu.custom-dropdown {
+  padding: 0.5rem 1.5rem;
+}
+
+.dropdown-menu.custom-dropdown-multi-select {
+  padding: 0 1.5rem;
+}
+.dropdown-menu.custom-dropdown-multi-select li:last-child {
+  margin: 1rem 0;
+}
+
+/* Custom switch with On/Off text inside */
+.form-switch .form-check-input {
+  width: 4rem;
+  height: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
