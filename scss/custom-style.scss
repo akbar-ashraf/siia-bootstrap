@@ -1,3 +1,6 @@
+p {
+  margin-bottom: 0;
+}
 .error-text {
   font-size: 0.875rem;
   color: #dc3545;
@@ -12,24 +15,15 @@
     a {
       background-color: transparent;
       border-color: transparent;
-      color: $text-color;
+      color: $accent-color;
       display: flex;
       text-align: start;
       font-weight: normal;
       align-items: center;
       gap: 0.75rem;
-      svg {
-        width: 20px;
-        transition: fill 0.3s ease, stroke 0.3s ease;
-        path {
-          transition: fill 0.3s ease, stroke 0.3s ease;
-        }
-        path[stroke] {
-          stroke: $accent-color;
-        }
-        path[fill] {
-          fill: $accent-color;
-        }
+      i {
+        font-size: 20px;
+        font-weight: bold;
       }
       &:hover,
       &.active {
@@ -37,14 +31,6 @@
         background-color: $primary;
         border-color: $primary;
         color: #fff;
-        svg {
-          path[stroke] {
-            stroke: #fff;
-          }
-          path[fill] {
-            fill: #fff;
-          }
-        }
       }
     }
   }

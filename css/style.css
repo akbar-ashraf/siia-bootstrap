@@ -18903,6 +18903,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+p {
+  margin-bottom: 0;
+}
+
 .error-text {
   font-size: 0.875rem;
   color: #dc3545;
@@ -18918,37 +18922,22 @@ textarea.form-control-lg {
 .dashboardSidebar nav a {
   background-color: transparent;
   border-color: transparent;
-  color: #575757;
+  color: #242424;
   display: flex;
   text-align: start;
   font-weight: normal;
   align-items: center;
   gap: 0.75rem;
 }
-.dashboardSidebar nav a svg {
-  width: 20px;
-  transition: fill 0.3s ease, stroke 0.3s ease;
-}
-.dashboardSidebar nav a svg path {
-  transition: fill 0.3s ease, stroke 0.3s ease;
-}
-.dashboardSidebar nav a svg path[stroke] {
-  stroke: #242424;
-}
-.dashboardSidebar nav a svg path[fill] {
-  fill: #242424;
+.dashboardSidebar nav a i {
+  font-size: 20px;
+  font-weight: bold;
 }
 .dashboardSidebar nav a:hover, .dashboardSidebar nav a.active {
   font-weight: normal;
   background-color: #006198;
   border-color: #006198;
   color: #fff;
-}
-.dashboardSidebar nav a:hover svg path[stroke], .dashboardSidebar nav a.active svg path[stroke] {
-  stroke: #fff;
-}
-.dashboardSidebar nav a:hover svg path[fill], .dashboardSidebar nav a.active svg path[fill] {
-  fill: #fff;
 }
 
 button,
