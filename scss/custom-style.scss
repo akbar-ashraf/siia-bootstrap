@@ -8,6 +8,10 @@ p {
   // margin-bottom: 0.25rem;
 }
 
+.readAbleFieldtextEqualHeight {
+  min-height: calc(100% - 30px);
+}
+
 .dashboardSidebar {
   min-width: 280px;
   nav {
@@ -36,19 +40,21 @@ p {
   }
 }
 
+// Button COmponent
 button,
 .btn {
   outline: none !important;
   box-shadow: none !important;
+  white-space: nowrap;
 }
 
+// Table COmponent
 .table {
   overflow: hidden;
   border-collapse: separate;
   border-spacing: 0 0.7rem; // spacing between rows
   thead th {
-    background-color: $secondary-color;
-    color: $accent-color;
+    background-color: $light-gray;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     border: 1px solid $border-color;
@@ -73,5 +79,37 @@ button,
     border-right-width: 1px;
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
+  }
+}
+
+// Badge Status
+.badge-status {
+  padding: 7px 14px;
+
+  position: relative;
+  padding-left: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+}
+
+// nav nav-pills for tabs
+
+.nav.nav-pills {
+  gap: 0.1rem;
+  .nav-link {
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
   }
 }
