@@ -969,8 +969,8 @@
                 </div>
               </div>
 
-              <div class="row mb-3 py-3">
-                <div class="col-md-4">
+              <div class="row mb-3 gy-10 py-3">
+                <div class="col-md-4" id="location">
                   <label for="btn-location" class="form-label">Location</label>
                   <div class="d-flex gap-2">
                     <div class="dropdown flex-grow-1">
@@ -1005,9 +1005,6 @@
                   >
                   <input type="date" class="form-control" id="reg-end-date" />
                 </div>
-              </div>
-
-              <div class="row mb-3 py-3">
                 <div class="col-md-4">
                   <label for="course-start-date" class="form-label"
                     >Course Start Date</label
@@ -1029,6 +1026,29 @@
                   />
                 </div>
               </div>
+
+              <!-- <div class="row mb-3 py-3">
+                <div class="col-md-4">
+                  <label for="course-start-date" class="form-label"
+                    >Course Start Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="course-start-date"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label for="course-end-date" class="form-label"
+                    >Course End Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="course-end-date"
+                  />
+                </div>
+              </div> -->
               <!-- Management & Pricing Section -->
               <h5 class="mb-3">Management & Pricing</h5>
               <div class="row mb-3 py-3">
@@ -1292,6 +1312,29 @@
           selectedDays || "Choose Schedule Days";
       }
 
+      // Function to toggle the location input field visibility
+      function toggleLocationField() {
+        const locationElement = document.getElementById("location");
+        const onlineRadio = document.querySelector(
+          'input[name="format"][value="online"]'
+        );
+
+        if (onlineRadio.checked) {
+          locationElement.classList.remove("d-block");
+          locationElement.classList.add("d-none");
+        } else {
+          locationElement.classList.remove("d-none");
+          locationElement.classList.add("d-block");
+        }
+      }
+
+      // Add event listeners to all format radio buttons
+      document.querySelectorAll('input[name="format"]').forEach((radio) => {
+        radio.addEventListener("change", toggleLocationField);
+      });
+
+      // Call the function on page load to set the initial state
+      toggleLocationField();
       document
         .getElementById("language-options")
         .addEventListener("click", function (event) {
