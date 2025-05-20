@@ -1,8 +1,15 @@
+p {
+  margin-bottom: 0;
+}
 .error-text {
   font-size: 0.875rem;
   color: #dc3545;
   margin-top: 0.25rem;
   // margin-bottom: 0.25rem;
+}
+
+.readAbleFieldtextEqualHeight {
+  min-height: calc(100% - 30px);
 }
 
 .dashboardSidebar {
@@ -12,24 +19,15 @@
     a {
       background-color: transparent;
       border-color: transparent;
-      color: $text-color;
+      color: $accent-color;
       display: flex;
       text-align: start;
       font-weight: normal;
       align-items: center;
       gap: 0.75rem;
-      svg {
-        width: 20px;
-        transition: fill 0.3s ease, stroke 0.3s ease;
-        path {
-          transition: fill 0.3s ease, stroke 0.3s ease;
-        }
-        path[stroke] {
-          stroke: $accent-color;
-        }
-        path[fill] {
-          fill: $accent-color;
-        }
+      i {
+        font-size: 20px;
+        font-weight: bold;
       }
       &:hover,
       &.active {
@@ -37,32 +35,26 @@
         background-color: $primary;
         border-color: $primary;
         color: #fff;
-        svg {
-          path[stroke] {
-            stroke: #fff;
-          }
-          path[fill] {
-            fill: #fff;
-          }
-        }
       }
     }
   }
 }
 
+// Button COmponent
 button,
 .btn {
   outline: none !important;
   box-shadow: none !important;
+  white-space: nowrap;
 }
 
+// Table COmponent
 .table {
   overflow: hidden;
   border-collapse: separate;
   border-spacing: 0 0.7rem; // spacing between rows
   thead th {
-    background-color: $secondary-color;
-    color: $accent-color;
+    background-color: $light-gray;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     border: 1px solid $border-color;
@@ -127,4 +119,35 @@ button,
 .form-switch .form-check-input {
   width: 4rem;
   height: 2rem;
+}
+// Badge Status
+.badge-status {
+  padding: 7px 14px;
+
+  position: relative;
+  padding-left: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+}
+
+// nav nav-pills for tabs
+
+.nav.nav-pills {
+  gap: 0.1rem;
+  .nav-link {
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+  }
 }

@@ -1,6 +1,6 @@
 // Branding Colors
 $primary-color: #006198; // Main brand color (buttons, links, active states)
-$secondary-color: #f0f0f0; // Light background color
+$secondary-color: #575757; // Light background color
 $accent-color: #242424; // Used for publish badge
 $text-color: #575757; // Main text color
 $light-gray: #f0f0f0; // Used for hover states, backgrounds
@@ -107,7 +107,7 @@ $spacers: (
   44: $spacer * 44,
   // 176px
   48: $spacer * 48
-    // 192px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    // 192px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 // Button styles
@@ -147,7 +147,7 @@ $input-border-radius: 0.5rem;
 $input-border-radius-sm: 0.5rem;
 
 // Focus state
-$input-focus-border-color: #006198;
+$input-focus-border-color: $primary-color;
 $input-focus-box-shadow: none;
 
 // Labels
@@ -157,3 +157,8 @@ $form-label-font-size: 16px;
 
 // Card
 $card-border-radius: 0.6rem;
+
+// Badge
+
+$badge-font-size: 0.875rem; // 14px
+$badge-font-weight: normal;
