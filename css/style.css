@@ -18983,33 +18983,6 @@ button,
   border-bottom-right-radius: 0.4rem;
 }
 
-.badge-status {
-  padding: 7px 14px;
-  position: relative;
-  padding-left: 24px;
-}
-.badge-status::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: currentColor;
-}
-
-.nav.nav-pills {
-  gap: 0.1rem;
-}
-.nav.nav-pills .nav-link {
-  padding: 0.4rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-}
-
 .dropdown-menu.custom-dropdown-multi-select, .dropdown-menu.custom-dropdown {
   background-color: #f0f0f0;
   width: 100%;
@@ -19039,6 +19012,33 @@ button,
 .form-switch .form-check-input {
   width: 4rem;
   height: 2rem;
+}
+
+.badge-status {
+  padding: 7px 14px;
+  position: relative;
+  padding-left: 24px;
+}
+.badge-status::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.nav.nav-pills {
+  gap: 0.1rem;
+}
+.nav.nav-pills .nav-link {
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
