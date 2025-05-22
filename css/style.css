@@ -5754,7 +5754,7 @@ textarea.form-control-lg {
 
 .alert {
   --bs-alert-bg: transparent;
-  --bs-alert-padding-x: 0.25rem;
+  --bs-alert-padding-x: 0.75rem;
   --bs-alert-padding-y: 0.25rem;
   --bs-alert-margin-bottom: 1rem;
   --bs-alert-color: inherit;
@@ -5781,14 +5781,14 @@ textarea.form-control-lg {
 }
 
 .alert-dismissible {
-  padding-right: 0.75rem;
+  padding-right: 2.25rem;
 }
 .alert-dismissible .btn-close {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 2;
-  padding: 0.3125rem 0.25rem;
+  padding: 0.3125rem 0.75rem;
 }
 
 .alert-primary {
@@ -6430,7 +6430,7 @@ textarea.form-control-lg {
 .modal {
   --bs-modal-zindex: 1055;
   --bs-modal-width: 500px;
-  --bs-modal-padding: 0.25rem;
+  --bs-modal-padding: 0.5rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: var(--bs-body-color);
   --bs-modal-bg: var(--bs-body-bg);
@@ -6439,16 +6439,16 @@ textarea.form-control-lg {
   --bs-modal-border-radius: var(--bs-border-radius-lg);
   --bs-modal-box-shadow: var(--bs-box-shadow-sm);
   --bs-modal-inner-border-radius: calc(var(--bs-border-radius-lg) - (var(--bs-border-width)));
-  --bs-modal-header-padding-x: 0.25rem;
-  --bs-modal-header-padding-y: 0.25rem;
-  --bs-modal-header-padding: 0.25rem 0.25rem;
+  --bs-modal-header-padding-x: 0.5rem;
+  --bs-modal-header-padding-y: 0.5rem;
+  --bs-modal-header-padding: 0.5rem 0.5rem;
   --bs-modal-header-border-color: var(--bs-border-color);
-  --bs-modal-header-border-width: var(--bs-border-width);
+  --bs-modal-header-border-width: 0;
   --bs-modal-title-line-height: 1.5;
   --bs-modal-footer-gap: 0.5rem;
   --bs-modal-footer-bg: ;
   --bs-modal-footer-border-color: var(--bs-border-color);
-  --bs-modal-footer-border-width: var(--bs-border-width);
+  --bs-modal-footer-border-width: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -7249,8 +7249,8 @@ textarea.form-control-lg {
   --bs-offcanvas-zindex: 1045;
   --bs-offcanvas-width: 400px;
   --bs-offcanvas-height: 30vh;
-  --bs-offcanvas-padding-x: 0.25rem;
-  --bs-offcanvas-padding-y: 0.25rem;
+  --bs-offcanvas-padding-x: 0.5rem;
+  --bs-offcanvas-padding-y: 0.5rem;
   --bs-offcanvas-color: var(--bs-body-color);
   --bs-offcanvas-bg: var(--bs-body-bg);
   --bs-offcanvas-border-width: var(--bs-border-width);
@@ -19009,9 +19009,17 @@ button,
 }
 
 /* Custom switch with On/Off text inside */
+.form-switch {
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .form-switch .form-check-input {
-  width: 4rem;
-  height: 2rem;
+  width: 3rem;
+  height: 1.5rem;
+  margin-left: -3rem;
 }
 
 .badge-status {
@@ -19039,6 +19047,10 @@ button,
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: 0.5rem;
+}
+
+.modal-content {
+  padding: 12px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
