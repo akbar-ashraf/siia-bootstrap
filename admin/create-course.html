@@ -1221,31 +1221,13 @@
 
                   <div class="col-md-2">
                     <label class="form-label">Thumbnail</label>
-                    <input type="file" id="thumbnail" class="d-none" />
-
-                    <button
-                      class="btn btn-outline-primary w-100 upload-btn"
-                      type="button"
-                      id="upload-thumbnail"
-                      data-target="thumbnail"
-                    >
-                      Upload Thumbnail
-                    </button>
+                    <input class="form-control" type="file" id="formFile" />
                   </div>
                 </div>
                 <div class="row mb-3 py-3">
                   <div class="col-md-2">
                     <label class="form-label">Upload Course Content</label>
-                    <input type="file" id="content-input" class="d-none" />
-
-                    <button
-                      class="btn btn-outline-primary w-100 upload-btn"
-                      type="button"
-                      id="upload-content"
-                      data-target="content-input"
-                    >
-                      Upload Content
-                    </button>
+                    <input class="form-control" type="file" id="formFile" />
                   </div>
                 </div>
                 <div class="mb-3 py-3">
@@ -1261,7 +1243,7 @@
 
               <div class="d-flex flex-row-reverse mt-4 text-end">
                 <div class="col-md-2">
-                  <button class="btn btn-primary w-75" type="Submit" disabled>
+                  <button class="btn btn-primary w-75" type="Submit">
                     Create Course
                   </button>
                 </div>
@@ -1277,13 +1259,6 @@
       </div>
     </div>
     <script>
-      document.querySelectorAll(".upload-btn").forEach((button) => {
-        button.addEventListener("click", () => {
-          const targetId = button.getAttribute("data-target");
-          const fileInput = document.getElementById(targetId);
-          if (fileInput) fileInput.click();
-        });
-      });
       function updateSwitchLabels() {
         document
           .querySelectorAll('.form-check-input[type="checkbox"]')
