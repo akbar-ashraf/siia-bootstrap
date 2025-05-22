@@ -160,7 +160,18 @@ button,
 
 // Modal
 .modal-content {
-  padding: 12px 20px;
+  padding: 10px 20px;
+}
+
+.modal-header {
+  position: relative;
+  display: block;
+  .btn-close {
+    position: absolute;
+    right: -5px;
+    top: 5px;
+    font-size: 14px;
+  }
 }
 
 // Alert

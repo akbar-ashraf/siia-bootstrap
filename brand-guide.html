@@ -18,7 +18,6 @@
         align-items: center;
         justify-content: center;
         font-weight: 500;
-        margin-bottom: 1rem;
       }
     </style>
   </head>
@@ -90,18 +89,19 @@
       <section class="mb-8 pb-8 border-bottom">
         <h2 class="mb-1 text-primary">Theme Colors</h2>
         <p class="text-muted mb-5">Theme colors styled with color classes.</p>
-        <div class="row">
+        <!-- Solid Theme Colors -->
+        <div class="row g-3 mb-4">
           <div class="col-md-3">
-            <div class="color-box bg-primary">Primary</div>
+            <div class="color-box bg-primary text-white">Primary</div>
           </div>
           <div class="col-md-3">
-            <div class="color-box bg-secondary">Secondary</div>
+            <div class="color-box bg-secondary text-white">Secondary</div>
           </div>
           <div class="col-md-3">
-            <div class="color-box bg-success">Success</div>
+            <div class="color-box bg-success text-white">Success</div>
           </div>
           <div class="col-md-3">
-            <div class="color-box bg-danger">Danger</div>
+            <div class="color-box bg-danger text-white">Danger</div>
           </div>
           <div class="col-md-3">
             <div class="color-box bg-warning text-dark">Warning</div>
@@ -112,7 +112,48 @@
           <div class="col-md-3">
             <div class="color-box bg-light text-dark">Light</div>
           </div>
-          <div class="col-md-3"><div class="color-box bg-dark">Dark</div></div>
+          <div class="col-md-3">
+            <div class="color-box bg-dark text-white">Dark</div>
+          </div>
+        </div>
+
+        <!-- Subtle Theme Colors -->
+        <h5 class="text-body mt-8 mb-5">Subtle Background Variants</h5>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="color-box bg-primary-subtle text-primary">
+              Primary Subtle
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="color-box bg-secondary-subtle text-secondary">
+              Secondary Subtle
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="color-box bg-success-subtle text-success">
+              Success Subtle
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="color-box bg-danger-subtle text-danger">
+              Danger Subtle
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="color-box bg-warning-subtle text-warning">
+              Warning Subtle
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="color-box bg-info-subtle text-info">Info Subtle</div>
+          </div>
+          <div class="col-md-3">
+            <div class="color-box bg-light-subtle text-body">Light Subtle</div>
+          </div>
+          <div class="col-md-3">
+            <div class="color-box bg-dark-subtle text-dark">Dark Subtle</div>
+          </div>
         </div>
       </section>
 
@@ -584,7 +625,7 @@
           aria-labelledby="basicModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="basicModalLabel">Basic Modal</h5>
@@ -624,7 +665,7 @@
         >
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header text-center">
                 <h5 class="modal-title" id="centeredModalLabel">
                   Centered Modal
                 </h5>
@@ -634,11 +675,13 @@
                   data-bs-dismiss="modal"
                 ></button>
               </div>
-              <div class="modal-body">
-                This modal is vertically centered using
+              <div class="modal-body text-center">
+                This modal is vertically centered using This modal is vertically
+                centered using This modal is vertically centered using This
+                modal is vertically centered using
                 <code>modal-dialog-centered</code>.
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer justify-content-center">
                 <button
                   type="button"
                   class="btn btn-secondary"
@@ -662,7 +705,9 @@
           aria-labelledby="scrollableModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-dialog-scrollable">
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+          >
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="scrollableModalLabel">
@@ -724,7 +769,7 @@
           aria-labelledby="largeModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-lg">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="largeModalLabel">Large Modal</h5>
@@ -749,7 +794,7 @@
           aria-labelledby="smallModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-sm">
+          <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="smallModalLabel">Small Modal</h5>
