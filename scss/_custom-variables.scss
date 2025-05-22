@@ -107,7 +107,7 @@ $spacers: (
   44: $spacer * 44,
   // 176px
   48: $spacer * 48
-    // 192px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    // 192px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 // Button styles
@@ -159,6 +159,20 @@ $form-label-font-size: 16px;
 $card-border-radius: 0.6rem;
 
 // Badge
-
 $badge-font-size: 0.875rem; // 14px
 $badge-font-weight: normal;
+
+// Alert
+$alert-padding-x: 0.75rem;
+
+// Modal
+
+$modal-inner-padding: 0.5rem;
+
+// $modal-footer-margin-between:       .5rem;
+
+// $modal-dialog-margin-y-sm-up:       1.75rem;
+
+$modal-header-border-width: 0;
+
+$modal-footer-border-width: 0;
