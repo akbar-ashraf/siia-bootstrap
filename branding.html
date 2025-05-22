@@ -60,7 +60,7 @@
         <h2 class="mb-1 text-primary">Buttons</h2>
         <p class="text-muted mb-5">Preview of all major button variants.</p>
 
-        <div class="d-flex flex-wrap gap-3">
+        <div class="hstack flex-wrap gap-3">
           <button class="btn btn-primary">Primary</button>
           <button class="btn btn-secondary">Secondary</button>
           <button class="btn btn-success">Success</button>
@@ -75,6 +75,13 @@
           <button class="btn btn-outline-secondary">Outline Secondary</button>
           <button class="btn btn-outline-secondary">
             <i class="bi bi-copy"></i> Outline Secondary
+          </button>
+          <button class="btn btn-primary btn-sm">Small Primary</button>
+          <button class="btn btn-outline-primary btn-sm">
+            Primary Outline
+          </button>
+          <button class="btn btn-outline-secondary btn-sm">
+            Small Secondary
           </button>
         </div>
       </section>
@@ -139,23 +146,39 @@
         </p>
 
         <div class="alert alert-primary" role="alert">
-          This is a primary alert
+          <i class="bi bi-info-circle-fill me-2"></i>
+          This is a primary alert with an icon.
         </div>
+
         <div class="alert alert-secondary" role="alert">
-          This is a secondary alert
+          <i class="bi bi-info-square-fill me-2"></i>
+          This is a secondary alert with an icon.
         </div>
+
         <div class="alert alert-success" role="alert">
-          This is a success alert
+          <i class="bi bi-check-circle-fill me-2"></i>
+          Success! Your action was completed.
         </div>
+
         <div class="alert alert-danger" role="alert">
-          This is a danger alert
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          Error! Something went wrong.
         </div>
+
         <div class="alert alert-warning" role="alert">
-          This is a warning alert
+          <i class="bi bi-exclamation-triangle me-2"></i>
+          Warning! Please check your input.
         </div>
-        <div class="alert alert-info" role="alert">This is an info alert</div>
-        <div class="alert alert-light" role="alert">This is a light alert</div>
-        <div class="alert alert-dark" role="alert">This is a dark alert</div>
+
+        <div class="alert alert-info" role="alert">
+          <i class="bi bi-info-lg me-2"></i>
+          For your information: updates are available.
+        </div>
+
+        <div class="alert alert-light" role="alert">
+          <i class="bi bi-lightbulb-fill me-2"></i>
+          Light alert with icon and soft background.
+        </div>
       </section>
 
       <!-- Cards -->

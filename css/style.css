@@ -5755,7 +5755,7 @@ textarea.form-control-lg {
 .alert {
   --bs-alert-bg: transparent;
   --bs-alert-padding-x: 0.75rem;
-  --bs-alert-padding-y: 0.25rem;
+  --bs-alert-padding-y: 0.9rem;
   --bs-alert-margin-bottom: 1rem;
   --bs-alert-color: inherit;
   --bs-alert-border-color: transparent;
@@ -5788,7 +5788,7 @@ textarea.form-control-lg {
   top: 0;
   right: 0;
   z-index: 2;
-  padding: 0.3125rem 0.75rem;
+  padding: 1.125rem 0.75rem;
 }
 
 .alert-primary {
@@ -19051,6 +19051,12 @@ button,
 
 .modal-content {
   padding: 12px 20px;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
