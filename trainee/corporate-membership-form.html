@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA-Corporate-Membership</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="py-3 border-bottom bg-white">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+          <div
+            class="rounded-circle bg-light"
+            style="width: 50px; height: 50px"
+          ></div>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Search (optional static icon) -->
+          <form class="position-relative d-none d-lg-block">
+            <input
+              type="search"
+              class="form-control form-control-sm ps-8"
+              placeholder="Search"
+            />
+            <i
+              class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2 text-body-tertiary small"
+            ></i>
+          </form>
+
+          <!-- Language Dropdown -->
+          <div class="dropdown">
+            <button
+              class="btn btn-sm btn-outline-secondary dropdown-toggle border text-body"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              English
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">العربية</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Us -->
+          <a href="#" class="btn btn-sm btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container py-10">
+      <div class="row align-items-center">
+        <!-- Welcome Message -->
+        <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+          <h2 class="fw-bold">Welcome to the SIIA</h2>
+          <p class="">
+            Lörem ipsum bebonar bongen, transaktiv.<br />
+            Curlingförälder maspedat däloling om nelig.
+          </p>
+        </div>
+
+        <!-- Membership Form -->
+        <div class="col-lg-5">
+          <div class="card px-10 py-5">
+            <h3 class="mb-4 text-center">Corporate Membership Form</h3>
+
+            <form novalidate>
+              <div class="mb-3">
+                <label for="organization-name" class="form-label"
+                  >Organization Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="organization-name"
+                  placeholder="Write here"
+                  required
+                />
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <label for="employees" class="form-label">Employees</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="employees"
+                    placeholder="e.g. 1"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <label for="required-course" class="form-label"
+                    >Required Course</label
+                  >
+                  <div class="dropdown">
+                    <button
+                      class="btn border w-100 text-start form-select"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      id="required-course"
+                    >
+                      Choose
+                    </button>
+                    <ul
+                      class="dropdown-menu custom-dropdown"
+                      id="language-options"
+                    >
+                      <li>Essentials of Internal Auditing-CIA1</li>
+                      <li>Practice of Internal Auditing-CIA2</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="subscription-type" class="form-label"
+                  >Subscription Type</label
+                >
+                <div class="dropdown">
+                  <button
+                    class="btn border w-100 text-start form-select"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    id="subscription-type"
+                  >
+                    Choose Type
+                  </button>
+                  <ul
+                    class="dropdown-menu custom-dropdown"
+                    id="language-options"
+                  >
+                    <li>Duration-Based (Flexible Seats)</li>
+                    <li>Course-Based (Fixed Seats)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="requirements" class="form-label"
+                  >Explain Requirements</label
+                >
+                <textarea
+                  class="form-control"
+                  id="requriements"
+                  rows="3"
+                  placeholder="Write actual requirements here"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >Employees List with Emails and National IDs (Optional)</label
+                >
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="mb-3 d-flex gap-3 justify-content-around">
+                <button type="button" class="btn btn-outline-danger w-100">
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary w-100">
+                  Get Quotation
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

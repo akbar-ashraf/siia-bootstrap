@@ -11,8 +11,8 @@
     />
   </head>
   <body>
-     <!-- Header -->
-     <header class="py-3 border-bottom bg-white">
+    <!-- Header -->
+    <header class="py-3 border-bottom bg-white">
       <div class="container d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-2">
           <div
@@ -57,7 +57,6 @@
       </div>
     </header>
 
-
     <!-- Page Content -->
     <div class="container py-10">
       <div class="row align-items-center">
@@ -75,7 +74,9 @@
         <div class="col-lg-7">
           <div class="container p-5">
             <!-- Progress Steps -->
-            <div class="d-flex justify-content-between align-items-top position-relative">
+            <div
+              class="d-flex justify-content-between align-items-top position-relative"
+            >
               <!-- Step 1 -->
               <div class="text-center bg-white z-1">
                 <div
@@ -112,8 +113,9 @@
                   Work and Training<br />Experience
                 </div>
               </div>
-                <hr class="my-0 position-absolute mt-3 start-0 w-100 border-2 border-heading" />
-
+              <hr
+                class="my-0 position-absolute mt-3 start-0 w-100 border-2 border-heading"
+              />
             </div>
           </div>
           <div class="container py-4 d-flex flex-column gap-4">
@@ -129,13 +131,6 @@
                   Work and Training Experience
                 </div>
               </div>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor<br />incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud <br />exercitation ullamco
-                laboris nisi ut.
-              </p>
-              <p class="error-text">*All fields required.</p>
             </div>
 
             <form id="signup-form" onsubmit="validateForm(event)">
@@ -200,53 +195,29 @@
                 <!-- Area of Expertise -->
                 <div class="col-md-6">
                   <label for="area-of-expertise" class="form-label"
-                    ><span class="text-danger">*</span> Training Areas of
-                    Expertise</label
+                    ><span class="text-danger">*</span> Training Areas
+                    ofExpertise</label
                   >
 
                   <div class="dropdown">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="area-of-expertise"
-                      placeholder="Choose"
+                    <button
+                      class="btn border w-100 text-start form-select"
+                      type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                      required
-                    />
-                    <ul class="dropdown-menu text-nowrap px-2">
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="setExpertise('Internal Audit')"
-                          >Internal Audit</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="setExpertise('Governance')"
-                          >Governance</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="setExpertise('Extra')"
-                          >Extra</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="setExpertise('Risk')"
-                          >Risk</a
-                        >
-                      </li>
+                      id="btn-area-of-expertise"
+                    >
+                      Choose
+                    </button>
+
+                    <ul
+                      id="area-of-expertise"
+                      class="dropdown-menu custom-dropdown"
+                    >
+                      <li>Internal Audit</li>
+                      <li>Governance</li>
+                      <li>Extra</li>
+                      <li>Risk</li>
                     </ul>
                   </div>
                 </div>
@@ -260,7 +231,7 @@
                   <textarea
                     class="form-control"
                     id="previous-training"
-                    placeholder="Number of years experience in training"
+                    placeholder="Have you previously delivered training courses? If yes then please explain. "
                     rows="5"
                   ></textarea>
                 </div>
@@ -271,51 +242,19 @@
                   <label for="training-file" class="form-label"
                     >Training related file (Optional)</label
                   >
-                  <input type="file" id="training-file" class="d-none" />
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary w-100 upload-btn"
-                    id="uploadTrainingBtn"
-                    data-target="training-file"
-                  >
-                    Upload File
-                  </button>
+                  <input class="form-control" type="file" id="formFile" />
                 </div>
 
                 <div class="col-md-4 mb-3 mb-md-0">
                   <label class="form-label">Picture (Optional)</label>
-                  <input
-                    type="file"
-                    id="pictureFileInput"
-                    class="d-none"
-                    accept="image/*"
-                  />
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary w-100 upload-btn"
-                    id="uploadPictureBtn"
-                    data-target="pictureFileInput"
-                  >
-                    Upload File
-                  </button>
+                  <input class="form-control" type="file" id="formFile" />
                 </div>
 
                 <div class="col-md-4">
                   <label class="form-label"
                     ><span class="text-danger">*</span> Updated CV</label
                   >
-                  <input type="file" id="cvFileInput" class="d-none" />
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary w-100 upload-btn"
-                    id="uploadCvBtn"
-                    data-target="cvFileInput"
-                  >
-                    Upload File
-                  </button>
+                  <input class="form-control" type="file" id="formFile" />
                 </div>
               </div>
               <div class="row mb-3">
@@ -332,7 +271,7 @@
                   </label>
                 </div>
               </div>
-              <div class="row text-center m-5">
+              <div class="row text-center">
                 <button
                   type="submit"
                   class="btn btn-primary"
@@ -363,8 +302,7 @@
 
             <p class="text-muted mb-2">
               Your application is now under review by the SIIA team. You will
-              receive an<br />
-              email as soon as you are accepted among the trainers.
+              receive an email as soon as you are accepted among the trainers.
             </p>
             <p class="text-muted">
               Please confirm your email (check your spam if you do not find the
@@ -412,17 +350,16 @@
     ></script>
 
     <script>
-      
-      document.querySelectorAll(".upload-btn").forEach((button) => {
-        button.addEventListener("click", () => {
-          const targetId = button.getAttribute("data-target");
-          const fileInput = document.getElementById(targetId);
-          if (fileInput) fileInput.click();
+
+      document
+        .getElementById("area-of-expertise")
+        .addEventListener("click", function (event) {
+          if (event.target.tagName === "LI") {
+            document.getElementById("btn-area-of-expertise").innerText =
+              event.target.innerText;
+          }
         });
-      });
-      function setExpertise(value) {
-        document.getElementById("area-of-expertise").value = value;
-      }
+
       function validateForm(event) {
         console.log("Validation is called");
         const form = document.getElementById("signup-form");
