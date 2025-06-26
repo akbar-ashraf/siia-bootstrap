@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA - Payment Process</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-light p-5 min-vh-100">
+      <div class="d-flex gap-5">
+        <aside
+          class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-6"
+        >
+          <!-- Profile -->
+          <div class="mb-4 text-center">
+            <img
+              src="https://i.pravatar.cc/100?img=3"
+              alt="Profile"
+              class="w-50 rounded-circle mx-auto mb-3"
+            />
+            <h6 class="">Aster Seawalker</h6>
+            <p class="text-muted small">Admin</p>
+          </div>
+          <!-- Navigation -->
+          <nav
+            class="dashboardNav d-flex flex-column"
+            aria-label="Dashboard Navigation"
+          >
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-bar-chart-line"></i>
+              Dashboard
+            </a>
+            <a href="#" class="btn btn-primary active">
+              <i class="bi bi-mortarboard"></i>
+              Courses
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-journal-bookmark"></i>
+              Programs
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-clipboard2-check"></i>
+              Assessments
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-calendar4-week"></i>
+              Events
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-card-checklist"></i>
+              Memberships
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-person"></i>
+              Admins
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-person-check"></i>
+              Trainers
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-people"></i>
+              Trainee & Students
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-pie-chart"></i>
+              Reports
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-credit-card-2-front"></i>
+              Payments
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-book"></i>
+              Library
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-patch-check"></i>
+              Certificates
+            </a>
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-box-arrow-right"></i>
+              Log Out
+            </a>
+          </nav>
+        </aside>
+        <div class="flex-grow-1 vstack gap-5">
+          <div class="card border-0 shadow-sm px-3 py-2">
+            <div
+              class="d-flex justify-content-between align-items-center px-3 py-2"
+            >
+              <!-- Search -->
+              <div class="position-relative">
+                <i
+                  class="bi bi-search position-absolute start-0 top-50 ms-4 translate-middle-y"
+                ></i>
+                <input
+                  type="text"
+                  class="form-control ps-11 rounded-pill"
+                  style="width: 360px"
+                  placeholder="Search anything"
+                />
+              </div>
+
+              <!-- Icons -->
+              <div class="d-flex align-items-center gap-2 ms-3">
+                <button class="btn p-1 border-0 fs-4">
+                  <i class="bi bi-envelope"></i>
+                </button>
+                <button class="btn p-1 border-0 fs-4">
+                  <i class="bi bi-bell"></i>
+                </button>
+                <button class="btn p-1 border-0 fs-4">
+                  <i class="bi bi-question-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 shadow-sm p-6">
+            <div class="container py-5">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                  <!-- Header -->
+                  <h2 class="text-center mb-5 fw-bold text-dark">
+                    Payment Process
+                  </h2>
+
+                  <!-- Course Items -->
+                  <div class="mb-4">
+                    <!-- First Course -->
+                    <div class="d-flex align-items-center mb-4 p-3">
+                      <img
+                        src="../images/ic-course.svg"
+                        alt="Description"
+                        class="img-fluid"
+                      />
+                      <div class="d-flex flex-column flex-grow-1">
+                        <div
+                          class="d-flex justify-content-between ms-3 text-emphasis"
+                        >
+                          <span>Course name</span>
+                          <span class="text-emphasis">SAR 250.00</span>
+                        </div>
+                        <small class="text-end text-muted"
+                          >One Time payment</small
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Second Course -->
+                    <div class="d-flex align-items-center mb-4 p-3">
+                      <img
+                        src="../images/ic-course.svg"
+                        alt="Description"
+                        class="img-fluid"
+                      />
+                      <div class="d-flex flex-column flex-grow-1">
+                        <div
+                          class="d-flex justify-content-between ms-3 text-emphasis"
+                        >
+                          <span>Course name</span>
+                          <span class="text-emphasis">SAR 50.00</span>
+                        </div>
+                        <small class="text-end text-muted"
+                          >Subscription for 6 months
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Order Summary -->
+                  <div class="bg-white rounded p-4">
+                    <h5 class="fw-bold mb-4 text-emphasis">Order Summary</h5>
+
+                    <!-- Gift Card / Discount Code -->
+                    <div class="mb-4">
+                      <label class="form-label text-dark mb-2"
+                        >Gift Card / Discount code</label
+                      >
+                      <div class="row g-5">
+                        <div class="col">
+                          <input
+                            type="text"
+                            class="form-control bg-light border-0 py-2"
+                          />
+                        </div>
+                        <div class="col-auto">
+                          <button
+                            class="btn btn-outline-primary px-4 py-2"
+                            type="button"
+                          >
+                            Apply
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Subtotal -->
+                    <div class="d-flex justify-content-between py-2">
+                      <h6 class="text-emphasis">Subtotal</h6>
+                      <span class="text-emphasis">SAR 300.00</span>
+                    </div>
+                    <hr/>
+
+                    <!-- Sales Tax -->
+                    <div class="d-flex justify-content-between py-2">
+                      <h6 class="text-emphasis">Sales tax (6.5%)</h6>
+                      <span class="text-emphasis">SAR 20.00</span>
+                    </div>
+
+                    <hr/>
+
+                    <!-- Total Due -->
+                    <div class="d-flex justify-content-between py-2 mb-4">
+                      <h6 class="text-emphasis">Total due</h6>
+                      <span class="fw-bold text-primary mb-0"
+                        >SAR 320.00</span
+                      >
+                    </div>
+
+                    <!-- Pay Button -->
+                    <button
+                      class="btn btn-primary w-100 py-3"
+                    >
+                      Pay SAR 320.00
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
