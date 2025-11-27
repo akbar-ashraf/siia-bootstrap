@@ -1,5 +1,5 @@
 // Branding Colors
-$primary-color: #006198; // Main brand color (buttons, links, active states)
+$primary-color: #1B8354; // Main brand color (buttons, links, active states)
 $secondary-color: #575757; // Light background color
 $accent-color: #242424; // Used for publish badge
 $text-color: #575757; // Main text color
@@ -9,7 +9,7 @@ $success-color: #28a745; // Used for complete badge
 $warning-color: #ffc107; // For warnings or important notices
 $danger-color: #dc3545; // For errors or critical actions
 $info-color: #17a2b8; // For informational elements
-
+$primary-light: #F3FCF6; // Light variant of primary color for backgrounds
 // Base text colors
 $primary: $primary-color;
 $body-color: $text-color;
@@ -28,6 +28,7 @@ $theme-colors: (
   "warning": $warning-color,
   "danger": $danger-color,
   "light": $light-gray,
+  "primary-light": $primary-light
 );
 
 $font-family-base: "DIN Next LT Arabic", sans-serif;
