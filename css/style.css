@@ -18997,6 +18997,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: var(--bs-light);
+}
+
 .logo-placeholder {
   width: 50px;
   height: 50px;
@@ -19237,6 +19241,62 @@ button,
 /* Small improvement to table focusable rows */
 tr[tabindex] {
   cursor: pointer;
+}
+
+.membership {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 1400px) {
+  .membership {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .membership .membership-actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .membership .membership-actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .membership .membership-actions .search-input {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .membership .membership-actions .action-btn {
+    flex: 1 1 calc(33.333% - 0.35rem);
+    min-width: 0;
+  }
+}
+@media (max-width: 576px) {
+  .membership .membership-actions .action-btn {
+    flex: 1 1 calc(50% - 0.25rem);
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  .membership .membership-actions .action-btn i {
+    margin: 0;
+  }
+  .membership .membership-actions .action-btn span {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .membership .membership-actions .action-btn {
+    flex: 1 1 100%;
+  }
+  .membership .membership-actions .action-btn span {
+    display: inline;
+  }
+}
+
+.membership-card {
+  min-width: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */
