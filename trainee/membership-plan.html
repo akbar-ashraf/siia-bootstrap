@@ -1,261 +1,840 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SIIA - Memberships</title>
+    <meta name="description" content="SIIA Memberships Page" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Link stylesheet -->
     <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="bg-light p-5 min-vh-100">
-      <div class="d-flex gap-5">
-        <aside
-          class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-6"
-        >
-          <!-- Profile -->
-          <div class="mb-4 text-center">
-            <img
-              src="https://i.pravatar.cc/100?img=3"
-              alt="Profile"
-              class="w-50 rounded-circle mx-auto mb-3"
-            />
-            <h6 class="">Aster Seawalker</h6>
-            <p class="text-muted small">Admin</p>
-          </div>
-           <!-- Navigation -->
-          <nav
-            class="dashboardNav d-flex flex-column"
-            aria-label="Dashboard Navigation"
+    <!-- Skip to content link (important for keyboard users) -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div class="container-fluid px-3 px-md-5 py-3 py-md-5">
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
           >
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-bar-chart-line"></i>
-              Dashboard
-            </a>
-            <a href="courses.html" class="btn btn-primary">
-              <i class="bi bi-mortarboard"></i>
-              Courses
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-journal-bookmark"></i>
-              Programs
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-clipboard2-check"></i>
-              Assessments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-calendar4-week"></i>
-              Events
-            </a>
-            <a href="memberships.html" class="btn btn-primary active">
-              <i class="bi bi-card-checklist"></i>
-              Memberships
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-credit-card-2-front"></i>
-              Payments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-book"></i>
-              Library
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-patch-check"></i>
-              Certificates
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-box-arrow-right"></i>
-              Log Out
-            </a>
-          </nav>
-        </aside>
-        <div class="flex-grow-1 vstack gap-5">
-          <div class="card border-0 shadow-sm px-3 py-2">
-            <div
-              class="d-flex justify-content-between align-items-center px-3 py-2"
-            >
-              <!-- Search -->
-              <div class="position-relative">
-                <i
-                  class="bi bi-search position-absolute start-0 top-50 ms-4 translate-middle-y"
-                ></i>
-                <input
-                  type="text"
-                  class="form-control ps-11 rounded-pill"
-                  style="width: 360px"
-                  placeholder="Search anything"
-                />
-              </div>
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+                loading="lazy"
+                decoding="async"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
+            </div>
 
-              <!-- Icons -->
-              <div class="d-flex align-items-center gap-2 ms-3">
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-envelope"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-bell"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-question-circle"></i>
-                </button>
+            <!-- Navigation -->
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="false">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-primary active" aria-current="page">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+            aria-hidden="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary"
+                    aria-current="page"
+                  >
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-primary active"
+                    aria-current="page"
+                  >
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
               </div>
             </div>
           </div>
-          <div class="card border-0 shadow-sm p-6">
-            <!-- Header Search and Filter Section -->
-            <div class="row align-items-center mb-3">
-              <div class="col">
-                <h2>Memberships</h2>
-                <p class="mb-0">View and manage memberships</p>
-              </div>
 
-              <div class="col d-flex justify-content-md-end gap-3">
-                <div class="position-relative">
-                  <input
-                    style="width: 230px"
-                    type="text"
-                    class="form-control"
-                    placeholder="Search here..."
-                  />
-                  <span
-                    class="position-absolute top-50 end-0 translate-middle-y me-3"
+          <!-- Main Content Area -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                    aria-expanded="false"
                   >
-                    <i class="bi bi-search"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
 
-            <!-- Membership Available Plan-->
-            <div class="mt-6">
-              <section>
-                <h5 class="mb-5">Available Plans</h5>
-                <div class="card p-5">
-                  <div class="card-body d-flex flex-column gap-3">
-                    <div class="d-flex justify-content-between mb-3">
-                      <h5 class="card-title text-black">Bronze Membership</h5>
-                      <small class="text-muted">Corporate Members</small>
-                    </div>
-                    <div class="row g-3 mb-3">
-                      <div class="col-md-3">
-                        <div class="d-flex flex-row align-items-baseline gap-2">
-                          <h2>SAR 250</h2>
-                          <span class="text-muted">Subscription Fee</span>
-                        </div>
-                      </div>
-                      <div class="row col-md-9">
-                        <div class="col">
-                          <span>Membership Type</span>
-                          <p class="text-body-emphasis">Group Membership</p>
-                        </div>
-                        <div class="col">
-                          <span>Exclusive Courses</span>
-                          <p class="text-body-emphasis">Yes</p>
-                        </div>
-                        <div class="col">
-                          <span>Accessibility for</span>
-                          <p class="text-body-emphasis">10 Person only</p>
-                        </div>
+                  <!-- Search -->
+                  <div
+                    class="position-relative flex-grow-1 me-3 w-100 mw-100"
+                    role="search"
+                    aria-label="Global site search"
+                  >
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
 
-                        <div class="col">
-                          <span>Discount Allowed</span>
-                          <p class="text-body-emphasis">15% on all courses</p>
-                        </div>
-
-                        <div class="col">
-                          <span>Duration</span>
-                          <p class="text-body-emphasis">6 Months</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="g-5 w-100 mb-3">
-                      <span>Description</span>
-                      <textarea
-                        disabled
-                        class="form-control"
-                        id="textareaInput"
-                        rows="3"
-                      >
-This membership is best of individual persons.</textarea
-                      >
-                    </div>
-                    <h5 class="card-title text-black mb-3">
-                      Required Questions
-                    </h5>
-
-                    <form>
-                      <div class="row mb-3">
-                        <!-- Organization -->
-                        <div class="col-md-2">
-                          <label for="organization" class="form-label">
-                            <span class="text-danger">*</span>
-                            Organization</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="organization"
-                            placeholder="Company name here"
-                            required
-                          />
-                        </div>
-                        <!-- Required Course -->
-
-                        <div class="col-md-2">
-                          <label for="required-course" class="form-label">
-                            <span class="text-danger">*</span>Required
-                            Course</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="required-course"
-                            placeholder="Course here"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <!-- Upload CSV -->
-
-                        <div class="col-md-4 mt-3">
-                          <label for="upload-csv" class="form-label"
-                            >Employees list with Emails and national ID</label
-                          >
-                          <button
-                            type="button"
-                            class="btn btn-outline-primary w-100"
-                            id="upload-csv"
-                          >
-                            Upload CSV
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                    <div class="d-flex flex-row-reverse mt-4 text-end">
-                      <div class="col-md-2">
-                        <button
-                          type="submit"
-                          class="btn btn-primary px-14"
-                          data-bs-toggle="modal"
-                          data-bs-target="#applyMembershipModal"
-                        >
-                          Pay SAR 250
-                        </button>
-                      </div>
+                    <label for="globalSearch" class="visually-hidden"
+                      >Search</label
+                    >
+                    <input
+                      id="globalSearch"
+                      name="q"
+                      type="text"
+                      class="form-control ps-9 rounded-pill"
+                      placeholder="Search anything"
+                      aria-label="Search site"
+                      aria-describedby="globalSearchHelp"
+                    />
+                    <div id="globalSearchHelp" class="visually-hidden">
+                      Type and press Enter to search the site
                     </div>
                   </div>
                 </div>
-              </section>
-            </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown -->
+                  <div class="dropdown d-none d-sm-block">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                      aria-haspopup="true"
+                    >
+                      English
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      role="menu"
+                      aria-label="Language options"
+                    >
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitemradio"
+                          aria-checked="true"
+                          aria-pressed="true"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          data-lang="ar"
+                          role="menuitemradio"
+                          aria-checked="false"
+                          aria-pressed="false"
+                        >
+                          العربية
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <section
+              class="card border-0 shadow-sm p-6"
+              aria-labelledby="membershipsHeading"
+            >
+              <!-- Header Search and Filter Section -->
+              <div class="row align-items-center mb-3">
+                <div class="col">
+                  <h2 id="membershipsHeading">Memberships</h2>
+                  <p class="mb-0">View and manage memberships</p>
+                </div>
+
+                <div class="col d-flex justify-content-md-end gap-3">
+                  <form
+                    role="search"
+                    aria-label="Memberships search"
+                    class="d-flex align-items-center"
+                  >
+                    <div class="position-relative">
+                      <label for="membershipsSearch" class="visually-hidden"
+                        >Search memberships</label
+                      >
+                      <input
+                        id="membershipsSearch"
+                        name="q"
+                        type="text"
+                        class="form-control"
+                        placeholder="Search here..."
+                        aria-label="Search memberships"
+                        aria-describedby="membershipsSearchHelp"
+                        style="width: 230px"
+                      />
+                      <div id="membershipsSearchHelp" class="visually-hidden">
+                        Type a membership name and press Enter
+                      </div>
+                      <span
+                        class="position-absolute top-50 end-0 translate-middle-y me-3"
+                        aria-hidden="true"
+                      >
+                        <i class="bi bi-search"></i>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Membership Available Plan-->
+              <div class="mt-6">
+                <section aria-labelledby="availablePlansHeading">
+                  <h5 id="availablePlansHeading" class="mb-5">
+                    Available Plans
+                  </h5>
+                  <div class="card p-3 p-md-4 p-xl-5">
+                    <div class="card-body d-flex flex-column gap-3">
+                      <!-- Header -->
+                      <div
+                        class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 mb-3"
+                      >
+                        <h5 class="card-title text-black mb-0">
+                          Bronze Membership
+                        </h5>
+                        <small class="text-muted text-nowrap"
+                          >Corporate Members</small
+                        >
+                      </div>
+
+                      <!-- Price and Features Row -->
+                      <div class="row g-3 mb-3">
+                        <!-- Price Section -->
+                        <div class="col-12 col-md-4 col-xl-3">
+                          <div
+                            class="d-flex flex-row flex-xl-column align-items-baseline align-items-xl-start gap-2"
+                          >
+                            <h2 class="mb-0">SAR 250</h2>
+                            <span class="text-muted">Subscription Fee</span>
+                          </div>
+                        </div>
+
+                        <!-- Features Grid -->
+                        <div class="col-12 col-md-8 col-xl-9">
+                          <div
+                            class="row row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 g-3"
+                            role="list"
+                            aria-label="Membership features"
+                          >
+                            <div class="col" role="listitem">
+                              <span class="text-muted small d-block mb-1"
+                                >Membership Type</span
+                              >
+                              <p class="text-body-emphasis mb-0">
+                                Group Membership
+                              </p>
+                            </div>
+                            <div class="col" role="listitem">
+                              <span class="text-muted small d-block mb-1"
+                                >Exclusive Courses</span
+                              >
+                              <p class="text-body-emphasis mb-0">Yes</p>
+                            </div>
+                            <div class="col" role="listitem">
+                              <span class="text-muted small d-block mb-1"
+                                >Accessibility for</span
+                              >
+                              <p class="text-body-emphasis mb-0">
+                                10 Person only
+                              </p>
+                            </div>
+                            <div class="col" role="listitem">
+                              <span class="text-muted small d-block mb-1"
+                                >Discount Allowed</span
+                              >
+                              <p class="text-body-emphasis mb-0">
+                                15% on all courses
+                              </p>
+                            </div>
+                            <div class="col" role="listitem">
+                              <span class="text-muted small d-block mb-1"
+                                >Duration</span
+                              >
+                              <p class="text-body-emphasis mb-0">6 Months</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Description -->
+                      <div class="w-100 mb-3">
+                        <label for="textareaInput" class="form-label"
+                          >Description</label
+                        >
+                        <textarea
+                          disabled
+                          class="form-control"
+                          id="textareaInput"
+                          rows="3"
+                          aria-label="Membership description"
+                          aria-readonly="true"
+                        >
+This membership is best of individual persons.</textarea
+                        >
+                      </div>
+
+                      <!-- Required Questions Section -->
+                      <h5 class="card-title text-black mb-3">
+                        Required Questions
+                      </h5>
+
+                      <form
+                        id="membershipForm"
+                        aria-label="Apply for membership"
+                        novalidate
+                      >
+                        <!-- Organization and Required Course -->
+                        <div class="row g-3 mb-3">
+                          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                            <label for="organization" class="form-label">
+                              <span class="text-danger" aria-hidden="true"
+                                >*</span
+                              >
+                              <span class="visually-hidden">required</span>
+                              Organization
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="organization"
+                              name="organization"
+                              placeholder="Company name here"
+                              required
+                              aria-required="true"
+                              aria-describedby="organizationHelp organizationError"
+                            />
+                            <div id="organizationHelp" class="visually-hidden">
+                              Enter your company or organisation name
+                            </div>
+                            <div
+                              id="organizationError"
+                              class="visually-hidden"
+                              aria-live="polite"
+                            ></div>
+                          </div>
+
+                          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                            <label for="required-course" class="form-label">
+                              <span class="text-danger" aria-hidden="true"
+                                >*</span
+                              >
+                              <span class="visually-hidden">required</span>
+                              Required Course
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="required-course"
+                              name="requiredCourse"
+                              placeholder="Course here"
+                              required
+                              aria-required="true"
+                              aria-describedby="requiredCourseHelp requiredCourseError"
+                            />
+                            <div
+                              id="requiredCourseHelp"
+                              class="visually-hidden"
+                            >
+                              Enter the required course
+                            </div>
+                            <div
+                              id="requiredCourseError"
+                              class="visually-hidden"
+                              aria-live="polite"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <!-- Upload CSV -->
+                        <div class="row g-3 mb-3">
+                          <div class="col-12 col-sm-6 col-md-5 col-xl-4">
+                            <label for="upload-csv-input" class="form-label">
+                              Employees list with Emails and national ID
+                            </label>
+                            <input
+                              id="upload-csv-input"
+                              name="uploadCsv"
+                              type="file"
+                              accept=".csv"
+                              class="visually-hidden"
+                              aria-label="Upload employees list CSV"
+                            />
+                            <button
+                              type="button"
+                              class="btn btn-outline-primary w-100"
+                              id="upload-csv-btn"
+                              aria-controls="uploadCsvFilename"
+                              aria-describedby="uploadCsvHelp"
+                            >
+                              Upload CSV
+                            </button>
+                            <div id="uploadCsvHelp" class="visually-hidden">
+                              Upload a CSV file containing employee emails and
+                              national IDs. Accepted format: .csv
+                            </div>
+                            <div
+                              id="uploadCsvFilename"
+                              class="visually-hidden"
+                              aria-live="polite"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-flex flex-row-reverse mt-4">
+                          <div class="col-12 col-sm-auto col-md-3 col-xl-2">
+                            <button
+                              type="submit"
+                              class="btn btn-primary w-100 px-4"
+                              id="payButton"
+                              aria-label="Pay SAR 250"
+                              data-bs-toggle="modal"
+                              data-bs-target="#applyMembershipModal"
+                            >
+                              Pay SAR 250
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="applyMembershipModal"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        aria-labelledby="applyMembershipModalLabel"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5
+                                id="applyMembershipModalLabel"
+                                class="modal-title visually-hidden"
+                              >
+                                Apply for membership
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <p class="visually-hidden">
+                                Modal content placeholder.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <!-- ARIA live region used by small announcements only -->
+    <div
+      id="sreanounce"
+      aria-live="polite"
+      aria-atomic="true"
+      style="
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+      "
+    ></div>
+
+    <!-- Bootstrap JS (kept as in original) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Accessibility helpers (small, non-visual JS) -->
+    <script>
+      (function () {
+        // Manage aria-expanded + aria-hidden for offcanvas triggered by hamburger
+        const hamburger = document.getElementById("hamburgerBtn");
+        const mobileSidebar = document.getElementById("mobileSidebar");
+
+        if (hamburger && mobileSidebar) {
+          // Use bootstrap events to sync aria attributes
+          mobileSidebar.addEventListener("show.bs.offcanvas", function () {
+            hamburger.setAttribute("aria-expanded", "true");
+            mobileSidebar.setAttribute("aria-hidden", "false");
+            // focus first focusable element inside offcanvas
+            setTimeout(() => {
+              const focusable = mobileSidebar.querySelector(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+              );
+              if (focusable) focusable.focus();
+            }, 10);
+          });
+
+          mobileSidebar.addEventListener("hide.bs.offcanvas", function () {
+            hamburger.setAttribute("aria-expanded", "false");
+            mobileSidebar.setAttribute("aria-hidden", "true");
+            // return focus to hamburger
+            setTimeout(() => hamburger.focus(), 10);
+          });
+        }
+
+        // Upload CSV: forward visible button click to hidden file input and announce filename
+        const uploadBtn = document.getElementById("upload-csv-btn");
+        const uploadInput = document.getElementById("upload-csv-input");
+        const uploadFilename = document.getElementById("uploadCsvFilename");
+
+        if (uploadBtn && uploadInput) {
+          uploadBtn.addEventListener("click", () => uploadInput.click());
+          uploadInput.addEventListener("change", () => {
+            if (uploadInput.files && uploadInput.files.length) {
+              const name = uploadInput.files[0].name;
+              uploadFilename.textContent = "Selected file: " + name;
+            } else {
+              uploadFilename.textContent = "No file selected";
+            }
+          });
+        }
+
+        // Form validation: simple client-side validation to expose errors to screen readers
+        const form = document.getElementById("membershipForm");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            // Basic check for required fields
+            const requiredFields = form.querySelectorAll("[required]");
+            let valid = true;
+            requiredFields.forEach((field) => {
+              const errEl = document.getElementById(field.id + "Error");
+              if (field.value.trim() === "") {
+                valid = false;
+                if (errEl) {
+                  errEl.textContent = field.getAttribute("aria-label")
+                    ? field.getAttribute("aria-label") + " is required"
+                    : "This field is required";
+                  errEl.classList.remove("visually-hidden");
+                }
+                field.setAttribute("aria-invalid", "true");
+              } else {
+                if (errEl) {
+                  errEl.textContent = "";
+                  errEl.classList.add("visually-hidden");
+                }
+                field.removeAttribute("aria-invalid");
+              }
+            });
+            if (!valid) {
+              e.preventDefault();
+              // Announce error
+              const sr = document.getElementById("sreanounce");
+              if (sr) {
+                sr.textContent = "Please fill in all required fields.";
+                setTimeout(() => (sr.textContent = ""), 1000);
+              }
+            }
+          });
+        }
+
+        // Toggle buttons aria controls (if any exist elsewhere)
+        const toggleButtons = [
+          { btnId: "historyBtn", targetId: "historySection" },
+          { btnId: "digitalCardBtn", targetId: "digitalCardSection" },
+          { btnId: "getQuotationBtn", targetId: "quotationSection" },
+        ];
+
+        toggleButtons.forEach(({ btnId, targetId }) => {
+          const btn = document.getElementById(btnId);
+          const target = document.getElementById(targetId);
+          if (!btn || !target) return;
+          btn.addEventListener("click", function () {
+            const expanded = btn.getAttribute("aria-expanded") === "true";
+            btn.setAttribute("aria-expanded", String(!expanded));
+            target.hidden = expanded;
+            target.setAttribute("aria-hidden", String(expanded));
+            if (!expanded) {
+              const sr = document.getElementById("sreanounce");
+              if (sr) {
+                sr.textContent = btn.textContent.trim() + " opened";
+                setTimeout(() => (sr.textContent = ""), 700);
+              }
+            }
+          });
+        });
+
+        // Keyboard: ensure Skip link brings focus to meaningful element
+        const skipLink = document.querySelector(".skip-to-content");
+        if (skipLink) {
+          skipLink.addEventListener("click", function (e) {
+            const main = document.getElementById("main-content");
+            if (main) {
+              main.setAttribute("tabindex", "-1");
+              main.focus();
+            }
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
