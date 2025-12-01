@@ -1,175 +1,435 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SIIA</title>
+    <title>SIIA - Dashboard</title>
+    <meta
+      name="description"
+      content="Comprehensive dashboard for managing courses, programs, assessments, and training administration"
+    />
+
+    <!-- Link stylesheet -->
     <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="bg-light p-5 min-vh-100">
-      <div class="d-flex gap-5">
-        <aside
-          class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-6"
-        >
-          <!-- Profile -->
-          <div class="mb-4 text-center">
-            <img
-              src="https://i.pravatar.cc/100?img=3"
-              alt="Profile"
-              class="w-50 rounded-circle mx-auto mb-3"
-            />
-            <h6 class="">Aster Seawalker</h6>
-            <p class="text-muted small">Admin</p>
-          </div>
-           <!-- Navigation -->
-          <nav
-            class="dashboardNav d-flex flex-column"
-            aria-label="Dashboard Navigation"
+    <!-- Skip to content link (important for keyboard users) -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div class="container-fluid px-3 px-md-5 py-3 py-md-5">
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
           >
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-bar-chart-line"></i>
-              Dashboard
-            </a>
-            <a href="courses.html" class="btn btn-primary active">
-              <i class="bi bi-mortarboard"></i>
-              Courses
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-journal-bookmark"></i>
-              Programs
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-clipboard2-check"></i>
-              Assessments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-calendar4-week"></i>
-              Events
-            </a>
-            <a href="memberships.html" class="btn btn-primary">
-              <i class="bi bi-card-checklist"></i>
-              Memberships
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-credit-card-2-front"></i>
-              Payments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-book"></i>
-              Library
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-patch-check"></i>
-              Certificates
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-box-arrow-right"></i>
-              Log Out
-            </a>
-          </nav>
-        </aside>
-        <div class="vstack gap-5">
-          <div class="card border-0 shadow-sm px-3 py-2">
-            <div
-              class="d-flex justify-content-between align-items-center px-3 py-2"
-            >
-              <!-- Search -->
-              <div class="position-relative">
-                <i
-                  class="bi bi-search position-absolute start-0 top-50 ms-4 translate-middle-y"
-                ></i>
-                <input
-                  type="text"
-                  class="form-control ps-11 rounded-pill"
-                  style="width: 360px"
-                  placeholder="Search anything"
-                />
-              </div>
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
+            </div>
 
-              <!-- Icons -->
-              <div class="d-flex align-items-center gap-2 ms-3">
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-envelope"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-bell"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-question-circle"></i>
-                </button>
+            <!-- Navigation -->
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
               </div>
             </div>
           </div>
-          <div class="card border-0 shadow-sm p-6">
-            <!-- Header Search and Filter Section -->
-            <div class="row align-items-center mb-3">
-              <div class="col">
-                <h2>Courses</h2>
-                <p class="mb-0">View and manage your courses</p>
-              </div>
 
-              <div class="col d-flex justify-content-md-end gap-3">
-                <div class="position-relative">
-                  <input
-                    style="width: 230px"
-                    type="text"
-                    class="form-control"
-                    placeholder="Search here..."
-                  />
-                  <span
-                    class="position-absolute top-50 end-0 translate-middle-y me-3"
-                  >
-                    <i class="bi bi-search"></i>
-                  </span>
-                </div>
-                <button class="btn btn-outline-primary" id="filterBtn">
-                  <i class="bi bi-funnel"></i> Apply Filters
-                </button>
-              </div>
-            </div>
-            <!-- Tabs -->
-            <ul
-              class="nav nav-pills mb-4 border rounded-3 p-2 bg-light d-inline-flex"
-              style="width: max-content"
-              id="myTab"
+          <!-- Main Content Area -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
             >
-              <li class="nav-item">
-                <button
-                  class="nav-link"
-                  id="enrolled-tab"
-                  data-bs-toggle="pill"
-                  type="button"
-                  role="tab"
-                >
-                  Enrolled Courses
-                </button>
-              </li>
-              <li class="nav-item">
-                <button
-                  class="nav-link btn-sm active"
-                  id="available-courses-tab"
-                  data-bs-toggle="pill"
-                  type="button"
-                  role="tab"
-                >
-                  Available for Enrollment
-                </button>
-              </li>
-            </ul>
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
 
-            <!-- Filter Form -->
-            <div id="filterForm" class="py-5 d-none">
-              <div class="row g-3">
-                <!-- Schedule Days -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Schedule Days</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <!-- Search -->
+                  <div class="position-relative flex-grow-1 me-3 w-100 mw-100">
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <label for="globalSearch" class="visually-hidden"
+                      >Search</label
+                    >
+                    <input
+                      id="globalSearch"
+                      type="text"
+                      class="form-control ps-9 rounded-pill"
+                      placeholder="Search anything"
+                      aria-label="Search site"
+                      aria-describedby="globalSearchHelp"
+                    />
+                    <div id="globalSearchHelp" class="visually-hidden">
+                      Type and press Enter to search the site
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown -->
+                  <div class="dropdown d-none d-sm-block">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                    >
+                      English
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitem"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          data-lang="ar"
+                          role="menuitem"
+                        >
+                          العربية
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Courses Card -->
+            <section
+              class="card border-0 shadow-sm p-3 p-md-4 p-lg-6"
+              role="region"
+              aria-labelledby="coursesHeading"
+            >
+              <div class="row align-items-center mb-6 g-3">
+                <div class="col-12 col-lg-6">
+                  <h2 id="coursesHeading" class="h2 h-md-3 h-lg-2 mb-2">
+                    Courses
+                  </h2>
+                  <p class="mb-0">View and manage your courses</p>
+                </div>
+
+                <div
+                  class="col-12 col-lg-6 d-flex flex-column flex-sm-row justify-content-lg-end gap-2"
+                >
+                  <div class="position-relative flex-grow-1 flex-sm-grow-0">
+                    <label for="courseSearch" class="visually-hidden"
+                      >Search courses</label
+                    >
+                    <input
+                      id="courseSearch"
+                      type="text"
+                      class="form-control"
+                      placeholder="Search here..."
+                      aria-label="Search courses"
+                      style="min-width: 200px"
+                      aria-describedby="courseSearchHelp"
+                    />
+                    <div id="courseSearchHelp" class="visually-hidden">
+                      Search for courses by title or code
+                    </div>
+                    <span
+                      class="position-absolute top-50 end-0 translate-middle-y me-3"
+                      aria-hidden="true"
+                    >
+                      <i class="bi bi-search" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <button
+                    class="btn btn-outline-primary"
+                    id="filterBtn"
+                    aria-expanded="false"
+                    aria-controls="filterForm"
+                  >
+                    <i class="bi bi-funnel" aria-hidden="true"></i>
+                    <span class="d-none d-sm-inline">Apply</span> Filters
+                  </button>
+                </div>
+              </div>
+
+              <!-- Filter Form -->
+              <form
+                id="filterForm"
+                class="py-3 py-md-5 d-none"
+                role="region"
+                aria-label="Filter options"
+              >
+                <div class="row g-3">
+                  <!-- All selects keep same options but include aria-labels and associated labels -->
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="scheduleDays"
+                      >Schedule Days</label
+                    >
+                    <select
+                      id="scheduleDays"
+                      class="form-select"
+                      aria-label="Select schedule days"
+                    >
                       <option selected>Choose Schedule Days</option>
                       <option>Monday, Wednesday</option>
                       <option>Tuesday, Thursday</option>
@@ -177,250 +437,758 @@
                       <option>Weekend Only</option>
                     </select>
                   </div>
-                </div>
 
-                <!-- Schedule Time -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Schedule Time</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="scheduleTime"
+                      >Schedule Time</label
+                    >
+                    <select
+                      id="scheduleTime"
+                      class="form-select"
+                      aria-label="Select schedule time"
+                    >
                       <option selected>9:00 AM To 9:30 AM</option>
                       <option>10:00 AM To 10:30 AM</option>
                       <option>11:00 AM To 11:30 AM</option>
                       <option>1:00 PM To 1:30 PM</option>
                     </select>
                   </div>
-                </div>
 
-                <!-- Duration -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Duration</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="durationSelect"
+                      >Duration</label
+                    >
+                    <select
+                      id="durationSelect"
+                      class="form-select"
+                      aria-label="Select duration"
+                    >
                       <option selected>4</option>
                       <option>6</option>
                       <option>8</option>
                       <option>12</option>
                     </select>
                   </div>
-                </div>
 
-                <!-- Location -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Location</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="locationSelect"
+                      >Location</label
+                    >
+                    <select
+                      id="locationSelect"
+                      class="form-select"
+                      aria-label="Select location"
+                    >
                       <option selected>Main campus class a</option>
                       <option>Main campus class b</option>
                       <option>City campus</option>
                       <option>Virtual classroom</option>
                     </select>
                   </div>
-                </div>
 
-                <!-- Trainer Assignment -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Trainer Assignment</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="trainerSelect"
+                      >Trainer Assignment</label
+                    >
+                    <select
+                      id="trainerSelect"
+                      class="form-select"
+                      aria-label="Select trainer"
+                    >
                       <option selected>Ahmed</option>
                       <option>Sarah</option>
                       <option>John</option>
                       <option>Emily</option>
                     </select>
                   </div>
-                </div>
 
-                <!-- Format -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Format</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="formatSelect">Format</label>
+                    <select
+                      id="formatSelect"
+                      class="form-select"
+                      aria-label="Select course format"
+                    >
                       <option selected>Online</option>
                       <option>In-person</option>
                       <option>Hybrid</option>
                     </select>
                   </div>
-                </div>
 
-                <!-- Type -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Type</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="typeSelect">Type</label>
+                    <select
+                      id="typeSelect"
+                      class="form-select"
+                      aria-label="Select course type"
+                    >
                       <option selected>Soft Skills</option>
                       <option>Technical</option>
                       <option>Leadership</option>
                       <option>Project Management</option>
                     </select>
                   </div>
-                </div>
 
-                <!-- Course Status -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Course Status</label>
-                  <div class="input-group">
-                    <select class="form-select">
+                  <div class="col-6 col-sm-4 col-lg-3">
+                    <label class="form-label" for="statusSelect"
+                      >Course Status</label
+                    >
+                    <select
+                      id="statusSelect"
+                      class="form-select"
+                      aria-label="Select course status"
+                    >
                       <option selected>Draft</option>
                       <option>Published</option>
                       <option>Archived</option>
                     </select>
                   </div>
                 </div>
-              </div>
 
-              <!-- Button row -->
-              <div class="row mt-4">
-                <div class="col-12 d-flex justify-content-end gap-3">
-                  <button class="btn btn-outline-secondary">
-                    Reset Filters
-                  </button>
-                  <button class="btn btn-primary">
-                    <i class="bi bi-funnel me-2"></i>Apply Filters
-                  </button>
+                <div class="row mt-4">
+                  <div
+                    class="col-12 d-flex flex-column flex-sm-row justify-content-end gap-2"
+                  >
+                    <button
+                      type="reset"
+                      class="btn btn-outline-secondary"
+                      aria-label="Reset filters"
+                    >
+                      Reset Filters
+                    </button>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      aria-label="Apply filters"
+                    >
+                      <i class="bi bi-funnel me-2" aria-hidden="true"></i>Apply
+                      Filters
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </form>
 
-            <div class="card p-0 d-flex flex-column">
-              <!-- Header Section (Top 50% height of card) -->
-              <div
-                class="card-header bg-dark text-white py-6 px-11 position-relative d-flex flex-column justify-content-between"
-                style="
-                  background: linear-gradient(
-                      rgba(0, 0, 0, 0.6),
-                      rgba(0, 0, 0, 0.6)
-                    ),
-                    url('../images/img-test-bg.png');
-                  background-size: cover;
-                  background-position: center;
-                  flex: 1 1 0;
-                  min-height: 400px;
-                "
+              <!-- Tabs -->
+              <ul
+                class="nav nav-tabs custom-tabs"
+                id="courseTabs"
+                role="tablist"
+                aria-label="Course Navigation Tabs"
               >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="enrolled-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#enrolled-section"
+                    type="button"
+                    role="tab"
+                    aria-controls="enrolled-section"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    Enrolled Courses
+                  </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="available-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#available-section"
+                    type="button"
+                    role="tab"
+                    aria-controls="available-section"
+                    aria-selected="false"
+                    tabindex="-1"
+                  >
+                    Available for Enrollment
+                  </button>
+                </li>
+              </ul>
+
+              <!-- Tab Panel Container -->
+              <div class="tab-content">
+                <!-- Enrolled -->
                 <div
-                  class="d-flex justify-content-between align-items-end h-100"
+                  class="tab-pane fade show active"
+                  id="enrolled-section"
+                  role="tabpanel"
+                  aria-labelledby="enrolled-tab"
                 >
-                  <div class="d-flex align-items-end gap-3">
-                    <img
-                      src="../images/ic-profile.svg"
-                      alt="Trainer"
-                      width="150"
-                      height="150"
-                    />
-                    <div class="d-flex flex-column">
-                      <h3 class="fw-semibold mb-1 text-white">Trainer name</h3>
-                      <h4 class="small opacity-75 text-white">Trainer</h4>
+                  <div class="d-flex flex-column gap-4 mt-4">
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <!-- Book Image -->
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <!-- Course Details -->
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <!-- Book Image -->
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <!-- Course Details -->
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <!-- Book Image -->
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <!-- Course Details -->
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <!-- Book Image -->
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <!-- Course Details -->
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <h2 class="text-white">SAR 150</h2>
                 </div>
-              </div>
 
-              <!-- Body Section (Bottom 50% height of card) -->
-              <div
-                class="card-body p-5 d-flex flex-column justify-content-between"
-              >
-                <div class="d-flex justify-content-between mb-4">
-                  <div>
-                    <h3 class="fs-5 fw-semibold text-black mb-2">
-                      Essentials of Internal Auditing- CIA1
-                    </h3>
-                    <p class="mb-3 text-black small">
-                      7 lectures, 3 quizzes and 3 assessments are deliverable.
-                    </p>
-                    <p class="mb-3 text-black small">
-                      Starts: 12 April, Duration: 3 Months, Registrations: Open
-                    </p>
+                <!-- Available -->
+                <div
+                  class="tab-pane fade"
+                  id="available-section"
+                  role="tabpanel"
+                  aria-labelledby="available-tab"
+                >
+                  <div class="d-flex flex-column gap-4 mt-4">
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <div
+                              class="d-flex justify-content-between align-items-start mb-3"
+                            >
+                              <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                              <!-- Enroll (Desktop) -->
+                              <button
+                                class="btn btn-primary d-none d-lg-block px-4"
+                                aria-label="Enroll in PRC CIA course"
+                              >
+                                + Enroll Course
+                              </button>
+                            </div>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Enroll (Mobile) -->
+                        <div class="col-12 d-lg-none">
+                          <button
+                            class="btn btn-primary w-100 py-2"
+                            aria-label="Enroll in PRC CIA course"
+                          >
+                            + Enroll Course
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <div
+                              class="d-flex justify-content-between align-items-start mb-3"
+                            >
+                              <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                              <!-- Enroll (Desktop) -->
+                              <button
+                                class="btn btn-primary d-none d-lg-block px-4"
+                                aria-label="Enroll in PRC CIA course"
+                              >
+                                + Enroll Course
+                              </button>
+                            </div>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Enroll (Mobile) -->
+                        <div class="col-12 d-lg-none">
+                          <button
+                            class="btn btn-primary w-100 py-2"
+                            aria-label="Enroll in PRC CIA course"
+                          >
+                            + Enroll Course
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <div
+                              class="d-flex justify-content-between align-items-start mb-3"
+                            >
+                              <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                              <!-- Enroll (Desktop) -->
+                              <button
+                                class="btn btn-primary d-none d-lg-block px-4"
+                                aria-label="Enroll in PRC CIA course"
+                              >
+                                + Enroll Course
+                              </button>
+                            </div>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Enroll (Mobile) -->
+                        <div class="col-12 d-lg-none">
+                          <button
+                            class="btn btn-primary w-100 py-2"
+                            aria-label="Enroll in PRC CIA course"
+                          >
+                            + Enroll Course
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white rounded-3 shadow-none border p-3 p-md-4 mx-auto"
+                    >
+                      <div class="row g-6">
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+                          <img
+                            src="../images/ic-book.svg"
+                            alt="PRC CIA Book Cover"
+                            class="w-100"
+                          />
+                        </div>
+
+                        <div class="col-12 col-sm-7 col-md-8 col-lg-10">
+                          <div class="d-flex flex-column h-100">
+                            <div
+                              class="d-flex justify-content-between align-items-start mb-3"
+                            >
+                              <h5 class="fw-bold mb-0">PRC CIA</h5>
+
+                              <!-- Enroll (Desktop) -->
+                              <button
+                                class="btn btn-primary d-none d-lg-block px-4"
+                                aria-label="Enroll in PRC CIA course"
+                              >
+                                + Enroll Course
+                              </button>
+                            </div>
+
+                            <p class="flex-grow-1">
+                              Dive into the fascinating world of espionage with
+                              the CIA PRC Book. This guide explores the Central
+                              Intelligence Agency's operations and strategies in
+                              the People's Republic of China. Ideal for spy
+                              literature fans and those interested in
+                              international relations, it offers a compelling
+                              mix of facts and stories that reveal the secrets
+                              of covert operations.
+                            </p>
+
+                            <div class="mt-auto">
+                              <span class="fs-6">SAR</span>
+                              <span class="fw-semibold fs-4 ms-1">150.00</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Enroll (Mobile) -->
+                        <div class="col-12 d-lg-none">
+                          <button
+                            class="btn btn-primary w-100 py-2"
+                            aria-label="Enroll in PRC CIA course"
+                          >
+                            + Enroll Course
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <button
-                    class="btn btn-primary px-10"
-                    style="height: max-content"
-                  >
-                    Enroll Course
-                  </button>
-                </div>
-                <div>
-                  <p class="text-black">
-                    <span class="fw-bold">Introduction:</span> Part 2 focuses on
-                    the practical execution of internal audit engagements. It
-                    covers planning, fieldwork, supervision, evidence gathering,
-                    evaluation, and communication of results. Additionally, this
-                    section delves into the importance of risk assessment in the
-                    audit process, ensuring that auditors can identify and
-                    prioritize areas of concern. It also emphasizes the need for
-                    effective teamwork and collaboration among audit staff to
-                    enhance the quality of findings. Furthermore, we will
-                    explore best practices for documenting audit procedures and
-                    maintaining transparency throughout the engagement, which
-                    are crucial for building trust with stakeholders.
-                  </p>
-
-                  <p class="text-black">
-                    <span class="fw-bold">Introduction:</span> Part 2 focuses on
-                    the practical execution of internal audit engagements. It
-                    covers planning, fieldwork, supervision, evidence gathering,
-                    evaluation, and communication of results. Additionally, this
-                    section delves into the importance of risk assessment in the
-                    audit process, ensuring that auditors can identify and
-                    prioritize areas of concern. It also emphasizes the need for
-                    effective teamwork and collaboration among audit staff to
-                    enhance the quality of findings. Furthermore, we will
-                    explore best practices for documenting audit procedures and
-                    maintaining transparency throughout the engagement, which
-                    are crucial for building trust with stakeholders.
-                  </p>
-                  <p class="text-black">
-                    <span class="fw-bold">Introduction:</span> Part 2 focuses on
-                    the practical execution of internal audit engagements. It
-                    covers planning, fieldwork, supervision, evidence gathering,
-                    evaluation, and communication of results. Additionally, this
-                    section delves into the importance of risk assessment in the
-                    audit process, ensuring that auditors can identify and
-                    prioritize areas of concern. It also emphasizes the need for
-                    effective teamwork and collaboration among audit staff to
-                    enhance the quality of findings. Furthermore, we will
-                    explore best practices for documenting audit procedures and
-                    maintaining transparency throughout the engagement, which
-                    are crucial for building trust with stakeholders.
-                  </p>
-                  <p class="text-black">
-                    <span class="fw-bold">Introduction:</span> Part 2 focuses on
-                    the practical execution of internal audit engagements. It
-                    covers planning, fieldwork, supervision, evidence gathering,
-                    evaluation, and communication of results. Additionally, this
-                    section delves into the importance of risk assessment in the
-                    audit process, ensuring that auditors can identify and
-                    prioritize areas of concern. It also emphasizes the need for
-                    effective teamwork and collaboration among audit staff to
-                    enhance the quality of findings. Furthermore, we will
-                    explore best practices for documenting audit procedures and
-                    maintaining transparency throughout the engagement, which
-                    are crucial for building trust with stakeholders.
-                  </p>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="visually-hidden" aria-label="Back to top">
+      Top
+    </button>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript for Filter Toggle -->
     <script>
-      // Toggle filter form visibility
+      // ====== Accessibility & DGA-focused JS Enhancements ======
+
+      // 1) Make decorative icons aria-hidden when they are purely presentational
+      document.querySelectorAll(".bi").forEach(function (icon) {
+        // If the icon is inside an element that already has visible text OR it's inside a button/link with an aria-label, mark it decorative
+        var parent = icon.parentElement;
+        var hasVisibleText =
+          parent &&
+          parent.textContent &&
+          parent.textContent.trim().length > 0 &&
+          parent.querySelector(".bi") &&
+          parent.querySelector(".bi").textContent.trim().length === 0;
+        if (
+          parent &&
+          (parent.getAttribute("aria-label") || parent.querySelector("span"))
+        ) {
+          icon.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      // 2) Filter toggle - update live region to notify screen reader users
       document
         .getElementById("filterBtn")
         .addEventListener("click", function () {
           const filterForm = document.getElementById("filterForm");
-          if (filterForm.classList.contains("d-block")) {
-            filterForm.classList.remove("d-block");
-            filterForm.classList.add("d-none");
-          } else {
-            filterForm.classList.remove("d-none");
-            filterForm.classList.add("d-block");
+          filterForm.classList.toggle("d-none");
+          filterForm.classList.toggle("d-block");
+
+          const expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", !expanded);
+
+          // announce
+          const status = document.getElementById("resultsStatus");
+          status.textContent = filterForm.classList.contains("d-none")
+            ? "Filters closed"
+            : "Filters opened";
+        });
+
+      // 3) Make offcanvas focusable and trap focus when opened + return focus on close
+      const offcanvasEl = document.getElementById("mobileSidebar");
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      if (offcanvasEl) {
+        offcanvasEl.addEventListener("shown.bs.offcanvas", function () {
+          // focus first focusable child
+          const focusable = offcanvasEl.querySelector("button, a, [tabindex]");
+          if (focusable) focusable.focus();
+        });
+
+        offcanvasEl.addEventListener("hidden.bs.offcanvas", function () {
+          // return focus to hamburger
+          if (hamburgerBtn) hamburgerBtn.focus();
+        });
+
+        // allow ESC key to close offcanvas (Bootstrap typically does this, but ensure it)
+        offcanvasEl.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            var bs = bootstrap.Offcanvas.getInstance(offcanvasEl);
+            if (bs) bs.hide();
           }
         });
+      }
+
+      // 4) Basic validation and accessible error handling for showCount
+      const showCount = document.getElementById("showCount");
+      const showCountError = document.getElementById("showCountError");
+      function validateShowCount() {
+        const val = showCount.value.trim();
+        if (!/^[0-9]+$/.test(val) || Number(val) < 1) {
+          showCountError.textContent = "Please enter a valid positive number";
+          showCountError.classList.remove("visually-hidden");
+          showCount.setAttribute("aria-invalid", "true");
+          return false;
+        }
+        showCountError.textContent = "";
+        showCountError.classList.add("visually-hidden");
+        showCount.removeAttribute("aria-invalid");
+        return true;
+      }
+      showCount.addEventListener("input", validateShowCount);
+
+      // 5) Update live region after table updates (placeholder example)
+      function announceTableCount(count) {
+        const status = document.getElementById("resultsStatus");
+        status.textContent = count + " results displayed.";
+      }
+
+      // Example: announce initial table rows count
+      announceTableCount(document.querySelectorAll("table tbody tr").length);
+
+      // 6) Back-to-top behavior + visible on scroll
+      const backToTop = document.getElementById("backToTop");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          backToTop.style.display = "inline-block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+      backToTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        // announce
+        const status = document.getElementById("resultsStatus");
+        status.textContent = "Returned to top of page.";
+      });
+
+      document.querySelectorAll("[data-lang]").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const lang = btn.getAttribute("data-lang");
+          document.documentElement.lang = lang;
+
+          if (lang === "ar") {
+            document.documentElement.dir = "rtl";
+            document.getElementById("bootstrap-style").href =
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
+            document.getElementById("langButton").textContent = "العربية";
+          } else {
+            document.documentElement.dir = "ltr";
+            document.getElementById("bootstrap-style").href =
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+            document.getElementById("langButton").textContent = "English";
+          }
+        })
+      );
+
+      // 9) Improve keyboard navigation for pagination links
+      document
+        .querySelectorAll(".pagination a.page-link")
+        .forEach(function (link) {
+          link.setAttribute("role", "button");
+          link.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              this.click();
+            }
+          });
+        });
+
+      // 10) Add aria-sort toggle example if future sorting implemented
+      document.querySelectorAll('th[scope="col"]').forEach(function (th) {
+        th.setAttribute("tabindex", "0");
+        th.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            // simple toggle example
+            var current = th.getAttribute("aria-sort") || "none";
+            var next =
+              current === "none"
+                ? "ascending"
+                : current === "ascending"
+                ? "descending"
+                : "none";
+            th.setAttribute("aria-sort", next);
+            announceTableCount(
+              document.querySelectorAll("table tbody tr").length + " (sorted)"
+            );
+          }
+        });
+      });
+
+      // Small safeguard: ensure links with only visual text have accessible names
+      document.querySelectorAll("a").forEach(function (a) {
+        if (
+          !a.getAttribute("aria-label") &&
+          a.textContent.trim().length === 0
+        ) {
+          a.setAttribute("aria-label", "Link");
+        }
+      });
     </script>
   </body>
 </html>

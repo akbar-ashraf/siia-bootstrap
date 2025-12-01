@@ -19465,12 +19465,82 @@ tr[tabindex] {
   cursor: pointer;
 }
 
-.membership-card .membership-actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.5rem;
+.membership {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 1rem;
 }
-.membership-card .membership-actions > * {
-  width: 100%;
+@media (max-width: 1400px) {
+  .membership {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .membership .membership-actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .membership .membership-actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .membership .membership-actions .search-input {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .membership .membership-actions .action-btn {
+    flex: 1 1 calc(33.333% - 0.35rem);
+    min-width: 0;
+  }
+}
+@media (max-width: 576px) {
+  .membership .membership-actions .action-btn {
+    flex: 1 1 calc(50% - 0.25rem);
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  .membership .membership-actions .action-btn i {
+    margin: 0;
+  }
+  .membership .membership-actions .action-btn span {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .membership .membership-actions .action-btn {
+    flex: 1 1 100%;
+  }
+  .membership .membership-actions .action-btn span {
+    display: inline;
+  }
+}
+
+.membership-card {
+  min-width: 300px;
+}
+
+.custom-tabs {
+  border-bottom: 3px solid #dee2e6 !important;
+}
+
+.custom-tabs .nav-link {
+  padding: 15px 20px;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  transition: all 0.3s ease;
+  margin-bottom: -2px !important;
+  color: var(--bs-dark) !important;
+}
+
+.custom-tabs .nav-link.active {
+  border-bottom: 3px solid var(--bs-primary) !important;
+  color: black !important;
+  font-weight: 700;
+}
+
+.tab-content {
+  padding-top: 20px;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

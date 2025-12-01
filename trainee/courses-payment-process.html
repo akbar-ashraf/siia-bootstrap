@@ -1,225 +1,527 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SIIA - Payment Process</title>
+
+    <meta name="description" content="SIIA Trainee Payment Process Page" />
+
+    <!-- Bootstrap Core (Will be swapped for RTL on language change) -->
+    <link
+      id="bootstrap-style"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main Styles -->
     <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div class="bg-light p-5 min-vh-100">
-      <div class="d-flex gap-5">
-        <aside
-          class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-6"
-        >
-          <!-- Profile -->
-          <div class="mb-4 text-center">
-            <img
-              src="https://i.pravatar.cc/100?img=3"
-              alt="Profile"
-              class="w-50 rounded-circle mx-auto mb-3"
-            />
-            <h6 class="">Aster Seawalker</h6>
-            <p class="text-muted small">Admin</p>
-          </div>
-           <!-- Navigation -->
-          <nav
-            class="dashboardNav d-flex flex-column"
-            aria-label="Dashboard Navigation"
-          >
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-bar-chart-line"></i>
-              Dashboard
-            </a>
-            <a href="courses.html" class="btn btn-primary active">
-              <i class="bi bi-mortarboard"></i>
-              Courses
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-journal-bookmark"></i>
-              Programs
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-clipboard2-check"></i>
-              Assessments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-calendar4-week"></i>
-              Events
-            </a>
-            <a href="memberships.html" class="btn btn-primary">
-              <i class="bi bi-card-checklist"></i>
-              Memberships
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-credit-card-2-front"></i>
-              Payments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-book"></i>
-              Library
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-patch-check"></i>
-              Certificates
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-box-arrow-right"></i>
-              Log Out
-            </a>
-          </nav>
-        </aside>
-        <div class="flex-grow-1 vstack gap-5">
-          <div class="card border-0 shadow-sm px-3 py-2">
-            <div
-              class="d-flex justify-content-between align-items-center px-3 py-2"
-            >
-              <!-- Search -->
-              <div class="position-relative">
-                <i
-                  class="bi bi-search position-absolute start-0 top-50 ms-4 translate-middle-y"
-                ></i>
-                <input
-                  type="text"
-                  class="form-control ps-11 rounded-pill"
-                  style="width: 360px"
-                  placeholder="Search anything"
-                />
-              </div>
 
-              <!-- Icons -->
-              <div class="d-flex align-items-center gap-2 ms-3">
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-envelope"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-bell"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-question-circle"></i>
-                </button>
+  <body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Hidden live region for announcements -->
+    <div aria-live="polite" class="visually-hidden" id="pageStatus"></div>
+
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container-fluid px-3 px-md-5 py-3 py-md-5">
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5">
+          <!-- SIDEBAR -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
+          >
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile photo"
+                class="w-50 rounded-circle mx-auto mb-3"
+              />
+              <h2 class="h6">Aster Seawalker</h2>
+              <p class="text-muted small">Admin</p>
+            </div>
+
+            <nav class="dashboardNav d-flex flex-column">
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-person"></i><span>Admins</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-person-check"></i><span>Trainers</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-people"></i><span>Trainee & Students</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-pie-chart"></i><span>Reports</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-credit-card-2-front"></i><span>Payments</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-book"></i><span>Library</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-patch-check"></i><span>Certificates</span>
+              </a>
+              <a class="btn btn-outline-primary" href="#">
+                <i class="bi bi-box-arrow-right"></i><span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
               </div>
             </div>
           </div>
-          <div class="card border-0 shadow-sm p-6">
-            <div class="container py-5">
-              <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6">
-                  <!-- Header -->
-                  <h2 class="text-center mb-5 fw-bold text-dark">
-                    Payment Process
-                  </h2>
+          <!-- MAIN CONTENT -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
 
-                  <!-- Course Items -->
-                  <div class="mb-4">
-                    <!-- First Course -->
-                    <div class="d-flex align-items-center mb-4 p-3">
-                      <img
-                        src="../images/ic-course.svg"
-                        alt="Description"
-                        class="img-fluid"
-                      />
-                      <div class="d-flex flex-column flex-grow-1">
-                        <div
-                          class="d-flex justify-content-between ms-3 text-emphasis"
-                        >
-                          <span>Course name</span>
-                          <span class="text-emphasis">SAR 250.00</span>
-                        </div>
-                        <small class="text-end text-muted"
-                          >One Time payment</small
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Second Course -->
-                    <div class="d-flex align-items-center mb-4 p-3">
-                      <img
-                        src="../images/ic-course.svg"
-                        alt="Description"
-                        class="img-fluid"
-                      />
-                      <div class="d-flex flex-column flex-grow-1">
-                        <div
-                          class="d-flex justify-content-between ms-3 text-emphasis"
-                        >
-                          <span>Course name</span>
-                          <span class="text-emphasis">SAR 50.00</span>
-                        </div>
-                        <small class="text-end text-muted"
-                          >Subscription for 6 months
-                        </small>
-                      </div>
+                  <!-- Search -->
+                  <div class="position-relative flex-grow-1 me-3 w-100 mw-100">
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <label for="globalSearch" class="visually-hidden"
+                      >Search</label
+                    >
+                    <input
+                      id="globalSearch"
+                      type="text"
+                      class="form-control ps-9 rounded-pill"
+                      placeholder="Search anything"
+                      aria-label="Search site"
+                      aria-describedby="globalSearchHelp"
+                    />
+                    <div id="globalSearchHelp" class="visually-hidden">
+                      Type and press Enter to search the site
                     </div>
                   </div>
+                </div>
 
-                  <!-- Order Summary -->
-                  <div class="bg-white rounded p-4">
-                    <h5 class="fw-bold mb-4 text-emphasis">Order Summary</h5>
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
 
-                    <!-- Gift Card / Discount Code -->
-                    <div class="mb-4">
-                      <label class="form-label text-dark mb-2"
-                        >Gift Card / Discount code</label
-                      >
-                      <div class="row g-5">
-                        <div class="col">
-                          <input
-                            type="text"
-                            class="form-control bg-light border-0 py-2"
-                          />
-                        </div>
-                        <div class="col-auto">
-                          <button
-                            class="btn btn-outline-primary px-4 py-2"
-                            type="button"
-                          >
-                            Apply
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Subtotal -->
-                    <div class="d-flex justify-content-between py-2">
-                      <h6 class="text-emphasis">Subtotal</h6>
-                      <span class="text-emphasis">SAR 300.00</span>
-                    </div>
-                    <hr/>
-
-                    <!-- Sales Tax -->
-                    <div class="d-flex justify-content-between py-2">
-                      <h6 class="text-emphasis">Sales tax (6.5%)</h6>
-                      <span class="text-emphasis">SAR 20.00</span>
-                    </div>
-
-                    <hr/>
-
-                    <!-- Total Due -->
-                    <div class="d-flex justify-content-between py-2 mb-4">
-                      <h6 class="text-emphasis">Total due</h6>
-                      <span class="fw-bold text-primary mb-0"
-                        >SAR 320.00</span
-                      >
-                    </div>
-
-                    <!-- Pay Button -->
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
                     <button
-                      class="btn btn-primary w-100 py-3"
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
                     >
-                      Pay SAR 320.00
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
                     </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown -->
+                  <div class="dropdown d-none d-sm-block">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                    >
+                      English
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitem"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          data-lang="ar"
+                          role="menuitem"
+                        >
+                          العربية
+                        </button>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </div>
+            </header>
+
+            <!-- LANGUAGE + RTL SCRIPT -->
+            <script>
+              document.querySelectorAll("[data-lang]").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                  const lang = btn.dataset.lang;
+
+                  // Update button text
+                  document.getElementById("langButton").textContent =
+                    lang === "ar" ? "العربية" : "English";
+
+                  // Set lang and direction
+                  document.documentElement.lang = lang;
+                  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+                });
+              });
+            </script>
+
+            <!-- PAYMENT CARD -->
+            <section
+              class="card border-0 shadow-sm p-4"
+              role="region"
+              aria-labelledby="paymentHeading"
+            >
+              <h2 id="paymentHeading" class="text-center fw-bold mb-4">
+                Payment Process
+              </h2>
+
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <!-- COURSE ITEMS -->
+                    <div class="mb-4">
+                      <div class="d-flex align-items-center p-3">
+                        <img
+                          src="../images/ic-course.svg"
+                          alt="Course icon"
+                          class="img-fluid"
+                        />
+                        <div class="flex-grow-1 ms-3">
+                          <div class="d-flex justify-content-between">
+                            <span>Course name</span>
+                            <span>SAR 250.00</span>
+                          </div>
+                          <small class="text-muted d-block text-end"
+                            >One Time payment</small
+                          >
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-center p-3">
+                        <img
+                          src="../images/ic-course.svg"
+                          alt="Course icon"
+                          class="img-fluid"
+                        />
+                        <div class="flex-grow-1 ms-3">
+                          <div class="d-flex justify-content-between">
+                            <span>Course name</span>
+                            <span>SAR 50.00</span>
+                          </div>
+                          <small class="text-muted d-block text-end"
+                            >Subscription – 6 months</small
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- ORDER SUMMARY -->
+                    <div class="bg-white rounded p-4">
+                      <h3 class="h5 fw-bold mb-3">Order Summary</h3>
+
+                      <div class="mb-4">
+                        <label class="form-label"
+                          >Gift Card / Discount Code</label
+                        >
+                        <div class="row g-2">
+                          <div class="col-8">
+                            <input
+                              type="text"
+                              class="form-control bg-light"
+                              aria-label="Enter discount code"
+                            />
+                          </div>
+                          <div class="col-4">
+                            <button class="btn btn-outline-primary w-100">
+                              Apply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-between py-2">
+                        <span>Subtotal</span>
+                        <span>SAR 300.00</span>
+                      </div>
+                      <hr />
+
+                      <div class="d-flex justify-content-between py-2">
+                        <span>Sales tax (6.5%)</span>
+                        <span>SAR 20.00</span>
+                      </div>
+                      <hr />
+
+                      <div class="d-flex justify-content-between py-2">
+                        <strong>Total Due</strong>
+                        <strong class="text-primary">SAR 320.00</strong>
+                      </div>
+
+                      <button
+                        class="btn btn-primary w-100 py-3 mt-3"
+                        aria-label="Pay 320 Saudi Riyals"
+                      >
+                        Pay SAR 320.00
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+      // Decorative icons become aria-hidden
+      document.querySelectorAll("i.bi").forEach((icon) => {
+        icon.setAttribute("aria-hidden", "true");
+      });
+
+      // Mobile menu focus trap + return focus
+      const offcanvas = document.getElementById("mobileSidebar");
+      const hamburger = document.getElementById("hamburgerBtn");
+
+      offcanvas.addEventListener("shown.bs.offcanvas", () => {
+        const first = offcanvas.querySelector("button, a");
+        if (first) first.focus();
+      });
+
+      offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+        hamburger.focus();
+      });
+
+      // Language Switch
+      document.querySelectorAll("[data-lang]").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const lang = btn.getAttribute("data-lang");
+
+          document.documentElement.lang = lang;
+          document.getElementById("langButton").textContent =
+            lang === "ar" ? "العربية" : "English";
+
+          if (lang === "ar") {
+            document.documentElement.dir = "rtl";
+            document.getElementById("bootstrap-style").href =
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
+          } else {
+            document.documentElement.dir = "ltr";
+            document.getElementById("bootstrap-style").href =
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+          }
+        })
+      );
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

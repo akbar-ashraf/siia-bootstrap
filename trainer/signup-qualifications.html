@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,209 +10,280 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="bg-white">
+    <!-- Skip to content (keyboard users) -->
+    <a class="skip-to-content visually-hidden-focusable" href="#main-content"
+      >Skip to main content</a
+    >
     <!-- Header -->
-    <header class="py-3 border-bottom bg-white">
-      <div class="container d-flex justify-content-between align-items-center">
+
+    <header class="py-3 border-bottom bg-white" role="banner">
+      <div
+        class="container d-flex justify-content-between align-items-center gap-4"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <div class="d-flex align-items-center gap-2">
-          <div
-            class="rounded-circle bg-light"
-            style="width: 50px; height: 50px"
-          ></div>
+          <img
+            src="../images/saia-logo.svg"
+            alt="SIIA Logo"
+            style="height: 50px; width: auto"
+          />
         </div>
 
         <!-- Right Actions -->
         <div class="d-flex align-items-center gap-3">
-          <!-- Search (optional static icon) -->
-          <form class="position-relative d-none d-lg-block">
+          <!-- Search -->
+          <form
+            class="position-relative d-none d-md-block"
+            role="search"
+            aria-label="Site search"
+          >
+            <label for="search" class="visually-hidden">Search</label>
             <input
+              id="search"
               type="search"
               class="form-control form-control-sm ps-8"
               placeholder="Search"
+              aria-describedby="searchHelp"
             />
+            <div id="searchHelp" class="visually-hidden">
+              Type search text and press Enter to search the site.
+            </div>
             <i
               class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2 text-body-tertiary small"
+              aria-hidden="true"
             ></i>
           </form>
 
           <!-- Language Dropdown -->
           <div class="dropdown">
             <button
-              class="btn btn-sm btn-outline-secondary dropdown-toggle border text-body"
+              id="langButton"
+              class="btn btn-sm btn-outline-secondary dropdown-toggle border"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              aria-label="Select language"
             >
               English
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item active" href="#">English</a></li>
-              <li><a class="dropdown-item" href="#">العربية</a></li>
+            <ul class="dropdown-menu" role="menu" aria-label="Language options">
+              <li role="none">
+                <button
+                  class="dropdown-item active"
+                  data-lang="en"
+                  role="menuitem"
+                  aria-pressed="true"
+                >
+                  English
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="dropdown-item"
+                  data-lang="ar"
+                  role="menuitem"
+                  aria-pressed="false"
+                >
+                  العربية
+                </button>
+              </li>
             </ul>
           </div>
 
-          <!-- Contact Us -->
-          <a href="#" class="btn btn-sm btn-primary">Contact Us</a>
+          <a
+            href="#"
+            class="btn btn-sm btn-primary"
+            role="button"
+            aria-label="Contact us"
+            >Contact Us</a
+          >
         </div>
       </div>
     </header>
 
     <!-- Page Content -->
-    <div class="container py-10">
-      <div class="row align-items-center">
-        <!-- Welcome Message -->
-        <div class="col-lg-5 text-center mb-4 mb-lg-0">
-          <h2 class="fw-bold">Join us</h2>
-          <p>
-            There are many variations of passages of Lorem Ipsum<br />
-            available, but the majority have suffered alteration in some<br />
-            form, by injected humour, or randomised words which don't<br />
-            look even slightly believable.
-          </p>
-        </div>
-        <!-- Qualification Form -->
-        <div class="col-lg-7">
-          <div class="container p-5">
-            <!-- Progress Steps -->
-            <div class="d-flex justify-content-between align-items-top">
-              <!-- Step 1 -->
-              <div class="text-center">
-                <div
-                  class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
-                  style="width: 25px; height: 25px"
-                >
-                  <h6 class="mb-1 text-white">1</h6>
-                </div>
-                <div class="text-black text-nowrap">Personal info</div>
-              </div>
-              <hr class="top-50 w-100 mt-3 border-heading border-2" />
-
-              <!-- Step 2 -->
-              <div class="text-center">
-                <div
-                  class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center"
-                  style="width: 25px; height: 25px"
-                >
-                  <h6 class="mb-1 text-white">2</h6>
-                </div>
-                <div class="text-primary">Qualifications</div>
-              </div>
-              <hr class="top-50 w-100 mt-3 border-2" />
-
-              <!-- Step 3 -->
-              <div class="text-center">
-                <div
-                  class="rounded-circle bg-border text-white d-inline-flex justify-content-center align-items-center"
-                  style="width: 25px; height: 25px"
-                >
-                  <h6 class="mb-1 text-white">3</h6>
-                </div>
-                <div class="text-muted text-nowrap">
-                  Work and Training<br />Experience
-                </div>
-              </div>
-            </div>
+    <main id="main-content" tabindex="-1">
+      <div class="container py-10">
+        <div class="row align-items-center">
+          <!-- Welcome Message -->
+          <div class="col-lg-5 text-center mb-4 mb-lg-0">
+            <h2 class="fw-bold">Join us</h2>
+            <p>
+              There are many variations of passages of Lorem Ipsum<br />
+              available, but the majority have suffered alteration in some<br />
+              form, by injected humour, or randomised words which don't<br />
+              look even slightly believable.
+            </p>
           </div>
-          <div class="container py-4 d-flex flex-column gap-4">
-            <div class="d-flex flex-column gap-2">
-              <div class="d-flex align-items-center gap-2">
-                <div
-                  class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
-                  style="width: 30px; height: 30px"
-                >
-                  <h6 class="mb-1 text-white">2</h6>
-                </div>
-                <div class="medium text-black">Qualifications</div>
-              </div>
-            </div>
-
-            <form>
-              <div class="row mb-3">
-                <!-- Academic Degree -->
-                <div class="col-md-6">
-                  <label for="academic-degree" class="form-label">
-                    <span class="text-danger">*</span> Academic Degree
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="academic-degree"
-                    placeholder="e.g Masters or PHD"
-                    required
-                  />
-                </div>
-                <!-- Institute-->
-                <div class="col-md-6">
-                  <label for="institute" class="form-label">
-                    <span class="text-danger">*</span> Institute
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="institute"
-                    placeholder="Enter institute"
-                    required
-                  />
-
-                  <!-- Dropdown Suggestions -->
+          <!-- Qualification Form -->
+          <div class="col-lg-7">
+            <div class="container p-5">
+              <!-- Progress Steps -->
+              <div class="d-flex justify-content-between align-items-top">
+                <!-- Step 1 -->
+                <div class="text-center">
                   <div
-                    id="instituteDropdown"
-                    class="col-md-3 list-group position-absolute shadow-sm z-3 d-none border-1 border-top-0"
+                    class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
+                    style="width: 25px; height: 25px"
                   >
-                    <button
-                      type="button"
-                      class="list-group-item list-group-item-action"
-                    >
-                      King Abdullah University of Science and Technology (KAUST)
-                    </button>
-                    <button
-                      type="button"
-                      class="list-group-item list-group-item-action"
-                    >
-                      King Abdulaziz University
-                    </button>
+                    <h6 class="mb-1 text-white">1</h6>
+                  </div>
+                  <div class="text-black text-nowrap">Personal info</div>
+                </div>
+                <hr class="top-50 w-100 mt-3 border-heading border-2" />
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                  <div
+                    class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center"
+                    style="width: 25px; height: 25px"
+                  >
+                    <h6 class="mb-1 text-white">2</h6>
+                  </div>
+                  <div class="text-primary">Qualifications</div>
+                </div>
+                <hr class="top-50 w-100 mt-3 border-2" />
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                  <div
+                    class="rounded-circle bg-border text-white d-inline-flex justify-content-center align-items-center"
+                    style="width: 25px; height: 25px"
+                  >
+                    <h6 class="mb-1 text-white">3</h6>
+                  </div>
+                  <div class="text-muted text-nowrap">
+                    Work and Training<br />Experience
                   </div>
                 </div>
               </div>
-
-              <div class="row mb-3">
-                <!-- Professional Certificates -->
-                <div class="col-md-6">
-                  <label for="professional-certificates" class="form-label"
-                    >Professional Certificates (Optional)</label
+            </div>
+            <div class="container py-4 d-flex flex-column gap-4">
+              <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div
+                    class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
+                    style="width: 30px; height: 30px"
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="e.g. CIA, PMP"
-                    id="professional-certificates"
-                  />
+                    <h6 class="mb-1 text-white">2</h6>
+                  </div>
+                  <div class="medium text-black">Qualifications</div>
                 </div>
               </div>
 
-              <div class="text-end">
-                <button type="button" class="btn btn-outline-primary px-12 mx-4">Back</button>
-                <button type="submit" class="btn btn-primary px-12">Next</button>
-              </div>
-            </form>
-          </div>
-          <!-- Step 3 -->
-          <div
-            class="d-flex align-items-center bg-body-secondary p-3 rounded-4 w-100 my-4"
-          >
-            <div
-              class="rounded-circle bg-heading bg-opacity-50 d-inline-flex me-3 justify-content-center align-items-center"
-              style="width: 25px; height: 25px"
-            >
-              <h6 class="mb-1 text-white">3</h6>
+              <form
+                id="trainerQualificationForm"
+                aria-labelledby="joinHeading"
+                novalidate
+              >
+                <h3 id="joinHeading" class="visually-hidden">
+                  Trainer qualification information
+                </h3>
+                <div class="row mb-3">
+                  <!-- Academic Degree -->
+                  <div class="col-md-6">
+                    <label for="academic-degree" class="form-label">
+                      <span class="text-danger">*</span> Academic Degree
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="academic-degree"
+                      placeholder="e.g Masters or PHD"
+                      required
+                    />
+                  </div>
+                  <!-- Institute-->
+                  <div class="col-md-6">
+                    <label for="institute" class="form-label">
+                      <span class="text-danger">*</span> Institute
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="institute"
+                      placeholder="Enter institute"
+                      required
+                    />
+
+                    <!-- Dropdown Suggestions -->
+                    <div
+                      id="instituteDropdown"
+                      class="col-md-3 list-group position-absolute shadow-sm z-3 d-none border-1 border-top-0"
+                    >
+                      <button
+                        type="button"
+                        class="list-group-item list-group-item-action"
+                      >
+                        King Abdullah University of Science and Technology
+                        (KAUST)
+                      </button>
+                      <button
+                        type="button"
+                        class="list-group-item list-group-item-action"
+                      >
+                        King Abdulaziz University
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <!-- Professional Certificates -->
+                  <div class="col-md-6">
+                    <label for="professional-certificates" class="form-label"
+                      >Professional Certificates (Optional)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="e.g. CIA, PMP"
+                      id="professional-certificates"
+                    />
+                  </div>
+                </div>
+
+                <div class="text-end">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary px-12 mx-4"
+                  >
+                    Back
+                  </button>
+                  <button type="submit" class="btn btn-primary px-12">
+                    Next
+                  </button>
+                </div>
+                <!-- Live region for form status/errors -->
+                <div
+                  id="formStatus"
+                  role="status"
+                  aria-live="polite"
+                  class="visually-hidden"
+                  aria-atomic="true"
+                ></div>
+              </form>
             </div>
-            <span class="fw-semibold text-muted"
-              >Work and Training Experience</span
+            <!-- Step 3 -->
+            <div
+              class="d-flex align-items-center bg-body-secondary p-3 rounded-4 w-100 my-4"
             >
+              <div
+                class="rounded-circle bg-heading bg-opacity-50 d-inline-flex me-3 justify-content-center align-items-center"
+                style="width: 25px; height: 25px"
+              >
+                <h6 class="mb-1 text-white">3</h6>
+              </div>
+              <span class="fw-semibold text-muted"
+                >Work and Training Experience</span
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
@@ -241,6 +312,87 @@
           dropdown.classList.add("d-none");
         }
       });
+
+      (function () {
+        // Mark decorative bootstrap icons as aria-hidden
+        document.querySelectorAll(".bi").forEach(function (i) {
+          i.setAttribute("aria-hidden", "true");
+        });
+
+        // Language switch behavior (no reload) - only sets lang/dir and updates button text
+        document.querySelectorAll("[data-lang]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var lang = btn.getAttribute("data-lang");
+            document.documentElement.lang = lang || "en";
+            if (lang === "ar") {
+              document.documentElement.dir = "rtl";
+              document.getElementById("langButton").textContent = "العربية";
+            } else {
+              document.documentElement.dir = "ltr";
+              document.getElementById("langButton").textContent = "English";
+            }
+            // update aria-pressed states
+            document.querySelectorAll("[data-lang]").forEach(function (b) {
+              b.setAttribute(
+                "aria-pressed",
+                b.getAttribute("data-lang") === lang ? "true" : "false"
+              );
+            });
+          });
+        });
+
+        // Country code selection: set phone prefix when chosen
+        document.querySelectorAll("[data-code]").forEach(function (b) {
+          b.addEventListener("click", function (e) {
+            var code = b.getAttribute("data-code");
+            var phone = document.getElementById("phone");
+            if (phone) {
+              phone.value = code;
+              phone.focus();
+            }
+            // close dropdown (Bootstrap auto-handles)
+          });
+        });
+
+        // Simple client-side form validation feedback (non-invasive)
+        var form = document.getElementById("trainerQualificationForm");
+        var status = document.getElementById("formStatus");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            // Basic required fields check
+            var required = form.querySelectorAll('[aria-required="true"]');
+            var valid = true;
+            required.forEach(function (el) {
+              if (!el.value || el.value.trim() === "") {
+                valid = false;
+                el.setAttribute("aria-invalid", "true");
+              } else {
+                el.removeAttribute("aria-invalid");
+              }
+            });
+            if (!valid) {
+              e.preventDefault();
+              status.textContent = "Please fill all required fields.";
+              status.classList.remove("visually-hidden");
+            } else {
+              // allow submission (or handle submit)
+              status.textContent = "Submitting...";
+              status.classList.remove("visually-hidden");
+            }
+          });
+        }
+
+        // Make skip-to-content visible on focus (if your CSS provides visually-hidden-focusable, otherwise no-ops)
+        var skip = document.querySelector(".skip-to-content");
+        if (skip) {
+          skip.addEventListener("focus", function () {
+            skip.classList.remove("visually-hidden");
+          });
+          skip.addEventListener("blur", function () {
+            skip.classList.add("visually-hidden");
+          });
+        }
+      })();
     </script>
   </body>
 </html>

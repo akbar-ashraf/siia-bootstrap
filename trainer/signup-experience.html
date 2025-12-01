@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,347 +10,518 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="bg-white">
+    <!-- Skip to content (keyboard users) -->
+    <a class="skip-to-content visually-hidden-focusable" href="#main-content"
+      >Skip to main content</a
+    >
     <!-- Header -->
-    <header class="py-3 border-bottom bg-white">
-      <div class="container d-flex justify-content-between align-items-center">
+    <header class="py-3 border-bottom bg-white" role="banner">
+      <div
+        class="container d-flex justify-content-between align-items-center gap-4"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <div class="d-flex align-items-center gap-2">
-          <div
-            class="rounded-circle bg-light"
-            style="width: 50px; height: 50px"
-          ></div>
+          <img
+            src="../images/saia-logo.svg"
+            alt="SIIA Logo"
+            style="height: 50px; width: auto"
+          />
         </div>
 
         <!-- Right Actions -->
         <div class="d-flex align-items-center gap-3">
-          <!-- Search (optional static icon) -->
-          <form class="position-relative d-none d-lg-block">
+          <!-- Search -->
+          <form
+            class="position-relative d-none d-md-block"
+            role="search"
+            aria-label="Site search"
+          >
+            <label for="search" class="visually-hidden">Search</label>
             <input
+              id="search"
               type="search"
               class="form-control form-control-sm ps-8"
               placeholder="Search"
+              aria-describedby="searchHelp"
             />
+            <div id="searchHelp" class="visually-hidden">
+              Type search text and press Enter to search the site.
+            </div>
             <i
               class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2 text-body-tertiary small"
+              aria-hidden="true"
             ></i>
           </form>
 
           <!-- Language Dropdown -->
           <div class="dropdown">
             <button
-              class="btn btn-sm btn-outline-secondary dropdown-toggle border text-body"
+              id="langButton"
+              class="btn btn-sm btn-outline-secondary dropdown-toggle border"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              aria-label="Select language"
             >
               English
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item active" href="#">English</a></li>
-              <li><a class="dropdown-item" href="#">العربية</a></li>
+            <ul class="dropdown-menu" role="menu" aria-label="Language options">
+              <li role="none">
+                <button
+                  class="dropdown-item active"
+                  data-lang="en"
+                  role="menuitem"
+                  aria-pressed="true"
+                >
+                  English
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="dropdown-item"
+                  data-lang="ar"
+                  role="menuitem"
+                  aria-pressed="false"
+                >
+                  العربية
+                </button>
+              </li>
             </ul>
           </div>
 
-          <!-- Contact Us -->
-          <a href="#" class="btn btn-sm btn-primary">Contact Us</a>
+          <a
+            href="#"
+            class="btn btn-sm btn-primary"
+            role="button"
+            aria-label="Contact us"
+            >Contact Us</a
+          >
         </div>
       </div>
     </header>
 
     <!-- Page Content -->
-    <div class="container py-10">
-      <div class="row align-items-center">
-        <!-- Welcome Message -->
-        <div class="col-lg-5 text-center mb-4 mb-lg-0">
-          <h2 class="fw-bold">Join us</h2>
-          <p>
-            There are many variations of passages of Lorem Ipsum<br />
-            available, but the majority have suffered alteration in some<br />
-            form, by injected humour, or randomised words which don't<br />
-            look even slightly believable.
-          </p>
-        </div>
-        <!-- Experience Form -->
-        <div class="col-lg-7">
-          <div class="container p-5">
-            <!-- Progress Steps -->
-            <div
-              class="d-flex justify-content-between align-items-top position-relative"
-            >
-              <!-- Step 1 -->
-              <div class="text-center bg-white z-1">
-                <div
-                  class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
-                  style="width: 25px; height: 25px"
-                >
-                  <h6 class="mb-1 text-white">1</h6>
-                </div>
-                <div class="text-black text-nowrap">Personal info</div>
-              </div>
-              <!-- <hr class="top-50 h-2 w-100 border-black" /> -->
-
-              <!-- Step 2 -->
-              <div class="text-center bg-white z-1">
-                <div
-                  class="rounded-circle bg-black text-white d-inline-flex justify-content-center align-items-center"
-                  style="width: 25px; height: 25px"
-                >
-                  <h6 class="mb-1 text-white">2</h6>
-                </div>
-                <div class="text-black">Qualifications</div>
-              </div>
-              <!-- <hr class="top-50 w-100 border-black" /> -->
-
-              <!-- Step 3 -->
-              <div class="text-center bg-white z-1">
-                <div
-                  class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center"
-                  style="width: 25px; height: 25px"
-                >
-                  <h6 class="mb-1 text-white">3</h6>
-                </div>
-                <div class="text-primary text-nowrap">
-                  Work and Training<br />Experience
-                </div>
-              </div>
-              <hr
-                class="my-0 position-absolute mt-3 start-0 w-100 border-2 border-heading"
-              />
-            </div>
+    <main id="main-content" tabindex="-1">
+      <div class="container py-10">
+        <div class="row align-items-center">
+          <!-- Welcome Message -->
+          <div class="col-lg-5 text-center mb-4 mb-lg-0">
+            <h2 class="fw-bold">Join us</h2>
+            <p>
+              There are many variations of passages of Lorem Ipsum<br />
+              available, but the majority have suffered alteration in some<br />
+              form, by injected humour, or randomised words which don't<br />
+              look even slightly believable.
+            </p>
           </div>
-          <div class="container py-4 d-flex flex-column gap-4">
-            <div class="d-flex flex-column gap-2">
-              <div class="d-flex align-items-center gap-2">
-                <div
-                  class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
-                  style="width: 30px; height: 30px"
-                >
-                  <h6 class="mb-1 text-white">3</h6>
+          <!-- Experience Form -->
+          <div class="col-lg-7">
+            <div class="container p-5">
+              <!-- Progress Steps -->
+              <div
+                class="d-flex justify-content-between align-items-top position-relative"
+              >
+                <!-- Step 1 -->
+                <div class="text-center bg-white z-1">
+                  <div
+                    class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
+                    style="width: 25px; height: 25px"
+                  >
+                    <h6 class="mb-1 text-white">1</h6>
+                  </div>
+                  <div class="text-black text-nowrap">Personal info</div>
                 </div>
-                <div class="medium text-black">
-                  Work and Training Experience
+                <!-- <hr class="top-50 h-2 w-100 border-black" /> -->
+
+                <!-- Step 2 -->
+                <div class="text-center bg-white z-1">
+                  <div
+                    class="rounded-circle bg-black text-white d-inline-flex justify-content-center align-items-center"
+                    style="width: 25px; height: 25px"
+                  >
+                    <h6 class="mb-1 text-white">2</h6>
+                  </div>
+                  <div class="text-black">Qualifications</div>
                 </div>
+                <!-- <hr class="top-50 w-100 border-black" /> -->
+
+                <!-- Step 3 -->
+                <div class="text-center bg-white z-1">
+                  <div
+                    class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center"
+                    style="width: 25px; height: 25px"
+                  >
+                    <h6 class="mb-1 text-white">3</h6>
+                  </div>
+                  <div class="text-primary text-nowrap">
+                    Work and Training<br />Experience
+                  </div>
+                </div>
+                <hr
+                  class="my-0 position-absolute mt-3 start-0 w-100 border-2 border-heading"
+                />
               </div>
             </div>
-
-            <form id="signup-form" onsubmit="validateForm(event)">
-              <div class="row mb-3">
-                <!-- Current Employer -->
-                <div class="col-md-6">
-                  <label for="current-employer" class="form-label">
-                    <span class="text-danger">*</span> Current Employer
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="current-employer"
-                    placeholder="Organization name here"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label for="job-title" class="form-label">
-                    <span class="text-danger">*</span> Job Title</label
+            <div class="container py-4 d-flex flex-column gap-4">
+              <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div
+                    class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
+                    style="width: 30px; height: 30px"
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="job-title"
-                    placeholder="Your job title here"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <!-- Field Experience -->
-                <div class="col-md-6">
-                  <label for="experience-field" class="form-label"
-                    ><span class="text-danger">*</span> Field Experience</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="experience-field"
-                    placeholder="Number of years experience in the field"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label for="experience-training" class="form-label"
-                    ><span class="text-danger">*</span> Training
-                    Experience</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="experience-training"
-                    placeholder="Number of years experience in training"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <!-- Area of Expertise -->
-                <div class="col-md-6">
-                  <label for="area-of-expertise" class="form-label"
-                    ><span class="text-danger">*</span> Training Areas
-                    ofExpertise</label
-                  >
-
-                  <div class="dropdown">
-                    <button
-                      class="btn border w-100 text-start form-select"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      id="btn-area-of-expertise"
-                    >
-                      Choose
-                    </button>
-
-                    <ul
-                      id="area-of-expertise"
-                      class="dropdown-menu custom-dropdown"
-                    >
-                      <li>Internal Audit</li>
-                      <li>Governance</li>
-                      <li>Extra</li>
-                      <li>Risk</li>
-                    </ul>
+                    <h6 class="mb-1 text-white">3</h6>
+                  </div>
+                  <div class="medium text-black">
+                    Work and Training Experience
                   </div>
                 </div>
               </div>
 
-              <div class="row mb-3">
-                <div class="col-md-12">
-                  <label for="previous-training" class="form-label"
-                    >Previously delivered tarining courses (Optional)</label
+              <form
+                id="trainerExperienceForm"
+                onsubmit="validateForm(event)"
+                aria-labelledby="trainerExperienceFormLabel"
+                novalidate
+              >
+                <div class="row mb-3">
+                  <!-- Current Employer -->
+                  <div class="col-md-6">
+                    <label for="current-employer" class="form-label">
+                      <span class="text-danger">*</span> Current Employer
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="current-employer"
+                      placeholder="Organization name here"
+                      required
+                      aria-required="true"
+                      aria-describedby="employerHelp"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="job-title" class="form-label">
+                      <span class="text-danger">*</span> Job Title</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="job-title"
+                      placeholder="Your job title here"
+                      required
+                      aria-required="true"
+                      aria-describedby="jobTitleHelp"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <!-- Field Experience -->
+                  <div class="col-md-6">
+                    <label for="experience-field" class="form-label"
+                      ><span class="text-danger">*</span> Field
+                      Experience</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="experience-field"
+                      placeholder="Number of years experience in the field"
+                      required
+                      aria-required="true"
+                      aria-describedby="fieldExperienceHelp"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="experience-training" class="form-label"
+                      ><span class="text-danger">*</span> Training
+                      Experience</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="experience-training"
+                      placeholder="Number of years experience in training"
+                      required
+                      aria-required="true"
+                      aria-describedby="trainingExperienceHelp"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <!-- Area of Expertise -->
+                  <div class="col-md-6">
+                    <label for="area-of-expertise" class="form-label"
+                      ><span class="text-danger">*</span> Training Areas
+                      ofExpertise</label
+                    >
+
+                    <div class="dropdown">
+                      <button
+                        class="btn border w-100 text-start form-select"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        id="btn-area-of-expertise"
+                      >
+                        Choose
+                      </button>
+
+                      <ul
+                        id="area-of-expertise"
+                        class="dropdown-menu custom-dropdown"
+                        aria-labelledby="btn-area-of-expertise"
+                      >
+                        <li>Internal Audit</li>
+                        <li>Governance</li>
+                        <li>Extra</li>
+                        <li>Risk</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                    <label for="previous-training" class="form-label"
+                      >Previously delivered tarining courses (Optional)</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="previous-training"
+                      placeholder="Have you previously delivered training courses? If yes then please explain. "
+                      rows="5"
+                      aria-describedby="previousTrainingHelp"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="d-flex flex-column h-100">
+                      <label for="training-file" class="form-label">
+                        Training related file (Optional)
+                      </label>
+                      <input
+                        class="form-control mt-auto"
+                        type="file"
+                        id="formFile"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="d-flex flex-column h-100">
+                      <label class="form-label">Picture (Optional)</label>
+                      <input
+                        class="form-control mt-auto"
+                        type="file"
+                        id="formFile"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="d-flex flex-column h-100">
+                      <label class="form-label">
+                        <span class="text-danger">*</span> Updated CV
+                      </label>
+                      <input
+                        class="form-control mt-auto"
+                        type="file"
+                        id="formFile"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6 d-flex gap-2 text-center">
+                    <input
+                      type="checkbox"
+                      id="terms-conditions"
+                      class="form-check-input"
+                      required
+                      aria-required="true"
+                      aria-labelledby="terms-conditions-label"
+                    />
+                    <label class="form-check-label" for="terms-conditions">
+                      I accept the
+                      <a href="#" class="text-primary">Terms and Conditions</a>
+                    </label>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#thankyou-modal"
                   >
-                  <textarea
-                    class="form-control"
-                    id="previous-training"
-                    placeholder="Have you previously delivered training courses? If yes then please explain. "
-                    rows="5"
-                  ></textarea>
+                    Submit Request
+                  </button>
                 </div>
-              </div>
-
-              <div class="row mb-3">
-                <div class="col-md-4 mb-3 mb-md-0">
-                  <label for="training-file" class="form-label"
-                    >Training related file (Optional)</label
-                  >
-                  <input class="form-control" type="file" id="formFile" />
-                </div>
-
-                <div class="col-md-4 mb-3 mb-md-0">
-                  <label class="form-label">Picture (Optional)</label>
-                  <input class="form-control" type="file" id="formFile" />
-                </div>
-
-                <div class="col-md-4">
-                  <label class="form-label"
-                    ><span class="text-danger">*</span> Updated CV</label
-                  >
-                  <input class="form-control" type="file" id="formFile" />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col-md-6 d-flex gap-2 text-center">
-                  <input
-                    type="checkbox"
-                    id="terms-conditions"
-                    class="form-check-input"
-                    required
-                  />
-                  <label class="form-check-label" for="terms-conditions">
-                    I accept the
-                    <a href="#" class="text-primary">Terms and Conditions</a>
-                  </label>
-                </div>
-              </div>
-              <div class="row text-center">
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#thankyou-modal"
-                >
-                  Submit Request
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="thankyou-modal"
-      tabindex="-1"
-      aria-labelledby="thankyou-label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-4 p-4 border-0 shadow-sm">
-          <div class="modal-body text-center">
-            <h4 class="fw-bold text-primary mb-3">Thank you!</h4>
-
-            <p class="text-muted mb-2">
-              Your application is now under review by the SIIA team. You will
-              receive an email as soon as you are accepted among the trainers.
-            </p>
-            <p class="text-muted">
-              Please confirm your email (check your spam if you do not find the
-              confirmation email)
-            </p>
-
-            <div class="input-group my-3">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="abc@xyz.com"
-                required
-                aria-label="Email"
-              />
-              <span class="input-group-text">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-envelope"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.634l5.803-3.483L0 5.383zm6.761 3.9L0 12.017A2 2 0 0 0 2 14h12a2 2 0 0 0 2-1.983l-6.761-2.734L8 10.583l-1.239-.742zm3.436-.383L16 12.017V5.383l-5.803 3.517z"
-                  />
-                </svg>
-              </span>
+                <!-- Live region for form status/errors -->
+                <div
+                  id="formStatus"
+                  role="status"
+                  aria-live="polite"
+                  class="visually-hidden"
+                  aria-atomic="true"
+                ></div>
+              </form>
             </div>
-
-            <button
-              type="submit"
-              class="btn btn-primary w-100 rounded-pill mt-3"
-              data-bs-dismiss="modal"
-            >
-              Okay
-            </button>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="thankyou-modal"
+        tabindex="-1"
+        aria-labelledby="thankyou-label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-4 p-4 border-0 shadow-sm">
+            <div class="modal-body text-center">
+              <h4 class="fw-bold text-primary mb-3">Thank you!</h4>
+
+              <p class="text-muted mb-2">
+                Your application is now under review by the SIIA team. You will
+                receive an email as soon as you are accepted among the trainers.
+              </p>
+              <p class="text-muted">
+                Please confirm your email (check your spam if you do not find
+                the confirmation email)
+              </p>
+
+              <div class="input-group my-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="abc@xyz.com"
+                  required
+                  aria-label="Email"
+                />
+                <span class="input-group-text">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-envelope"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.634l5.803-3.483L0 5.383zm6.761 3.9L0 12.017A2 2 0 0 0 2 14h12a2 2 0 0 0 2-1.983l-6.761-2.734L8 10.583l-1.239-.742zm3.436-.383L16 12.017V5.383l-5.803 3.517z"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary w-100 rounded-pill mt-3"
+                data-bs-dismiss="modal"
+              >
+                Okay
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     ></script>
 
+    <!-- Minimal accessibility JS (non-visual) -->
     <script>
+      (function () {
+        // Mark decorative bootstrap icons as aria-hidden
+        document.querySelectorAll(".bi").forEach(function (i) {
+          i.setAttribute("aria-hidden", "true");
+        });
 
+        // Language switch behavior (no reload) - only sets lang/dir and updates button text
+        document.querySelectorAll("[data-lang]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var lang = btn.getAttribute("data-lang");
+            document.documentElement.lang = lang || "en";
+            if (lang === "ar") {
+              document.documentElement.dir = "rtl";
+              document.getElementById("langButton").textContent = "العربية";
+            } else {
+              document.documentElement.dir = "ltr";
+              document.getElementById("langButton").textContent = "English";
+            }
+            // update aria-pressed states
+            document.querySelectorAll("[data-lang]").forEach(function (b) {
+              b.setAttribute(
+                "aria-pressed",
+                b.getAttribute("data-lang") === lang ? "true" : "false"
+              );
+            });
+          });
+        });
+
+        // Country code selection: set phone prefix when chosen
+        document.querySelectorAll("[data-code]").forEach(function (b) {
+          b.addEventListener("click", function (e) {
+            var code = b.getAttribute("data-code");
+            var phone = document.getElementById("phone");
+            if (phone) {
+              phone.value = code;
+              phone.focus();
+            }
+            // close dropdown (Bootstrap auto-handles)
+          });
+        });
+
+        // Simple client-side form validation feedback (non-invasive)
+        var form = document.getElementById("trainerExperienceForm");
+        var status = document.getElementById("formStatus");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            // Basic required fields check
+            var required = form.querySelectorAll('[aria-required="true"]');
+            var valid = true;
+            required.forEach(function (el) {
+              if (!el.value || el.value.trim() === "") {
+                valid = false;
+                el.setAttribute("aria-invalid", "true");
+              } else {
+                el.removeAttribute("aria-invalid");
+              }
+            });
+            if (!valid) {
+              e.preventDefault();
+              status.textContent = "Please fill all required fields.";
+              status.classList.remove("visually-hidden");
+            } else {
+              // allow submission (or handle submit)
+              status.textContent = "Submitting...";
+              status.classList.remove("visually-hidden");
+            }
+          });
+        }
+
+        // Make skip-to-content visible on focus (if your CSS provides visually-hidden-focusable, otherwise no-ops)
+        var skip = document.querySelector(".skip-to-content");
+        if (skip) {
+          skip.addEventListener("focus", function () {
+            skip.classList.remove("visually-hidden");
+          });
+          skip.addEventListener("blur", function () {
+            skip.classList.add("visually-hidden");
+          });
+        }
+      })();
       document
         .getElementById("area-of-expertise")
         .addEventListener("click", function (event) {
@@ -362,7 +533,7 @@
 
       function validateForm(event) {
         console.log("Validation is called");
-        const form = document.getElementById("signup-form");
+        const form = document.getElementById("trainerExperienceForm");
         console.log("Form is: ", form);
         if (!form.checkValidity()) {
           // Prevent form submission

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,309 +10,536 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-   <!-- Header -->
-   <header class="py-3 border-bottom bg-white">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-2">
-        <div
-          class="rounded-circle bg-light"
-          style="width: 50px; height: 50px"
-        ></div>
-      </div>
-
-      <!-- Right Actions -->
-      <div class="d-flex align-items-center gap-3">
-        <!-- Search (optional static icon) -->
-        <form class="position-relative d-none d-lg-block">
-          <input
-            type="search"
-            class="form-control form-control-sm ps-8"
-            placeholder="Search"
+  <body class="bg-white">
+    <!-- Skip to content (keyboard users) -->
+    <a class="skip-to-content visually-hidden-focusable" href="#main-content"
+      >Skip to main content</a
+    >
+    <!-- Header -->
+    <header class="py-3 border-bottom bg-white" role="banner">
+      <div
+        class="container d-flex justify-content-between align-items-center gap-4"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div class="d-flex align-items-center gap-2">
+          <img
+            src="../images/saia-logo.svg"
+            alt="SIIA Logo"
+            style="height: 50px; width: auto"
           />
-          <i
-            class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2 text-body-tertiary small"
-          ></i>
-        </form>
-
-        <!-- Language Dropdown -->
-        <div class="dropdown">
-          <button
-            class="btn btn-sm btn-outline-secondary dropdown-toggle border text-body"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            English
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item active" href="#">English</a></li>
-            <li><a class="dropdown-item" href="#">العربية</a></li>
-          </ul>
         </div>
 
-        <!-- Contact Us -->
-        <a href="#" class="btn btn-sm btn-primary">Contact Us</a>
+        <!-- Right Actions -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Search -->
+          <form
+            class="position-relative d-none d-md-block"
+            role="search"
+            aria-label="Site search"
+          >
+            <label for="search" class="visually-hidden">Search</label>
+            <input
+              id="search"
+              type="search"
+              class="form-control form-control-sm ps-8"
+              placeholder="Search"
+              aria-describedby="searchHelp"
+            />
+            <div id="searchHelp" class="visually-hidden">
+              Type search text and press Enter to search the site.
+            </div>
+            <i
+              class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2 text-body-tertiary small"
+              aria-hidden="true"
+            ></i>
+          </form>
+
+          <!-- Language Dropdown -->
+          <div class="dropdown">
+            <button
+              id="langButton"
+              class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Select language"
+            >
+              English
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-label="Language options">
+              <li role="none">
+                <button
+                  class="dropdown-item active"
+                  data-lang="en"
+                  role="menuitem"
+                  aria-pressed="true"
+                >
+                  English
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="dropdown-item"
+                  data-lang="ar"
+                  role="menuitem"
+                  aria-pressed="false"
+                >
+                  العربية
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="#"
+            class="btn btn-sm btn-primary"
+            role="button"
+            aria-label="Contact us"
+            >Contact Us</a
+          >
+        </div>
       </div>
-    </div>
-  </header>
-
-
+    </header>
 
     <!-- Page Content -->
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <!-- Welcome Message -->
-        <div class="col-lg-5 text-center mb-4 mb-lg-0">
-          <h2 class="fw-bold">Join us</h2>
-          <p class="text-muted">
-            There are many variations of passages of Lorem Ipsum<br />
-            available, but the majority have suffered alteration in some<br />
-            form, by injected humour, or randomised words which don't<br />
-            look even slightly believable.
-          </p>
-        </div>
-        <!-- Sign Up Form -->
-        <div class="col-lg-7 ">
-          <div class="container py-12 d-flex flex-column gap-4">
-            <div class="d-flex flex-column gap-2">
-              <div class="d-flex align-items-center gap-2">
-                <div
-                  class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
-                  style="width: 30px; height: 30px"
-                >
-                  <h6 class="mb-1 text-white">1</h6>
-                </div>
-                <div class="medium text-black">Personal info</div>
-              </div>
-            </div>
-
-            <form>
-              <div class="row mb-3">
-                <!-- First Name -->
-                <div class="col-md-6">
-                  <label for="firstname-eng" class="form-label">
-                    <span class="text-danger">*</span> First Name (English)
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="firstname-eng"
-                    placeholder="Amina"
-                    required
-                  />
-                </div>
-                <div class="col-md-6 text-end">
-                  <label for="firstname-arabic" class="form-label"
-                    ><span class="text-danger">*</span> الاسم الأول
-                    (عربي)</label
+    <main id="main-content" tabindex="-1">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <!-- Welcome Message -->
+          <div class="col-lg-5 text-center mb-4 mb-lg-0">
+            <h2 class="fw-bold">Join us</h2>
+            <p class="text-muted">
+              There are many variations of passages of Lorem Ipsum<br />
+              available, but the majority have suffered alteration in some<br />
+              form, by injected humour, or randomised words which don't<br />
+              look even slightly believable.
+            </p>
+          </div>
+          <!-- Personal Info Form -->
+          <div class="col-lg-7">
+            <div class="container py-12 d-flex flex-column gap-4">
+              <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div
+                    class="rounded-circle bg-black d-inline-flex justify-content-center align-items-center"
+                    style="width: 30px; height: 30px"
                   >
-                  <input
-                    type="text"
-                    class="form-control text-end"
-                    placeholder="أمينة"
-                    id="firstname-arabic"
-                    required
-                  />
+                    <h6 class="mb-1 text-white">1</h6>
+                  </div>
+                  <div class="medium text-black">Personal info</div>
                 </div>
               </div>
 
-              <div class="row mb-3">
-                <!-- Middle Name -->
-                <div class="col-md-6">
-                  <label for="middlename-eng" class="form-label"
-                    >Middle Name (English) (Optional)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="middlename-eng"
-                    placeholder="Zayd"
-                  />
-                </div>
-                <div class="col-md-6 text-end">
-                  <label for="middlename-arabic" class="form-label"
-                    >وسـط اسم (عربي) (Optional)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control text-end"
-                    id="middlename-arabic"
-                    placeholder="زيد"
-                  />
-                </div>
-              </div>
+              <!-- Form -->
+              <form
+                id="traineeSignUpForm"
+                aria-labelledby="joinHeading"
+                novalidate
+              >
+                <h3 id="joinHeading" class="visually-hidden">
+                  Trainee sign up personal information
+                </h3>
 
-              <div class="row mb-3">
-                <!-- Last Name -->
-                <div class="col-md-6">
-                  <label for="lastname-eng" class="form-label"
-                    ><span class="text-danger">*</span> Last Name
-                    (English)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="lastname-eng"
-                    placeholder="Al-Mahdi"
-                  />
-                </div>
-                <div class="col-md-6 text-end">
-                  <label for="lastname-arabic" class="form-label"
-                    ><span class="text-danger">*</span> الاسم الأخير
-                    (عربي)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control text-end"
-                    placeholder="المهدي"
-                    id="lastname-arabic"
-                    required
-                  />
-                </div>
-              </div>
-
-              <!-- Country Name -->
-
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <label for="country" class="form-label"
-                    ><span class="text-danger">*</span> Country</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="country"
-                    placeholder="Country here"
-                    required
-                  />
-                </div>
-                <!-- City Name -->
-                <div class="col-md-6">
-                  <label for="city" class="form-label"
-                    ><span class="text-danger">*</span> City</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="city"
-                    placeholder="City here"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <!-- National ID -->
-                <div class="col-md-6">
-                  <label for="national-id" class="form-label"
-                    ><span class="text-danger">*</span> National ID</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="national-id"
-                    placeholder="1234567890123"
-                    pattern="[0-9]*"
-                    required
-                  />
-                </div>
-                <!-- Email -->
-                <div class="col-md-6">
-                  <label for="email" class="form-label"
-                    ><span class="text-danger">*</span> Email</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="abc@xyz.com"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <label class="form-label"
-                    ><span class="text-danger">*</span> Phone</label
-                  >
-                  <div class="input-group border rounded text-center">
-                    <!-- Custom country code dropdown -->
-                    <div class="dropdown">
-                      <button
-                        class="btn dropdown-toggle h-100 d-flex align-items-center gap-1 border-0"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <img
-                          src="https://flagcdn.com/sa.svg"
-                          width="20"
-                          alt="SA"
-                        />
-                      </button>
-                      <ul class="dropdown-menu text-nowrap px-2">
-                        <li>
-                          <img src="https://flagcdn.com/sa.svg" width="20" />
-                          Saudi Arabia (+966)
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- Phone input -->
+                <div class="row mb-3">
+                  <!-- First Name -->
+                  <div class="col-md-6">
+                    <label for="firstname-eng" class="form-label">
+                      <span class="text-danger">*</span> First Name (English)
+                    </label>
                     <input
-                      type="tel"
-                      pattern="[0-9]+*"
-                      class="form-control border-0"
-                      id="phone"
-                      value="+966"
+                      type="text"
+                      class="form-control"
+                      id="firstname-eng"
+                      placeholder="First Name"
                       required
+                      aria-required="true"
+                      aria-describedby="firstnameEngHelp"
                     />
+                    <div id="firstnameEngHelp" class="visually-hidden">
+                      Enter your first name in English.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 text-end">
+                    <label for="firstname-arabic" class="form-label">
+                      <span class="text-danger">*</span> الاسم الأول (عربي)
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control text-end"
+                      placeholder="الاسم الأول"
+                      id="firstname-arabic"
+                      required
+                      aria-required="true"
+                      aria-describedby="firstnameArHelp"
+                    />
+                    <div id="firstnameArHelp" class="visually-hidden">
+                      ادخل الاسم الأول باللغة العربية.
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <label for="birthday" class="form-label"
-                    ><span class="text-danger">*</span> Your birthday</label
-                  >
-                  <input
-                    type="date"
-                    class="form-control"
-                    value="2025-07-11"
-                    id="birthday"
-                    required
-                  />
-                </div>
-              </div>
 
-              <div class="row mb-3">
-                <div class="col-md-6 d-flex gap-2 text-center">
-                  <input
-                    type="checkbox"
-                    id="terms-conditions"
-                    class="form-check-input"
-                    required
-                  />
-                  <label class="form-check-label" for="terms-conditions">
-                    I accept the
-                    <a href="#" class="text-primary">Terms and Conditions</a>
-                  </label>
-                </div>
-              </div>
+                <div class="row mb-3">
+                  <!-- Middle Name -->
+                  <div class="col-md-6">
+                    <label for="middlename-eng" class="form-label"
+                      >Middle Name (English) (Optional)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="middlename-eng"
+                      placeholder="Middle Name"
+                      aria-describedby="middlenameEngHelp"
+                    />
+                    <div id="middlenameEngHelp" class="visually-hidden">
+                      Optional middle name in English.
+                    </div>
+                  </div>
 
-              <div class="row text-center">
-                <button type="submit" class="btn btn-primary">
-                  Create Account
-                </button>
-              </div>
-            </form>
+                  <div class="col-md-6 text-end">
+                    <label for="middlename-arabic" class="form-label"
+                      >وسـط اسم (عربي) (Optional)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control text-end"
+                      id="middlename-arabic"
+                      placeholder="وسـط اسم"
+                      aria-describedby="middlenameArHelp"
+                    />
+                    <div id="middlenameArHelp" class="visually-hidden">
+                      اسم الوسـط اختياري.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <!-- Last Name -->
+                  <div class="col-md-6">
+                    <label for="lastname-eng" class="form-label">
+                      <span class="text-danger">*</span> Last Name (English)
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastname-eng"
+                      placeholder="Last Name"
+                      required
+                      aria-required="true"
+                      aria-describedby="lastnameEngHelp"
+                    />
+                    <div id="lastnameEngHelp" class="visually-hidden">
+                      Enter your last name in English.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 text-end">
+                    <label for="lastname-arabic" class="form-label">
+                      <span class="text-danger">*</span> الاسم الأخير (عربي)
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control text-end"
+                      placeholder="الاسم الأخير"
+                      id="lastname-arabic"
+                      required
+                      aria-required="true"
+                      aria-describedby="lastnameArHelp"
+                    />
+                    <div id="lastnameArHelp" class="visually-hidden">
+                      ادخل الاسم الأخير باللغة العربية.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Country & City -->
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="country" class="form-label"
+                      ><span class="text-danger">*</span> Country</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      placeholder="Country here"
+                      required
+                      aria-required="true"
+                      aria-describedby="countryHelp"
+                    />
+                    <div id="countryHelp" class="visually-hidden">
+                      Enter your country.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="city" class="form-label"
+                      ><span class="text-danger">*</span> City</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      placeholder="City here"
+                      required
+                      aria-required="true"
+                      aria-describedby="cityHelp"
+                    />
+                    <div id="cityHelp" class="visually-hidden">
+                      Enter your city.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <!-- National ID -->
+                  <div class="col-md-6">
+                    <label for="national-id" class="form-label"
+                      ><span class="text-danger">*</span> National ID</label
+                    >
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      pattern="[0-9]*"
+                      class="form-control"
+                      id="national-id"
+                      placeholder="1234567890123"
+                      required
+                      aria-required="true"
+                      aria-describedby="nationalIdHelp"
+                    />
+                    <div id="nationalIdHelp" class="visually-hidden">
+                      Enter numeric national ID digits only.
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-md-6">
+                    <label for="email" class="form-label"
+                      ><span class="text-danger">*</span> Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="abc@xyz.com"
+                      required
+                      aria-required="true"
+                      aria-describedby="emailHelp"
+                    />
+                    <div id="emailHelp" class="visually-hidden">
+                      Enter a valid email address, for example name@example.com.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label"
+                      ><span class="text-danger">*</span> Phone</label
+                    >
+                    <div
+                      class="input-group border rounded text-center"
+                      role="group"
+                      aria-label="Phone number input"
+                    >
+                      <!-- Custom country code dropdown (accessible) -->
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle h-100 d-flex align-items-center gap-1 border-0"
+                          type="button"
+                          id="countryCodeBtn"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Select country code"
+                        >
+                          <img
+                            src="https://flagcdn.com/sa.svg"
+                            width="20"
+                            alt="Saudi Arabia flag"
+                          />
+                        </button>
+                        <ul
+                          class="dropdown-menu text-nowrap px-2"
+                          role="menu"
+                          aria-labelledby="countryCodeBtn"
+                        >
+                          <li role="none">
+                            <button
+                              role="menuitem"
+                              class="dropdown-item"
+                              type="button"
+                              data-code="+966"
+                            >
+                              <img
+                                src="https://flagcdn.com/sa.svg"
+                                width="20"
+                                alt="Saudi Arabia flag"
+                              />
+                              Saudi Arabia (+966)
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- Phone input -->
+                      <input
+                        type="tel"
+                        pattern="[0-9+]*"
+                        inputmode="tel"
+                        class="form-control border-0"
+                        id="phone"
+                        value="+966"
+                        required
+                        aria-required="true"
+                        aria-describedby="phoneHelp"
+                      />
+                    </div>
+                    <div id="phoneHelp" class="visually-hidden">
+                      Enter your phone number with country code.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="birthday" class="form-label"
+                      ><span class="text-danger">*</span> Your birthday</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      value="2025-07-11"
+                      id="birthday"
+                      required
+                      aria-required="true"
+                      aria-describedby="birthdayHelp"
+                    />
+                    <div id="birthdayHelp" class="visually-hidden">
+                      Select your date of birth.
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6 d-flex gap-2 text-center">
+                    <input
+                      type="checkbox"
+                      id="terms-conditions"
+                      class="form-check-input"
+                      required
+                    />
+                    <label class="form-check-label" for="terms-conditions">
+                      I accept the
+                      <a href="#" class="text-primary">Terms and Conditions</a>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="row text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Create Account
+                  </button>
+                </div>
+                <!-- Live region for form status/errors -->
+                <div
+                  id="formStatus"
+                  role="status"
+                  aria-live="polite"
+                  class="visually-hidden"
+                  aria-atomic="true"
+                ></div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     ></script>
+    <!-- Minimal accessibility JS (non-visual) -->
+    <script>
+      (function () {
+        // Mark decorative bootstrap icons as aria-hidden
+        document.querySelectorAll(".bi").forEach(function (i) {
+          i.setAttribute("aria-hidden", "true");
+        });
+
+        // Language switch behavior (no reload) - only sets lang/dir and updates button text
+        document.querySelectorAll("[data-lang]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var lang = btn.getAttribute("data-lang");
+            document.documentElement.lang = lang || "en";
+            if (lang === "ar") {
+              document.documentElement.dir = "rtl";
+              document.getElementById("langButton").textContent = "العربية";
+            } else {
+              document.documentElement.dir = "ltr";
+              document.getElementById("langButton").textContent = "English";
+            }
+            // update aria-pressed states
+            document.querySelectorAll("[data-lang]").forEach(function (b) {
+              b.setAttribute(
+                "aria-pressed",
+                b.getAttribute("data-lang") === lang ? "true" : "false"
+              );
+            });
+          });
+        });
+
+        // Country code selection: set phone prefix when chosen
+        document.querySelectorAll("[data-code]").forEach(function (b) {
+          b.addEventListener("click", function (e) {
+            var code = b.getAttribute("data-code");
+            var phone = document.getElementById("phone");
+            if (phone) {
+              phone.value = code;
+              phone.focus();
+            }
+            // close dropdown (Bootstrap auto-handles)
+          });
+        });
+
+        // Simple client-side form validation feedback (non-invasive)
+        var form = document.getElementById("traineeSignUpForm");
+        var status = document.getElementById("formStatus");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            // Basic required fields check
+            var required = form.querySelectorAll('[aria-required="true"]');
+            var valid = true;
+            required.forEach(function (el) {
+              if (!el.value || el.value.trim() === "") {
+                valid = false;
+                el.setAttribute("aria-invalid", "true");
+              } else {
+                el.removeAttribute("aria-invalid");
+              }
+            });
+            if (!valid) {
+              e.preventDefault();
+              status.textContent = "Please fill all required fields.";
+              status.classList.remove("visually-hidden");
+            } else {
+              // allow submission (or handle submit)
+              status.textContent = "Submitting...";
+              status.classList.remove("visually-hidden");
+            }
+          });
+        }
+
+        // Make skip-to-content visible on focus (if your CSS provides visually-hidden-focusable, otherwise no-ops)
+        var skip = document.querySelector(".skip-to-content");
+        if (skip) {
+          skip.addEventListener("focus", function () {
+            skip.classList.remove("visually-hidden");
+          });
+          skip.addEventListener("blur", function () {
+            skip.classList.add("visually-hidden");
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
