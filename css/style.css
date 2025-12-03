@@ -19310,6 +19310,12 @@ tr[tabindex] {
   transition: all 0.3s ease;
   margin-bottom: -2px !important;
   color: var(--bs-dark) !important;
+  background-color: transparent !important;
+}
+.custom-tabs .nav-link:not(.active):hover {
+  color: black !important;
+  border-bottom: 3px solid black !important;
+  background-color: var(--bs-light) !important;
 }
 
 .custom-tabs .nav-link.active {
@@ -19331,6 +19337,22 @@ tr[tabindex] {
 .subtitle-text {
   font-size: clamp(0.75rem, 1.5vw, 0.95rem); /* 12px to 15.2px */
   line-height: 1.4;
+}
+
+#mobileMenuBtn {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dark #mobileMenuBtn {
+  background: rgba(40, 40, 40, 0.95);
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

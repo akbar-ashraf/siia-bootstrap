@@ -1,1015 +1,1451 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SIIA</title>
+    <title>SIIA - Course Details</title>
+
+    <meta
+      name="description"
+      content="Comprehensive dashboard for managing courses, programs, assessments, and training administration"
+    />
+
     <link href="../css/style.css" rel="stylesheet" />
 
+    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
   </head>
+
   <body>
-    <div class="bg-light p-5 min-vh-100">
-      <div class="d-flex gap-5">
-        <aside
-          class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-6"
-        >
-          <!-- Profile -->
-          <div class="mb-4 text-center">
-            <img
-              src="https://i.pravatar.cc/100?img=3"
-              alt="Profile"
-              class="w-50 rounded-circle mx-auto mb-3"
-            />
-            <h6 class="">Aster Seawalker</h6>
-            <p class="text-muted small">Admin</p>
-          </div>
-          <!-- Navigation -->
-          <nav
-            class="dashboardNav d-flex flex-column"
-            aria-label="Dashboard Navigation"
+    <!-- Skip to content link -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div
+        class="container-fluid px-3 px-md-5 py-3 py-md-5"
+        style="width: 100% !important"
+      >
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5 w-100">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
           >
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-bar-chart-line"></i>
-              Dashboard
-            </a>
-            <a href="#" class="btn btn-primary active">
-              <i class="bi bi-mortarboard"></i>
-              Courses
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-journal-bookmark"></i>
-              Programs
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-clipboard2-check"></i>
-              Assessments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-calendar4-week"></i>
-              Events
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-card-checklist"></i>
-              Memberships
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-person"></i>
-              Admins
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-person-check"></i>
-              Trainers
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-people"></i>
-              Trainee & Students
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-pie-chart"></i>
-              Reports
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-credit-card-2-front"></i>
-              Payments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-book"></i>
-              Library
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-patch-check"></i>
-              Certificates
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-box-arrow-right"></i>
-              Log Out
-            </a>
-          </nav>
-        </aside>
-        <div class="flex-grow-1 vstack gap-5">
-          <div class="card border-0 shadow-sm p-6">
-            <div class="row align-items-center mb-5">
-              <div class="col">
-                <p class="mb-0">Course Title (English)</p>
-                <h3>Advanced Cybersecurity for Beginners</h3>
-              </div>
-              <div class="col" dir="rtl">
-                <p class="mb-0">عنوان الدورة (عربی)</p>
-                <h3>الأمن السيبراني المتقدم للمبتدئين</h3>
-              </div>
-            </div>
-
-            <div class="col d-flex justify-content-md-end gap-3 mb-5">
-              <button class="btn btn-outline-primary">
-                <i class="bi bi-box-arrow-in-down-left"></i> Import CSV
-              </button>
-              <button class="btn btn-outline-primary">
-                <i class="bi bi-box-arrow-up-right"></i> Export CSV
-              </button>
-              <button class="btn btn-outline-primary">
-                <i class="bi bi-copy"></i> Copy Details
-              </button>
-              <button class="btn btn-outline-primary">
-                <i class="bi bi-pencil-square"></i> Edit Course
-              </button>
-            </div>
-            <div class="row mb-3">
-              <div class="col">
-                <p class="mb-1">Course Description (English)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis"
-                >
-                  Part 1 lays the foundation of internal auditing by introducing
-                  the core principles, ethical standards, and the internal
-                  auditor’s role in governance, risk, and control. It aligns
-                  directly with the updated Global Internal Audit Standards.
-                </div>
-              </div>
-            </div>
-            <div class="row mb-3">
-              <div class="col" dir="rtl">
-                <p class="mb-1">وصف الدورة (العربية)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis"
-                >
-                  تضع الجزء الأول أساس التدقيق الداخلي من خلال تقديم المبادئ
-                  الأساسية والمعايير الأخلاقية ودور المدقق الداخلي في الحوكمة
-                  والمخاطر والرقابة. يتماشى مباشرة مع المعايير العالمية المحدثة
-                  للتدقيق الداخلي.
-                </div>
-              </div>
-            </div>
-            <div class="row mb-3">
-              <div class="col">
-                <p class="mb-1">Learning Objectives (English)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis readAbleFieldtextEqualHeight"
-                >
-                  · Understand the definition, purpose, and value of internal
-                  auditing<br />
-                  · Differentiate between assurance and advisory roles<br />
-                  · Apply ethical and professional standards<br />
-                  · Recognize fraud risks and the internal auditor’s
-                  responsibilities
-                </div>
-              </div>
-              <div class="col" dir="rtl">
-                <p class="mb-1">أهداف التعلم (العربية)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis readAbleFieldtextEqualHeight"
-                >
-                  · فهم التعريف والغرض والقيمة من التدقيق الداخلي<br />
-                  · التمييز بين أدوار الضمان والاستشارات<br />
-                  · تطبيق المعايير الأخلاقية والمهنية<br />
-                  · التعرف على مخاطر الاحتيال ومسؤوليات المدقق الداخلي
-                </div>
-              </div>
-              <div class="col">
-                <p class="mb-1">Key Domains (English)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis readAbleFieldtextEqualHeight"
-                >
-                  · Foundations of Internal Auditing – 35% <br />
-                  · Ethics and Professionalism – 20%<br />
-                  · Governance, Risk Management, and Control – 30%<br />
-                  · Fraud Risks – 15%
-                </div>
-              </div>
-            </div>
-            <div class="row mb-3">
-              <div class="col" dir="rtl">
-                <p class="mb-1">المجالات الرئيسية (العربية)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis readAbleFieldtextEqualHeight"
-                >
-                  · أسس التدقيق الداخلي – 35% <br />
-                  · الأخلاقيات والمهنية – 20% <br />
-                  · الحوكمة وإدارة المخاطر والرقابة – 30% <br />
-                  · مخاطر الاحتيال – 15%
-                </div>
-              </div>
-              <div class="col">
-                <p class="mb-1">Learning Objectives (English)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis readAbleFieldtextEqualHeight"
-                >
-                  · Core principles and objectives of internal auditing<br />
-                  · Internal audit charter, mandate, and independence<br />
-                  · Assurance vs. advisory roles and services<br />
-                  · Ethical standards, integrity, and professional behavior<br />
-                  · Governance, risk management, and internal controls<br />
-                  · Fraud risks, detection, and auditor’s role in investigations
-                </div>
-              </div>
-              <div class="col" dir="rtl">
-                <p class="mb-1">أهداف التعلم (العربية)</p>
-                <div
-                  class="border rounded-3 px-5 py-2 bg-light text-body-emphasis readAbleFieldtextEqualHeight"
-                >
-                  · المبادئ الأساسية وأهداف التدقيق الداخلي<br />
-                  · ميثاق التدقيق الداخلي، والتفويض، والاستقلالية<br />
-                  · أدوار وخدمات الضمان مقابل الاستشارات<br />
-                  · المعايير الأخلاقية، والنزاهة، والسلوك المهني<br />
-                  · الحوكمة، وإدارة المخاطر، والرقابة الداخلية<br />
-                  · مخاطر الاحتيال، والكشف، ودور المدقق في التحقيقات
-                </div>
-              </div>
-            </div>
-
-            <div class="row row-cols-5 g-4 mb-10">
-              <div class="col">
-                <span>Online</span>
-                <p class="text-body-emphasis">Course format</p>
-              </div>
-              <div class="col">
-                <span>Course type</span>
-                <p class="text-body-emphasis">CIA</p>
-              </div>
-              <div class="col">
-                <span>Course level</span>
-                <p class="text-body-emphasis">Beginner</p>
-              </div>
-              <div class="col">
-                <span>Schedule Days</span>
-                <p class="text-body-emphasis">Sunday To Thursday</p>
-              </div>
-              <div class="col">
-                <span>Schedule Time</span>
-                <p class="text-body-emphasis">9:00 AM To 9:30 AM</p>
-              </div>
-
-              <div class="col">
-                <span>Duration</span>
-                <p class="text-body-emphasis">6 Months</p>
-              </div>
-              <div class="col">
-                <span>Language</span>
-                <p class="text-body-emphasis">English</p>
-              </div>
-              <div class="col">
-                <span>Max Participants</span>
-                <p class="text-body-emphasis">50</p>
-              </div>
-              <div class="col">
-                <span>Exams Passing % (Optional)</span>
-                <p class="text-body-emphasis">70%</p>
-              </div>
-              <div class="col">
-                <span>Attendance Passing %</span>
-                <p class="text-body-emphasis">70%</p>
-              </div>
-
-              <div class="col">
-                <span>Base Price</span>
-                <p class="text-body-emphasis">SR: 500</p>
-              </div>
-              <div class="col">
-                <span>Disc. Price</span>
-                <p class="text-body-emphasis">SR: 300</p>
-              </div>
-              <div class="col">
-                <span>Trainer</span>
-                <p class="text-body-emphasis">Ahmed</p>
-              </div>
-              <div class="col">
-                <span>Supervisor</span>
-                <p class="text-body-emphasis">Ali</p>
-              </div>
-              <div class="col">
-                <span>Registrations</span>
-                <p class="text-body-emphasis">Open</p>
-              </div>
-
-              <div class="col">
-                <span>Accessible</span>
-                <p class="text-body-emphasis">Members only</p>
-              </div>
-              <div class="col">
-                <span>Upcoming class zoom link:</span>
-                <p class="text-body-emphasis">
-                  Class 10: <a href="#">https://zoom.us/j/123</a>
-                </p>
-              </div>
-              <div class="col">
-                <span>Course Intro</span>
-                <p class="text-body-emphasis"><a href="#">YouTube Link</a></p>
-              </div>
-              <div class="col">
-                <span>Course Content</span>
-                <p class="text-body-emphasis">
-                  <a href="#" download="">Download</a>
-                </p>
-              </div>
-              <div class="col">
-                <span>Course Status</span>
-                <p class="text-body-emphasis">Published</p>
-              </div>
-            </div>
-
-            <div>
-              <!-- Tabs -->
-              <ul
-                class="nav nav-pills mb-4 border rounded-3 p-2 bg-light d-inline-flex"
-                id="myTab"
-              >
-                <li class="nav-item">
-                  <button
-                    class="nav-link btn-sm active"
-                    id="trainee-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#trainee"
-                    type="button"
-                    role="tab"
-                  >
-                    Trainee / Students
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button
-                    class="nav-link"
-                    id="classes-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#classes"
-                    type="button"
-                    role="tab"
-                  >
-                    Classes Schedule
-                  </button>
-                </li>
-              </ul>
-
-              <!-- Tab Content -->
-              <div class="tab-content" id="myTabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="trainee"
-                  role="tabpanel"
-                  aria-labelledby="trainee-tab"
-                >
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead class="">
-                        <tr>
-                          <th>Full Name</th>
-                          <th>National ID</th>
-                          <th>Contact No#</th>
-                          <th>Joining</th>
-                          <th>Fee Status</th>
-                          <th>Type</th>
-                          <th>Enrollment</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Approved -->
-                        <tr>
-                          <td>
-                            <button
-                              type="button"
-                              class="btn btn-link p-0"
-                              data-bs-toggle="modal"
-                              data-bs-target="#editProfileModal"
-                            >
-                              <img
-                                src="https://i.pravatar.cc/100?img=1"
-                                alt="Profile"
-                                class="rounded-circle me-2"
-                                width="40"
-                              />Ahmed Ali
-                            </button>
-                          </td>
-                          <td>12345-1234567-1</td>
-                          <td>+966 512345678</td>
-                          <td>Jul 20, 25</td>
-                          <td>
-                            <span class="text-success"
-                              ><i class="bi bi-check-circle me-1"></i>
-                              Paid</span
-                            >
-                          </td>
-                          <td>Individual</td>
-                          <td>
-                            <span
-                              class="badge bg-success-subtle text-success badge-status"
-                              >Approved</span
-                            >
-                          </td>
-                          <td>
-                            <div>
-                              <button class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-pencil-square"></i> Edit
-                              </button>
-                              <button class="btn btn-outline-danger btn-sm">
-                                <i class="bi bi-trash"></i> Delete
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <!-- Editable -->
-                        <tr>
-                          <td>
-                            <button
-                              type="button"
-                              class="btn btn-link p-0"
-                              data-bs-toggle="modal"
-                              data-bs-target="#editProfileModal"
-                            >
-                              <img
-                                src="https://i.pravatar.cc/100?img=1"
-                                alt="Profile"
-                                class="rounded-circle me-2"
-                                width="40"
-                              />Ahmed Ali
-                            </button>
-                          </td>
-                          <td>12345-1234567-1</td>
-                          <td>+966 512345678</td>
-                          <td>
-                            <input
-                              type="text"
-                              class="form-control form-control-sm"
-                              value="Jul 20, 25"
-                            />
-                          </td>
-                          <td>
-                            <select class="form-select form-select-sm">
-                              <option>Paid</option>
-                              <option>Pending</option>
-                            </select>
-                          </td>
-                          <td>Individual</td>
-                          <td>
-                            <select class="form-select form-select-sm">
-                              <option>Approve</option>
-                              <option>Pending</option>
-                              <option>Rejected</option>
-                            </select>
-                          </td>
-                          <td>
-                            <div class="d-flex gap-2">
-                              <button class="btn btn-outline-danger btn-sm">
-                                Discard
-                              </button>
-                              <button class="btn btn-primary btn-sm">
-                                Save
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <!-- Pending -->
-                        <tr>
-                          <td>
-                            <button
-                              type="button"
-                              class="btn btn-link p-0"
-                              data-bs-toggle="modal"
-                              data-bs-target="#editProfileModal"
-                            >
-                              <img
-                                src="https://i.pravatar.cc/100?img=1"
-                                alt="Profile"
-                                class="rounded-circle me-2"
-                                width="40"
-                              />Ahmed Ali
-                            </button>
-                          </td>
-                          <td>12345-1234567-1</td>
-                          <td>+966 512345678</td>
-                          <td>Jul 20, 25</td>
-                          <td>
-                            <span class="text-warning"
-                              ><i class="bi bi-exclamation-circle me-1"></i>
-                              Pending</span
-                            >
-                          </td>
-                          <td>Individual</td>
-                          <td>
-                            <span
-                              class="badge bg-warning-subtle text-warning badge-status"
-                              >Pending</span
-                            >
-                          </td>
-                          <td>
-                            <div class="d-flex gap-2 align-items-center">
-                              <button class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-pencil-square"></i> Edit
-                              </button>
-                              <button class="btn btn-outline-danger btn-sm">
-                                <i class="bi bi-trash"></i> Delete
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <!-- Rejected -->
-                        <tr>
-                          <td>
-                            <button
-                              type="button"
-                              class="btn btn-link p-0"
-                              data-bs-toggle="modal"
-                              data-bs-target="#editProfileModal"
-                            >
-                              <img
-                                src="https://i.pravatar.cc/100?img=1"
-                                alt="Profile"
-                                class="rounded-circle me-2"
-                                width="40"
-                              />Ahmed Ali
-                            </button>
-                          </td>
-                          <td>12345-1234567-1</td>
-                          <td>+966 512345678</td>
-                          <td>Jul 20, 25</td>
-                          <td>
-                            <span class="text-warning"
-                              ><i class="bi bi-exclamation-circle me-1"></i>
-                              Pending</span
-                            >
-                          </td>
-                          <td>Individual</td>
-                          <td>
-                            <span
-                              class="badge bg-danger-subtle text-danger badge-status"
-                              >Rejected</span
-                            >
-                          </td>
-                          <td>
-                            <div class="d-flex gap-2">
-                              <button class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-pencil-square"></i> Edit
-                              </button>
-                              <button class="btn btn-outline-danger btn-sm">
-                                <i class="bi bi-trash"></i> Delete
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <button class="btn btn-primary">
-                      <i class="bi bi-plus"></i>Add New
-                    </button>
-                  </div>
-                  <!-- Bottom Controls -->
-                  <div
-                    class="row align-items-center justify-content-between mt-3"
-                  >
-                    <div class="col-md-4">
-                      <div class="d-flex align-items-center">
-                        <span class="me-2">Show</span>
-                        <input
-                          type="text"
-                          class="form-control form-control-sm"
-                          style="width: 40px"
-                          placeholder="10"
-                        />
-                        <span class="ms-2">Out of 13</span>
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                      <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-md-end mb-0">
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                            </a>
-                          </li>
-                          <li class="page-item active">
-                            <a class="page-link" href="#">1</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">4</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">5</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Classes Tab -->
-                <div
-                  class="tab-pane fade"
-                  id="classes"
-                  role="tabpanel"
-                  aria-labelledby="classes-tab"
-                >
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Classes</th>
-                          <th>Date</th>
-                          <th>Schedule</th>
-                          <th>Notes</th>
-                          <th>Location</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Class 1 -->
-                        <tr>
-                          <td>Class 1: Accessibility</td>
-                          <td>July 20, 2024</td>
-                          <td>
-                            Saturday<br />
-                            10:00 to 11:00
-                          </td>
-                          <td><a href="#" class="text-primary">Download</a></td>
-                          <td>
-                            <a href="#" class="text-primary">Zoom Link</a>
-                          </td>
-                          <td>
-                            <div class="d-flex gap-2">
-                              <button class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-pencil"></i> Edit
-                              </button>
-                              <button class="btn btn-outline-danger btn-sm">
-                                <i class="bi bi-trash"></i> Delete
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <!-- Class 2 -->
-                        <tr>
-                          <td>
-                            <input
-                              type="text"
-                              class="form-control form-control-sm"
-                              value=""
-                            />
-                          </td>
-                          <td>
-                            <input
-                              type="text"
-                              class="form-control form-control-sm"
-                              value=""
-                            />
-                          </td>
-                          <td>
-                            <select class="form-select form-select-sm">
-                              <option>Sunday</option>
-                              <option>Monday</option>
-                              <option>Tuesday</option>
-                              <option>Wednesday</option>
-                              <option>Thursday</option>
-                              <option>Friday</option>
-                              <option>Saturday</option>
-                            </select>
-                          </td>
-
-                          <td>
-                            <input
-                              type="file"
-                              class="form-control form-control-sm"
-                            />
-                          </td>
-                          <td>
-                            <a href="#" class="text-primary">Zoom Link</a>
-                          </td>
-                          <td>
-                            <div class="d-flex gap-2">
-                              <button class="btn btn-outline-danger btn-sm">
-                                Discard
-                              </button>
-                              <button class="btn btn-primary btn-sm">
-                                Save
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <!-- Class 3 -->
-                        <tr>
-                          <td>Class 3: Accessibility and Controls</td>
-                          <td>July 22, 2024</td>
-                          <td>
-                            Monday<br />
-                            10:00 to 11:00
-                          </td>
-                          <td><a href="#" class="text-primary">Download</a></td>
-                          <td>
-                            <a href="#" class="text-primary">Zoom Link</a>
-                          </td>
-                          <td>
-                            <div class="d-flex gap-2">
-                              <button class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-pencil"></i> Edit
-                              </button>
-                              <button class="btn btn-outline-danger btn-sm">
-                                <i class="bi bi-trash"></i> Delete
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <button class="btn btn-primary">
-                      <i class="bi bi-plus"></i>Add New
-                    </button>
-                  </div>
-                  <!-- Bottom Controls -->
-                  <div
-                    class="row align-items-center justify-content-between mt-3"
-                  >
-                    <div class="col-md-4">
-                      <div class="d-flex align-items-center">
-                        <span class="me-2">Show</span>
-                        <input
-                          type="text"
-                          class="form-control form-control-sm"
-                          style="width: 40px"
-                          placeholder="10"
-                        />
-                        <span class="ms-2">Out of 13</span>
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                      <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-md-end mb-0">
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                            </a>
-                          </li>
-                          <li class="page-item active">
-                            <a class="page-link" href="#">1</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">4</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">5</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="editProfileModal"
-      tabindex="-1"
-      aria-labelledby="editProfileModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content p-4">
-          <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="text-center mb-4">
+            <!-- Profile -->
+            <div class="mb-4 text-center">
               <img
-                src="https://i.pravatar.cc/100?img=1"
-                alt="Profile"
-                class="rounded-circle mb-3"
-                width="120"
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
               />
-              <h5 class="fw-bold mb-1">Ali Ahmed</h5>
-              <p class="text-muted">Trainee</p>
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
             </div>
 
-            <!-- Form -->
-            <form>
-              <div class="row g-3">
-                <!-- English / Arabic Names -->
-                <div class="col-md-6">
-                  <label class="form-label">First Name (English)</label>
-                  <input type="text" class="form-control" value="Aster" />
-                </div>
-                <div class="col-md-6 text-end">
-                  <label class="form-label">الأول اسم (عربي)</label>
-                  <input
-                    type="text"
-                    class="form-control text-end"
-                    value="أستر"
+            <!-- Navigation -->
+
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
                   />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
                 </div>
 
-                <div class="col-md-6">
-                  <label class="form-label">Middle Name (English)</label>
-                  <input type="text" class="form-control" value="Zayd" />
-                </div>
-                <div class="col-md-6 text-end">
-                  <label class="form-label">وسط اسم (عربي)</label>
-                  <input
-                    type="text"
-                    class="form-control text-end"
-                    value="زيد"
-                  />
-                </div>
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
 
-                <div class="col-md-6">
-                  <label class="form-label">Last Name (English)</label>
-                  <input type="text" class="form-control" value="Seawalker" />
-                </div>
-                <div class="col-md-6 text-end">
-                  <label class="form-label">الأخير اسم (عربي)</label>
-                  <input
-                    type="text"
-                    class="form-control text-end"
-                    value="سيووكر"
-                  />
-                </div>
-
-                <!-- Country & City -->
-                <div class="col-md-6">
-                  <label class="form-label">Country</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    value="United Arab Emirates"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">City</label>
-                  <input type="text" class="form-control" value="Abu Dhabi" />
-                </div>
-
-                <!-- ID & Email -->
-                <div class="col-md-6">
-                  <label class="form-label">National ID</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    value="1234567890123"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    value="abc@xyz.com"
-                  />
-                </div>
-
-                <!-- Phone & Qualification -->
-                <div class="col-md-6">
-                  <label class="form-label">Phone</label>
-                  <div class="input-group">
-                    <span class="input-group-text"
-                      ><img src="https://flagcdn.com/w40/sa.png" width="20"
-                    /></span>
-                    <input type="text" class="form-control" value="+966" />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Qualification</label>
-                  <select class="form-select">
-                    <option selected>Choose</option>
-                    <option>Bachelor</option>
-                    <option>Master</option>
-                  </select>
-                </div>
-
-                <!-- Language & Gender -->
-                <div class="col-md-6">
-                  <label class="form-label">Language</label>
-                  <select class="form-select">
-                    <option>English</option>
-                    <option>Arabic</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label d-block">Gender (Optional)</label>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="gender"
-                      id="male"
-                      value="male"
-                    />
-                    <label class="form-check-label" for="male">Male</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="gender"
-                      id="female"
-                      value="female"
-                      checked
-                    />
-                    <label class="form-check-label" for="female">Female</label>
-                  </div>
-                </div>
-
-                <!-- Joining & Notes -->
-                <div class="col-md-6">
-                  <label class="form-label">Joining</label>
-                  <input type="text" class="form-control" value="Jul 20, 25" />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Notes (Optional)</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Name here"
-                  />
-                </div>
-
-                <!-- Course Enrollment -->
-                <div class="col-6">
-                  <label class="form-label">Course Enrollment</label>
-                  <div class="p-3 border rounded bg-light">
-                    <p>
-                      Essentials of Internal Auditing – CIA1<br />
-                      Practice of Internal Auditing – CIA2<br />
-                      Business Knowledge for Internal Auditing – CIA3
-                    </p>
-                  </div>
-                </div>
-                <div class="col-6"></div>
-
-                <!-- Alert -->
-                <div class="col-6">
-                  <div
-                    class="alert alert-warning d-flex align-items-center mb-0 mt-3"
+          <!-- MAIN CONTENT -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
                   >
-                    <i class="bi bi-exclamation-triangle mx-2"></i>
-                    <div class="lh-2">
-                      <strong>Important note:</strong> Course enrollment can be
-                      managed from course section.
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Search -->
+                  <div class="position-relative flex-grow-1 me-3 w-100 mw-100">
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <label for="globalSearch" class="visually-hidden"
+                      >Search</label
+                    >
+                    <input
+                      id="globalSearch"
+                      type="text"
+                      class="form-control ps-9 rounded-pill"
+                      placeholder="Search anything"
+                      aria-label="Search site"
+                      aria-describedby="globalSearchHelp"
+                    />
+                    <div id="globalSearchHelp" class="visually-hidden">
+                      Type and press Enter to search the site
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown -->
+                  <div class="dropdown d-none d-sm-block">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                    >
+                      English
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitem"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          data-lang="ar"
+                          role="menuitem"
+                        >
+                          العربية
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Main Content -->
+            <div
+              class="card border-0 shadow-sm p-6 gap-10"
+              role="region"
+              aria-labelledby="courseTitle"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center mt-6 mt-lg-0"
+              >
+                <h3 id="courseTitle" class="lang-en">
+                  Advanced Cybersecurity for Beginners
+                </h3>
+                <h3 class="lang-ar text-end" dir="rtl">
+                  الأمن السيبراني المتقدم للمبتدئين
+                </h3>
+              </div>
+
+              <!-- English Content -->
+              <div
+                class="row g-4 lang-en"
+                role="group"
+                aria-label="Course Information"
+              >
+                <div class="col-12 col-md-6 col-lg-3">
+                  <p class="mb-2 fw-semibold">Course Description (English)</p>
+                  <div
+                    class="border-none rounded-3 px-5 py-2 bg-light text-body-emphasis overflow-auto"
+                    style="height: 120px"
+                    role="textbox"
+                    aria-readonly="true"
+                  >
+                    Part 1 lays the foundation of internal auditing by
+                    introducing the core principles, ethical standards, and the
+                    internal auditor's role in governance, risk, and control. It
+                    aligns directly with the updated Global Internal Audit
+                    Standards.
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                  <p class="mb-2 fw-semibold">Learning Objectives (English)</p>
+                  <ul
+                    class="border-none rounded-3 px-5 py-2 bg-light text-body-emphasis overflow-auto"
+                    style="height: 120px"
+                    role="list"
+                  >
+                    <li>
+                      Understand the definition, purpose, and value of internal
+                      auditing
+                    </li>
+                    <li>Differentiate between assurance and advisory roles</li>
+                    <li>Apply ethical and professional standards</li>
+                    <li>
+                      Recognize fraud risks and internal auditor
+                      responsibilities
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                  <p class="mb-2 fw-semibold">Key Domains (English)</p>
+                  <ul
+                    class="border-none rounded-3 px-5 py-2 bg-light text-body-emphasis overflow-auto"
+                    style="height: 120px"
+                    role="list"
+                  >
+                    <li>Foundations of Internal Auditing – 35%</li>
+                    <li>Ethics and Professionalism – 20%</li>
+                    <li>Governance, Risk Management, and Control – 30%</li>
+                    <li>Fraud Risks – 15%</li>
+                  </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                  <p class="mb-2 fw-semibold">Topics (English)</p>
+                  <ul
+                    class="border-none rounded-3 px-5 py-2 bg-light text-body-emphasis overflow-auto"
+                    style="height: 120px"
+                    role="list"
+                  >
+                    <li>Core principles and objectives of internal auditing</li>
+                    <li>Internal audit charter, mandate, and independence</li>
+                    <li>Assurance vs advisory roles and services</li>
+                    <li>Ethical standards and professional behavior</li>
+                    <li>Governance, risk management, internal controls</li>
+                    <li>
+                      Fraud detection and auditor's role in investigations
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Course Details Row -->
+              <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
+                role="group"
+                aria-label="Course Details"
+              >
+                <div class="col">
+                  <span class="fw-semibold">Online</span>
+                  <p class="text-body-emphasis">Course format</p>
+                </div>
+                <div class="col">
+                  <span class="fw-semibold">Course type</span>
+                  <p class="text-body-emphasis">CIA</p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Schedule Days</span>
+                  <p class="text-body-emphasis">Sunday To Thursday</p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Schedule Time</span>
+                  <p class="text-body-emphasis">9:00 AM To 9:30 AM</p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Duration</span>
+                  <p class="text-body-emphasis">6 Months</p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Language</span>
+                  <p class="text-body-emphasis">English</p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Trainer</span>
+                  <p class="text-body-emphasis">Ahmed</p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Supervisor</span>
+                  <p class="text-body-emphasis">Ali</p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Upcoming class Zoom link:</span>
+                  <p class="text-body-emphasis">
+                    <a href="#" aria-label="Join Zoom for Class 10"
+                      >Class 10 Zoom Link</a
+                    >
+                  </p>
+                </div>
+
+                <div class="col">
+                  <span class="fw-semibold">Course Intro</span>
+                  <p class="text-body-emphasis">
+                    <a
+                      href="#"
+                      aria-label="Watch Course Introduction on YouTube"
+                      >YouTube Link</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tabs -->
+              <div role="region" aria-labelledby="tabsHeading">
+                <h4 id="tabsHeading" class="visually-hidden">Course Tabs</h4>
+
+                <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="trainee-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#trainee"
+                      role="tab"
+                      aria-controls="trainee"
+                      aria-selected="true"
+                    >
+                      Trainee / Students
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="classes-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#classes"
+                      role="tab"
+                      aria-controls="classes"
+                      aria-selected="false"
+                    >
+                      Classes Schedule
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content d-block d-lg-flex" id="myTabContent">
+                  <!-- Trainee Tab -->
+                  <div
+                    class="tab-pane fade show active w-100"
+                    id="trainee"
+                    role="tabpanel"
+                    aria-labelledby="trainee-tab"
+                  >
+                    <div class="table-responsive">
+                      <table class="table" role="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">National ID</th>
+                            <th scope="col">Contact No#</th>
+                            <th scope="col">Joining</th>
+                            <th scope="col">Fee Status</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Enrollment</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <!-- Approved Row -->
+                          <tr>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn btn-link p-0"
+                                data-bs-toggle="modal"
+                                data-bs-target="#editProfileModal"
+                                aria-label="Edit profile for Ahmed Ali"
+                              >
+                                <img
+                                  src="https://i.pravatar.cc/100?img=1"
+                                  alt="Profile picture of Ahmed Ali"
+                                  class="rounded-circle me-2"
+                                  width="40"
+                                />
+                                Ahmed Ali
+                              </button>
+                            </td>
+                            <td>12345-1234567-1</td>
+                            <td>+966 512345678</td>
+                            <td>Jul 20, 25</td>
+                            <td>
+                              <span class="text-success">
+                                <i
+                                  class="bi bi-check-circle me-1"
+                                  aria-hidden="true"
+                                ></i
+                                >Paid
+                              </span>
+                            </td>
+                            <td>Individual</td>
+                            <td>
+                              <span
+                                class="badge bg-success-subtle text-success badge-status"
+                              >
+                                Approved
+                              </span>
+                            </td>
+                            <td>
+                              <div>
+                                <button
+                                  class="btn btn-outline-primary btn-sm"
+                                  aria-label="Edit Trainee"
+                                >
+                                  <i
+                                    class="bi bi-pencil-square"
+                                    aria-hidden="true"
+                                  ></i>
+                                  Edit
+                                </button>
+                                <button
+                                  class="btn btn-outline-danger btn-sm"
+                                  aria-label="Delete Trainee"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"></i>
+                                  Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!-- Editable Row -->
+                          <tr>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn btn-link p-0"
+                                data-bs-toggle="modal"
+                                data-bs-target="#editProfileModal"
+                                aria-label="Edit profile for Ahmed Ali"
+                              >
+                                <img
+                                  src="https://i.pravatar.cc/100?img=1"
+                                  alt="Profile picture of Ahmed Ali"
+                                  class="rounded-circle me-2"
+                                  width="40"
+                                />
+                                Ahmed Ali
+                              </button>
+                            </td>
+                            <td>12345-1234567-1</td>
+                            <td>+966 512345678</td>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control form-control-sm"
+                                value="Jul 20, 25"
+                                aria-label="Joining Date"
+                              />
+                            </td>
+                            <td>
+                              <select
+                                class="form-select form-select-sm"
+                                aria-label="Select fee status"
+                              >
+                                <option>Paid</option>
+                                <option>Pending</option>
+                              </select>
+                            </td>
+                            <td>Individual</td>
+                            <td>
+                              <select
+                                class="form-select form-select-sm"
+                                aria-label="Select enrollment status"
+                              >
+                                <option>Approve</option>
+                                <option>Pending</option>
+                                <option>Rejected</option>
+                              </select>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-2">
+                                <button
+                                  class="btn btn-outline-danger btn-sm"
+                                  aria-label="Discard changes"
+                                >
+                                  Discard
+                                </button>
+                                <button
+                                  class="btn btn-primary btn-sm"
+                                  aria-label="Save changes"
+                                >
+                                  Save
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!-- Pending Row -->
+                          <tr>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn btn-link p-0"
+                                data-bs-toggle="modal"
+                                data-bs-target="#editProfileModal"
+                                aria-label="Edit profile for Ahmed Ali"
+                              >
+                                <img
+                                  src="https://i.pravatar.cc/100?img=1"
+                                  alt="Profile picture of Ahmed Ali"
+                                  class="rounded-circle me-2"
+                                  width="40"
+                                />
+                                Ahmed Ali
+                              </button>
+                            </td>
+                            <td>12345-1234567-1</td>
+                            <td>+966 512345678</td>
+                            <td>Jul 20, 25</td>
+                            <td>
+                              <span class="text-warning">
+                                <i
+                                  class="bi bi-exclamation-circle me-1"
+                                  aria-hidden="true"
+                                ></i>
+                                Pending
+                              </span>
+                            </td>
+                            <td>Individual</td>
+                            <td>
+                              <span
+                                class="badge bg-warning-subtle text-warning badge-status"
+                              >
+                                Pending
+                              </span>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-2 align-items-center">
+                                <button
+                                  class="btn btn-outline-primary btn-sm"
+                                  aria-label="Edit Trainee"
+                                >
+                                  <i
+                                    class="bi bi-pencil-square"
+                                    aria-hidden="true"
+                                  ></i>
+                                  Edit
+                                </button>
+                                <button
+                                  class="btn btn-outline-danger btn-sm"
+                                  aria-label="Delete Trainee"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"></i>
+                                  Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!-- Rejected Row -->
+                          <tr>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn btn-link p-0"
+                                data-bs-toggle="modal"
+                                data-bs-target="#editProfileModal"
+                                aria-label="Edit profile for Ahmed Ali"
+                              >
+                                <img
+                                  src="https://i.pravatar.cc/100?img=1"
+                                  alt="Profile picture of Ahmed Ali"
+                                  class="rounded-circle me-2"
+                                  width="40"
+                                />
+                                Ahmed Ali
+                              </button>
+                            </td>
+                            <td>12345-1234567-1</td>
+                            <td>+966 512345678</td>
+                            <td>Jul 20, 25</td>
+                            <td>
+                              <span class="text-warning">
+                                <i
+                                  class="bi bi-exclamation-circle me-1"
+                                  aria-hidden="true"
+                                ></i>
+                                Pending
+                              </span>
+                            </td>
+                            <td>Individual</td>
+                            <td>
+                              <span
+                                class="badge bg-danger-subtle text-danger badge-status"
+                              >
+                                Rejected
+                              </span>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-2">
+                                <button
+                                  class="btn btn-outline-primary btn-sm"
+                                  aria-label="Edit Trainee"
+                                >
+                                  <i
+                                    class="bi bi-pencil-square"
+                                    aria-hidden="true"
+                                  ></i>
+                                  Edit
+                                </button>
+                                <button
+                                  class="btn btn-outline-danger btn-sm"
+                                  aria-label="Delete Trainee"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"></i>
+                                  Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-2">
+                      <button
+                        class="btn bg-light btn-sm text-body-emphasis"
+                        aria-label="Add more trainees"
+                      >
+                        <i class="bi bi-plus" aria-hidden="true"></i>Add More
+                      </button>
+                    </div>
+
+                    <!-- Bottom Controls -->
+                    <div class="row mt-3 g-3">
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="me-2">Show</span>
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            style="width: 40px"
+                            placeholder="10"
+                            aria-label="Number of records to show"
+                          />
+                          <span>Out of 13</span>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-8">
+                        <nav aria-label="Page navigation">
+                          <ul
+                            class="pagination justify-content-start justify-content-sm-end mb-0 flex-wrap"
+                          >
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Previous Page"
+                              >
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+
+                            <li class="page-item active">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 1"
+                                >1</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 2"
+                                >2</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 3"
+                                >3</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 4"
+                                >4</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 5"
+                                >5</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Next Page"
+                              >
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Classes Tab -->
+                  <div
+                    class="tab-pane fade w-100"
+                    id="classes"
+                    role="tabpanel"
+                    aria-labelledby="classes-tab"
+                  >
+                    <div class="table-responsive">
+                      <table class="table" role="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Classes</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Schedule</th>
+                            <th scope="col">Notes</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <!-- Class Row -->
+                          <tr>
+                            <td>Class 1: Accessibility</td>
+                            <td>July 20, 2024</td>
+                            <td>Saturday<br />10:00 to 11:00</td>
+                            <td>
+                              <a
+                                href="#"
+                                class="text-primary"
+                                aria-label="Download class notes"
+                                >Download</a
+                              >
+                            </td>
+                            <td>
+                              <a
+                                href="#"
+                                class="text-primary"
+                                aria-label="Join via Zoom"
+                                >Zoom Link</a
+                              >
+                            </td>
+                            <td>
+                              <div class="d-flex gap-2">
+                                <button
+                                  class="btn btn-outline-primary btn-sm"
+                                  aria-label="Edit class details"
+                                >
+                                  <i
+                                    class="bi bi-pencil"
+                                    aria-hidden="true"
+                                  ></i>
+                                  Edit
+                                </button>
+                                <button
+                                  class="btn btn-outline-danger btn-sm"
+                                  aria-label="Delete class"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"></i>
+                                  Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!-- Editable Class Row -->
+                          <tr>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control form-control-sm"
+                                aria-label="Class Name"
+                              />
+                            </td>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control form-control-sm"
+                                aria-label="Class Date"
+                              />
+                            </td>
+                            <td>
+                              <select
+                                class="form-select form-select-sm"
+                                aria-label="Select day"
+                              >
+                                <option>Sunday</option>
+                                <option>Monday</option>
+                                <option>Tuesday</option>
+                                <option>Wednesday</option>
+                                <option>Thursday</option>
+                                <option>Friday</option>
+                                <option>Saturday</option>
+                              </select>
+                            </td>
+                            <td>
+                              <input
+                                type="file"
+                                class="form-control form-control-sm"
+                                aria-label="Upload class notes"
+                              />
+                            </td>
+                            <td>
+                              <a
+                                href="#"
+                                class="text-primary"
+                                aria-label="Join Zoom class"
+                                >Zoom Link</a
+                              >
+                            </td>
+                            <td>
+                              <div class="d-flex gap-2">
+                                <button
+                                  class="btn btn-outline-danger btn-sm"
+                                  aria-label="Discard class entry"
+                                >
+                                  Discard
+                                </button>
+                                <button
+                                  class="btn btn-primary btn-sm"
+                                  aria-label="Save class entry"
+                                >
+                                  Save
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!-- Class 3 -->
+                          <tr>
+                            <td>Class 3: Accessibility and Controls</td>
+                            <td>July 22, 2024</td>
+                            <td>Monday<br />10:00 to 11:00</td>
+                            <td>
+                              <a
+                                href="#"
+                                class="text-primary"
+                                aria-label="Download class notes"
+                                >Download</a
+                              >
+                            </td>
+                            <td>
+                              <a
+                                href="#"
+                                class="text-primary"
+                                aria-label="Join via Zoom"
+                                >Zoom Link</a
+                              >
+                            </td>
+                            <td>
+                              <div class="d-flex gap-2">
+                                <button
+                                  class="btn btn-outline-primary btn-sm"
+                                  aria-label="Edit class details"
+                                >
+                                  <i
+                                    class="bi bi-pencil"
+                                    aria-hidden="true"
+                                  ></i>
+                                  Edit
+                                </button>
+                                <button
+                                  class="btn btn-outline-danger btn-sm"
+                                  aria-label="Delete class"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"></i>
+                                  Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-2">
+                      <button
+                        class="btn bg-light btn-sm text-body-emphasis"
+                        aria-label="Add more trainees"
+                      >
+                        <i class="bi bi-plus" aria-hidden="true"></i>Add More
+                      </button>
+                    </div>
+
+                    <!-- Bottom Controls -->
+                    <div class="row mt-3 g-3">
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="me-2">Show</span>
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            style="width: 40px"
+                            placeholder="10"
+                            aria-label="Number of classes to show"
+                          />
+                          <span>Out of 13</span>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-8">
+                        <nav aria-label="Page navigation">
+                          <ul
+                            class="pagination justify-content-start justify-content-sm-end mb-0 flex-wrap"
+                          >
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Previous Page"
+                              >
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+
+                            <li class="page-item active">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 1"
+                                >1</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 2"
+                                >2</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 3"
+                                >3</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 4"
+                                >4</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Go to page 5"
+                                >5</a
+                              >
+                            </li>
+
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Next Page"
+                              >
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <!-- Footer -->
-              <div
-                class="d-flex justify-content-center gap-6 align-items-center mt-8"
-              >
-                <button
-                  type="button"
-                  class="btn btn-outline-danger px-4"
-                  data-bs-dismiss="modal"
-                >
-                  Discard Changes
-                </button>
-                <button type="submit" class="btn btn-primary px-4">
-                  Save Changes
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="editProfileModal"
+        tabindex="-1"
+        aria-labelledby="editProfileModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content p-4">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center mb-4">
+                <img
+                  src="https://i.pravatar.cc/100?img=1"
+                  alt="Profile"
+                  class="rounded-circle mb-3"
+                  width="120"
+                />
+                <h5 class="fw-bold mb-1">Ali Ahmed</h5>
+                <p class="text-muted">Trainee</p>
+              </div>
 
+              <!-- Form -->
+              <form>
+                <div class="row g-3">
+                  <!-- English / Arabic Names -->
+                  <div class="col-md-6">
+                    <label class="form-label">First Name (English)</label>
+                    <input type="text" class="form-control" value="Aster" />
+                  </div>
+                  <div class="col-md-6 text-end">
+                    <label class="form-label">الأول اسم (عربي)</label>
+                    <input
+                      type="text"
+                      class="form-control text-end"
+                      value="أستر"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Middle Name (English)</label>
+                    <input type="text" class="form-control" value="Zayd" />
+                  </div>
+                  <div class="col-md-6 text-end">
+                    <label class="form-label">وسط اسم (عربي)</label>
+                    <input
+                      type="text"
+                      class="form-control text-end"
+                      value="زيد"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Last Name (English)</label>
+                    <input type="text" class="form-control" value="Seawalker" />
+                  </div>
+                  <div class="col-md-6 text-end">
+                    <label class="form-label">الأخير اسم (عربي)</label>
+                    <input
+                      type="text"
+                      class="form-control text-end"
+                      value="سيووكر"
+                    />
+                  </div>
+
+                  <!-- Country & City -->
+                  <div class="col-md-6">
+                    <label class="form-label">Country</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="United Arab Emirates"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" value="Abu Dhabi" />
+                  </div>
+
+                  <!-- ID & Email -->
+                  <div class="col-md-6">
+                    <label class="form-label">National ID</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="1234567890123"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      value="abc@xyz.com"
+                    />
+                  </div>
+
+                  <!-- Phone & Qualification -->
+                  <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><img src="https://flagcdn.com/w40/sa.png" width="20"
+                      /></span>
+                      <input type="text" class="form-control" value="+966" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Qualification</label>
+                    <select class="form-select">
+                      <option selected>Choose</option>
+                      <option>Bachelor</option>
+                      <option>Master</option>
+                    </select>
+                  </div>
+
+                  <!-- Language & Gender -->
+                  <div class="col-md-6">
+                    <label class="form-label">Language</label>
+                    <select class="form-select">
+                      <option>English</option>
+                      <option>Arabic</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label d-block">Gender (Optional)</label>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                      />
+                      <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                        checked
+                      />
+                      <label class="form-check-label" for="female"
+                        >Female</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Joining & Notes -->
+                  <div class="col-md-6">
+                    <label class="form-label">Joining</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="Jul 20, 25"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Notes (Optional)</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name here"
+                    />
+                  </div>
+
+                  <!-- Course Enrollment -->
+                  <div class="col-6">
+                    <label class="form-label">Course Enrollment</label>
+                    <div class="p-3 border rounded bg-light">
+                      <p>
+                        Essentials of Internal Auditing – CIA1<br />
+                        Practice of Internal Auditing – CIA2<br />
+                        Business Knowledge for Internal Auditing – CIA3
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6"></div>
+
+                  <!-- Alert -->
+                  <div class="col-6">
+                    <div
+                      class="alert alert-warning d-flex align-items-center mb-0 mt-3"
+                    >
+                      <i class="bi bi-exclamation-triangle mx-2"></i>
+                      <div class="lh-2">
+                        <strong>Important note:</strong> Course enrollment can
+                        be managed from course section.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="d-flex justify-content-center gap-6 align-items-center mt-8"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger px-4"
+                    data-bs-dismiss="modal"
+                  >
+                    Discard Changes
+                  </button>
+                  <button type="submit" class="btn btn-primary px-4">
+                    Save Changes
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- LANGUAGE SWITCH SCRIPT -->
+    <script></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

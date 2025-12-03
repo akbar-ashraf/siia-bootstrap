@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA - Memberships</title>
+    <meta name="description" content="SIIA Memberships Page" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Link stylesheet -->
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Skip to content link (important for keyboard users) -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+    <!-- Live region for polite SR announcements -->
+    <div
+      id="srAnnounce"
+      class="visually-hidden"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content" role="main" tabindex="-1">
+      <div class="container-fluid px-3 px-md-5 py-3 py-md-5">
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
+          >
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+                loading="lazy"
+                decoding="async"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="false">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-primary active" aria-current="page">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+            aria-hidden="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary"
+                    aria-current="page"
+                  >
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-primary active"
+                    aria-current="page"
+                  >
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Content Area -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Search -->
+                  <div
+                    class="position-relative flex-grow-1 me-3 w-100 mw-100"
+                    role="search"
+                    aria-label="Global site search"
+                  >
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <form
+                      action="#"
+                      method="get"
+                      class="w-100"
+                      aria-label="Global search form"
+                      role="search"
+                    >
+                      <label for="globalSearch" class="visually-hidden"
+                        >Search</label
+                      >
+                      <input
+                        id="globalSearch"
+                        name="q"
+                        type="text"
+                        class="form-control ps-9 rounded-pill"
+                        placeholder="Search anything"
+                        aria-label="Search site"
+                        aria-describedby="globalSearchHelp"
+                      />
+                      <div id="globalSearchHelp" class="visually-hidden">
+                        Type and press Enter to search the site
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown (kept but English-only, non-interactive for this page) -->
+                  <div class="dropdown d-none d-sm-block" aria-hidden="true">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                      aria-haspopup="true"
+                      disabled
+                    >
+                      English
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      role="menu"
+                      aria-label="Language options"
+                    >
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitemradio"
+                          aria-checked="true"
+                          aria-pressed="true"
+                        >
+                          English
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Membership Card -->
+            <section
+              class="card border-0 shadow-sm p-3 p-md-4 p-lg-6"
+              role="region"
+              aria-labelledby="coursesHeading"
+            >
+              <!-- Header Search and Filter Section -->
+              <div
+                class="membership d-flex flex-column flex-xl-row justify-content-between mb-4 mb-lg-5 g-3"
+              >
+                <div>
+                  <h2 id="coursesHeading" class="h3 h-lg-2 mb-2">
+                    Memberships
+                  </h2>
+                  <p class="mb-0">View and manage memberships</p>
+                </div>
+
+                <div
+                  class="membership-actions d-flex justify-content-lg-end gap-2"
+                >
+                  <div class="memberhsip-search position-relative search-input">
+                    <label for="membershipSearch" class="visually-hidden"
+                      >Search memberships</label
+                    >
+                    <input
+                      id="membershipSearch"
+                      name="membershipSearch"
+                      type="text"
+                      class="form-control pe-8"
+                      placeholder="Search here..."
+                      aria-label="Search memberships"
+                      aria-describedby="membershipSearchHelp"
+                    />
+                    <div id="membershipSearchHelp" class="visually-hidden">
+                      Search memberships by name
+                    </div>
+                    <span
+                      class="position-absolute top-50 end-0 translate-middle-y me-3"
+                      aria-hidden="true"
+                    >
+                      <i class="bi bi-search" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Membership Current Plan-->
+              <div class="mt-6">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs custom-tabs" id="myTab">
+                  <li class="nav-item">
+                    <button
+                      class="nav-link btn-sm active"
+                      id="individual-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#individual"
+                      type="button"
+                      role="tab"
+                    >
+                      <i class="bi bi-house me-2"></i>Individual
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link"
+                      id="student-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#student"
+                      type="button"
+                      role="tab"
+                    >
+                      <i class="bi bi-house me-2"></i>Student
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link btn-sm"
+                      id="corporate-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#corporate"
+                      type="button"
+                      role="tab"
+                    >
+                      <i class="bi bi-house me-2"></i>Corporate
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link btn-sm"
+                      id="quotation-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#quotation"
+                      type="button"
+                      role="tab"
+                    >
+                      <i class="bi bi-house me-2"></i>Quotation Requests
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active w-100"
+                    id="individual"
+                    role="tabpanel"
+                    aria-labelledby="individual-tab"
+                  >
+                    <section class="d-flex flex-column gap-4 w-100">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Individual Memberships
+                          </h4>
+                          <div
+                            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 g-3 g-lg-4"
+                          >
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Membership type</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Corporate
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Exclusive courses</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Regular
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Accessibility for</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                50 Persons only
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Subscribers fee</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                15% on all courses
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Discount allowed</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                SAR 350
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Renew on</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                11 Aug, 2025
+                              </p>
+                            </div>
+                          </div>
+                          <div>
+                            <span class="d-block mb-2 text-muted small"
+                              >Membership description</span
+                            >
+                            <textarea
+                              disabled
+                              class="form-control"
+                              id="textareaGold"
+                              rows="3"
+                              aria-label="Membership description for Gold membership (read-only)"
+                              aria-readonly="true"
+                            >
+This membership is best for corporates.</textarea
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div
+                    class="tab-pane fade w-100"
+                    id="student"
+                    role="tabpanel"
+                    aria-labelledby="student-tab"
+                  >
+                    <section class="d-flex flex-column gap-4">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <h4 class="card-title text-black mb-3">
+                              Student Memberships
+                            </h4>
+                            <div class="d-flex gap-4 flex-wrap">
+                              <button class="btn btn-sm btn-outline-secondary">
+                                Import CSV
+                              </button>
+
+                              <button class="btn btn-sm btn-outline-secondary">
+                                Export CSV
+                              </button>
+                              <button class="btn btn-sm btn-outline-secondary">
+                                Copy Details
+                              </button>
+                              <button class="btn btn-sm btn-outline-secondary">
+                                Edit Membership
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 g-3 g-lg-4"
+                          >
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Membership type</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Corporate
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Exclusive courses</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Regular
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Accessibility for</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                50 Persons only
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Subscribers fee</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                15% on all courses
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Discount allowed</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                SAR 350
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Renew on</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                11 Aug, 2025
+                              </p>
+                            </div>
+                          </div>
+                          <div>
+                            <span class="d-block mb-2 text-muted small"
+                              >Membership description</span
+                            >
+                            <textarea
+                              disabled
+                              class="form-control"
+                              id="textareaGold"
+                              rows="3"
+                              aria-label="Membership description for Gold membership (read-only)"
+                              aria-readonly="true"
+                            >
+This membership is best for corporates.</textarea
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div
+                    class="tab-pane fade w-100"
+                    id="corporate"
+                    role="tabpanel"
+                    aria-labelledby="corporate-tab"
+                  >
+                    <section class="d-flex flex-column gap-4">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Gold Memberships (Current Plan)
+                          </h4>
+                          <div
+                            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 g-3 g-lg-4"
+                          >
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Membership type</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Corporate
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Exclusive courses</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Regular
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Accessibility for</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                50 Persons only
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Subscribers fee</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                15% on all courses
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Discount allowed</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                SAR 350
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Renew on</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                11 Aug, 2025
+                              </p>
+                            </div>
+                          </div>
+                          <div>
+                            <span class="d-block mb-2 text-muted small"
+                              >Membership description</span
+                            >
+                            <textarea
+                              disabled
+                              class="form-control"
+                              id="textareaInput"
+                              rows="3"
+                              aria-label="Membership description"
+                              aria-readonly="true"
+                            >
+This membership is best for corporates.</textarea
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Bronze Memberships
+                          </h4>
+                          <div
+                            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 g-3 g-lg-4"
+                          >
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Membership type</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Corporate
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Exclusive courses</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Regular
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Accessibility for</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                50 Persons only
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Subscribers fee</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                15% on all courses
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Discount allowed</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                SAR 350
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Renew on</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                11 Aug, 2025
+                              </p>
+                            </div>
+                          </div>
+                          <div>
+                            <span class="d-block mb-2 text-muted small"
+                              >Membership description</span
+                            >
+                            <textarea
+                              disabled
+                              class="form-control"
+                              id="textareaInput"
+                              rows="3"
+                              aria-label="Membership description"
+                              aria-readonly="true"
+                            >
+This membership is best for corporates.</textarea
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Gold Memberships (Current Plan)
+                          </h4>
+                          <div
+                            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 g-3 g-lg-4"
+                          >
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Membership type</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Corporate
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Exclusive courses</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                Regular
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Accessibility for</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                50 Persons only
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Subscribers fee</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                15% on all courses
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Discount allowed</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                SAR 350
+                              </p>
+                            </div>
+                            <div class="col">
+                              <span class="d-block mb-1 text-muted small"
+                                >Renew on</span
+                              >
+                              <p class="text-body-emphasis mb-0 fw-medium">
+                                11 Aug, 2025
+                              </p>
+                            </div>
+                          </div>
+                          <div>
+                            <span class="d-block mb-2 text-muted small"
+                              >Membership description</span
+                            >
+                            <textarea
+                              disabled
+                              class="form-control"
+                              id="textareaInput"
+                              rows="3"
+                              aria-label="Membership description"
+                              aria-readonly="true"
+                            >
+This membership is best for corporates.</textarea
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div
+                    class="tab-pane fade w-100"
+                    id="quotation"
+                    role="tabpanel"
+                    aria-labelledby="quotation-tab"
+                  >
+                    <section class="d-flex flex-column gap-4 w-100">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Quotation Requests
+                          </h4>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS (kept as in original) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Accessibility helpers (small, non-visual JS) -->
+    <script>
+      (function () {
+        // References
+        const hamburger = document.getElementById("hamburgerBtn");
+        const mobileSidebar = document.getElementById("mobileSidebar");
+        const sr = document.getElementById("srAnnounce");
+        const skipLink = document.querySelector(".skip-to-content");
+
+        // Offcanvas: sync aria-expanded + aria-hidden, manage focus
+        if (hamburger && mobileSidebar) {
+          mobileSidebar.addEventListener("show.bs.offcanvas", function () {
+            hamburger.setAttribute("aria-expanded", "true");
+            mobileSidebar.setAttribute("aria-hidden", "false");
+            // focus first focusable element inside offcanvas
+            setTimeout(() => {
+              const focusable = mobileSidebar.querySelector(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+              );
+              if (focusable) focusable.focus();
+            }, 10);
+            if (sr) sr.textContent = "Menu opened";
+          });
+
+          mobileSidebar.addEventListener("hide.bs.offcanvas", function () {
+            hamburger.setAttribute("aria-expanded", "false");
+            mobileSidebar.setAttribute("aria-hidden", "true");
+            setTimeout(() => hamburger.focus(), 10);
+            if (sr) sr.textContent = "Menu closed";
+          });
+        }
+
+        // Toggle buttons: keep graceful handling if present
+        const toggleButtons = [
+          { btnId: "historyBtn", targetId: "historySection" },
+          { btnId: "digitalCardBtn", targetId: "digitalCardSection" },
+          { btnId: "getQuotationBtn", targetId: "quotationSection" },
+        ];
+
+        toggleButtons.forEach(({ btnId, targetId }) => {
+          const btn = document.getElementById(btnId);
+          const target = document.getElementById(targetId);
+          if (!btn || !target) return;
+          btn.setAttribute("aria-expanded", "false");
+          btn.addEventListener("click", function () {
+            const expanded = btn.getAttribute("aria-expanded") === "true";
+            btn.setAttribute("aria-expanded", String(!expanded));
+            target.hidden = expanded; // toggle: if was expanded -> hide
+            target.setAttribute("aria-hidden", String(expanded));
+            if (!expanded) {
+              if (sr) {
+                sr.textContent = btn.textContent.trim() + " opened";
+                setTimeout(() => (sr.textContent = ""), 700);
+              }
+            }
+          });
+        });
+
+        // Skip link behavior: move focus to main content properly
+        if (skipLink) {
+          skipLink.addEventListener("click", function (e) {
+            const main = document.getElementById("main-content");
+            if (main) {
+              main.setAttribute("tabindex", "-1");
+              main.focus();
+            }
+          });
+        }
+
+        // Ensure textareas are read-only for assistive tech
+        ["textareaGold", "textareaSilver", "textareaBronze"].forEach((id) => {
+          const ta = document.getElementById(id);
+          if (ta) {
+            ta.setAttribute("aria-readonly", "true");
+            ta.setAttribute("tabindex", "-1"); // not focusable since disabled
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,818 +1,1082 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SIIA - Dashboard</title>
+    <meta
+      name="description"
+      content="Comprehensive dashboard for viewing courses, programs, assessments, and training administration"
+    />
+
+    <!-- Link stylesheet -->
     <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="bg-light p-5 min-vh-100">
-      <div class="d-flex gap-5">
-        <aside
-          class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-6"
-        >
-          <!-- Profile -->
-          <div class="mb-4 text-center">
-            <img
-              src="https://i.pravatar.cc/100?img=3"
-              alt="Profile"
-              class="w-50 rounded-circle mx-auto mb-3"
-            />
-            <h6 class="">Aster Seawalker</h6>
-            <p class="text-muted small">Admin</p>
-          </div>
-          <!-- Navigation -->
-          <nav
-            class="dashboardNav d-flex flex-column"
-            aria-label="Dashboard Navigation"
+    <!-- Skip to content link (important for keyboard users) -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Trainee Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div class="container-fluid px-3 px-md-5 py-3 py-md-5">
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
           >
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-bar-chart-line"></i>
-              Dashboard
-            </a>
-            <a href="courses.html" class="btn btn-primary active">
-              <i class="bi bi-mortarboard"></i>
-              Courses
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-journal-bookmark"></i>
-              Programs
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-clipboard2-check"></i>
-              Assessments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-calendar4-week"></i>
-              Events
-            </a>
-            <a href="memberships.html" class="btn btn-primary">
-              <i class="bi bi-card-checklist"></i>
-              Memberships
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-credit-card-2-front"></i>
-              Payments
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-book"></i>
-              Library
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-patch-check"></i>
-              Certificates
-            </a>
-            <a href="#" class="btn btn-primary">
-              <i class="bi bi-box-arrow-right"></i>
-              Log Out
-            </a>
-          </nav>
-        </aside>
-        <div class="vstack gap-5">
-          <div class="card border-0 shadow-sm px-3 py-2">
-            <div
-              class="d-flex justify-content-between align-items-center px-3 py-2"
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Individual profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Individual Memberships</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
             >
-              <!-- Search -->
-              <div class="position-relative">
-                <i
-                  class="bi bi-search position-absolute start-0 top-50 ms-4 translate-middle-y"
-                ></i>
-                <input
-                  type="text"
-                  class="form-control ps-11 rounded-pill"
-                  style="width: 360px"
-                  placeholder="Search anything"
-                />
-              </div>
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
 
-              <!-- Icons -->
-              <div class="d-flex align-items-center gap-2 ms-3">
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-envelope"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-bell"></i>
-                </button>
-                <button class="btn p-1 border-0 fs-4">
-                  <i class="bi bi-question-circle"></i>
-                </button>
-              </div>
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
             </div>
-          </div>
-          <div class="card border-0 shadow-sm p-6">
-            <!-- Header Search and Filter Section -->
-            <div class="row align-items-center mb-3">
-              <div class="col">
-                <h2>Courses</h2>
-                <p class="mb-0">View and manage your courses</p>
-              </div>
-
-              <div class="col d-flex justify-content-md-end gap-3">
-                <div class="position-relative">
-                  <input
-                    style="width: 230px"
-                    type="text"
-                    class="form-control"
-                    placeholder="Search here..."
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Individual profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
                   />
-                  <span
-                    class="position-absolute top-50 end-0 translate-middle-y me-3"
-                  >
-                    <i class="bi bi-search"></i>
-                  </span>
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Individual Membership</p>
                 </div>
-                <button class="btn btn-outline-primary" id="filterBtn">
-                  <i class="bi bi-funnel"></i> Apply Filters
-                </button>
-              </div>
-            </div>
-            <!-- Tabs -->
-            <ul
-              class="nav nav-pills mb-4 border rounded-3 p-2 bg-light d-inline-flex"
-              style="width: max-content"
-              id="myTab"
-            >
-              <li class="nav-item">
-                <button
-                  class="nav-link btn-sm active"
-                  id="enrolled-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#enrolled-courses"
-                  type="button"
-                  role="tab"
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
                 >
-                  Enrolled Courses
-                </button>
-              </li>
-              <li class="nav-item">
-                <button
-                  class="nav-link"
-                  id="available-courses-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#available-courses"
-                  type="button"
-                  role="tab"
-                >
-                  Available for Enrollment
-                </button>
-              </li>
-            </ul>
-            <!-- Filter Form -->
-            <div id="filterForm" class="py-5 d-none">
-              <div class="row g-3">
-                <!-- Schedule Days -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Schedule Days</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>Choose Schedule Days</option>
-                      <option>Monday, Wednesday</option>
-                      <option>Tuesday, Thursday</option>
-                      <option>Friday, Saturday</option>
-                      <option>Weekend Only</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Schedule Time -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Schedule Time</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>9:00 AM To 9:30 AM</option>
-                      <option>10:00 AM To 10:30 AM</option>
-                      <option>11:00 AM To 11:30 AM</option>
-                      <option>1:00 PM To 1:30 PM</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Duration -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Duration</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>4</option>
-                      <option>6</option>
-                      <option>8</option>
-                      <option>12</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Location -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Location</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>Main campus class a</option>
-                      <option>Main campus class b</option>
-                      <option>City campus</option>
-                      <option>Virtual classroom</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Trainer Assignment -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Trainer Assignment</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>Ahmed</option>
-                      <option>Sarah</option>
-                      <option>John</option>
-                      <option>Emily</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Format -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Format</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>Online</option>
-                      <option>In-person</option>
-                      <option>Hybrid</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Type -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Type</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>Soft Skills</option>
-                      <option>Technical</option>
-                      <option>Leadership</option>
-                      <option>Project Management</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Course Status -->
-                <div class="col-md-6 col-lg-3">
-                  <label class="form-label">Course Status</label>
-                  <div class="input-group">
-                    <select class="form-select">
-                      <option selected>Draft</option>
-                      <option>Published</option>
-                      <option>Archived</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Button row -->
-              <div class="row mt-4">
-                <div class="col-12 d-flex justify-content-end gap-3">
-                  <button class="btn btn-outline-secondary">
-                    Reset Filters
-                  </button>
-                  <button class="btn btn-primary">
-                    <i class="bi bi-funnel me-2"></i>Apply Filters
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-content" id="enrolledCoursesContent">
-              <!-- Enrolled Course Table -->
-
-              <div
-                class="tab-pane fade show active"
-                id="enrolled-courses"
-                role="tabpanel"
-                aria-labelledby="enrolled-courses-tab"
-              >
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Sr.#</th>
-                        <th>Program Title</th>
-                        <th>Format</th>
-                        <th>Level</th>
-                        <th>Schedule</th>
-                        <th>Duration</th>
-                        <th>Location</th>
-                        <th>Trainer</th>
-                        <th>Attendance %</th>
-                        <th>Attendance</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <img
-                            src="../images/ic-course.svg"
-                            alt="Description"
-                            class="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <a href="#">Essentials of Internal Auditing-101</a>
-                        </td>
-                        <td>Online Live</td>
-                        <td>Beginner</td>
-                        <td>Sat to Thu<br />09:00 to 10:00</td>
-                        <td>Jul 20 to Aug 20, 2025</td>
-                        <td><a href="#" class="zoom-link">Zoom Link</a></td>
-                        <td>Faizan Ali</td>
-                        <td>76%</td>
-                        <td>Today<br />09:00 to 10:00</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <img
-                            src="../images/ic-course.svg"
-                            alt="Description"
-                            class="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <a href="#">Essentials of Internal Auditing-101</a>
-                        </td>
-                        <td>Online Live</td>
-                        <td>Beginner</td>
-                        <td>Sat to Thu<br />09:00 to 10:00</td>
-                        <td>Jul 20 to Aug 20, 2025</td>
-                        <td><a href="#" class="zoom-link">Zoom Link</a></td>
-                        <td>Faizan Ali</td>
-                        <td>76%</td>
-                        <td>Today<br />10:05 to 12:00</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <img
-                            src="../images/ic-course.svg"
-                            alt="Description"
-                            class="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <a href="#">Essentials of Internal Auditing-101</a>
-                        </td>
-                        <td>Online Live</td>
-                        <td>Beginner</td>
-                        <td>Sat to Thu<br />09:00 to 10:00</td>
-                        <td>Jul 20 to Aug 20, 2025</td>
-                        <td><a href="#" class="zoom-link">Zoom Link</a></td>
-                        <td>Faizan Ali</td>
-                        <td class="text-danger">54%</td>
-                        <td>
-                          <button type="button" class="btn btn-outline-primary">
-                            Check In
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <img
-                            src="../images/ic-course.svg"
-                            alt="Description"
-                            class="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <a href="#">Essentials of Internal Auditing-101</a>
-                        </td>
-                        <td>Online Live</td>
-                        <td>Beginner</td>
-                        <td>Sat to Thu<br />09:00 to 10:00</td>
-                        <td>Jul 20 to Aug 20, 2025</td>
-                        <td><a href="#" class="zoom-link">Zoom Link</a></td>
-                        <td>Faizan Ali</td>
-                        <td>76%</td>
-                        <td>
-                          <button type="button" class="btn btn-outline-primary">
-                            Check In
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <!-- Available Courses -->
-              <div
-                class="tab-pane fade w-75"
-                id="available-courses"
-                role="tabpanel"
-                aria-labelledby="available-courses-tab"
-              >
-                <div class="row mb-4">
-                  <div class="col-md-6">
-                    <div
-                      class="card h-100 p-0 d-flex flex-column"
-                      style="min-height: 300px; overflow: hidden"
-                    >
-                      <!-- Header Section (Top 50% height of card) -->
-                      <div
-                        class="card-header bg-dark text-white p-5 position-relative d-flex flex-column justify-content-between"
-                        style="
-                          background: linear-gradient(
-                              rgba(0, 0, 0, 0.6),
-                              rgba(0, 0, 0, 0.6)
-                            ),
-                            url('../images/ic-course.svg');
-                          background-size: cover;
-                          background-position: center;
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div
-                          class="d-flex justify-content-between align-items-end h-100"
-                        >
-                          <div class="d-flex">
-                            <img
-                              src="../images/ic-profile.svg"
-                              alt="Trainer"
-                              class="rounded-2 me-3"
-                              width="50"
-                              height="50"
-                            />
-                            <div class="d-flex flex-column">
-                              <h5 class="fw-semibold mb-1 text-white">
-                                Trainer name
-                              </h5>
-                              <h6 class="small opacity-75 text-white">
-                                Trainer
-                              </h6>
-                            </div>
-                          </div>
-                          <h2 class="text-white">SAR 150</h2>
-                        </div>
-                      </div>
-
-                      <!-- Body Section (Bottom 50% height of card) -->
-                      <div
-                        class="card-body p-5 d-flex flex-column justify-content-between"
-                        style="
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div>
-                          <h3 class="fs-5 fw-semibold text-dark mb-2">
-                            Essentials of Internal Auditing- CIA1
-                          </h3>
-                          <p class="text-muted mb-3 small">
-                            7 lectures, 3 quizzes and 3 assessments are
-                            deliverable.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-3 align-items-center">
-                          <div
-                            class="d-flex align-items-center justify-content-center text-white"
-                            style="width: 40px; height: 40px"
-                          >
-                            <img src="../images/ic-clock.svg" alt="Calendar" />
-                          </div>
-                          <div>
-                            <div class="small text-primary">Starts on</div>
-                            <div class="fw-semibold text-dark">
-                              3 April, 08:00 PM
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      class="card h-100 p-0 d-flex flex-column"
-                      style="min-height: 300px; overflow: hidden"
-                    >
-                      <!-- Header Section (Top 50% height of card) -->
-                      <div
-                        class="card-header bg-dark text-white p-5 position-relative d-flex flex-column justify-content-between"
-                        style="
-                          background: linear-gradient(
-                              rgba(0, 0, 0, 0.6),
-                              rgba(0, 0, 0, 0.6)
-                            ),
-                            url('../images/ic-course.svg');
-                          background-size: cover;
-                          background-position: center;
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div
-                          class="d-flex justify-content-between align-items-end h-100"
-                        >
-                          <div class="d-flex">
-                            <img
-                              src="../images/ic-profile.svg"
-                              alt="Trainer"
-                              class="rounded-2 me-3"
-                              width="50"
-                              height="50"
-                            />
-                            <div class="d-flex flex-column">
-                              <h5 class="fw-semibold mb-1 text-white">
-                                Trainer name
-                              </h5>
-                              <h6 class="small opacity-75 text-white">
-                                Trainer
-                              </h6>
-                            </div>
-                          </div>
-                          <h2 class="text-white">SAR 150</h2>
-                        </div>
-                      </div>
-
-                      <!-- Body Section (Bottom 50% height of card) -->
-                      <div
-                        class="card-body p-5 d-flex flex-column justify-content-between"
-                        style="
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div>
-                          <h3 class="fs-5 fw-semibold text-dark mb-2">
-                            Essentials of Internal Auditing- CIA1
-                          </h3>
-                          <p class="text-muted mb-3 small">
-                            7 lectures, 3 quizzes and 3 assessments are
-                            deliverable.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-3 align-items-center">
-                          <div
-                            class="d-flex align-items-center justify-content-center text-white"
-                            style="width: 40px; height: 40px"
-                          >
-                            <img src="../images/ic-clock.svg" alt="Calendar" />
-                          </div>
-                          <div>
-                            <div class="small text-primary">Starts on</div>
-                            <div class="fw-semibold text-dark">
-                              3 April, 08:00 PM
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row mb-4">
-                  <div class="col-md-6">
-                    <div
-                      class="card h-100 p-0 d-flex flex-column"
-                      style="min-height: 300px; overflow: hidden"
-                    >
-                      <!-- Header Section (Top 50% height of card) -->
-                      <div
-                        class="card-header bg-dark text-white p-5 position-relative d-flex flex-column justify-content-between"
-                        style="
-                          background: linear-gradient(
-                              rgba(0, 0, 0, 0.6),
-                              rgba(0, 0, 0, 0.6)
-                            ),
-                            url('../images/ic-course.svg');
-                          background-size: cover;
-                          background-position: center;
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div
-                          class="d-flex justify-content-between align-items-end h-100"
-                        >
-                          <div class="d-flex">
-                            <img
-                              src="../images/ic-profile.svg"
-                              alt="Trainer"
-                              class="rounded-2 me-3"
-                              width="50"
-                              height="50"
-                            />
-                            <div class="d-flex flex-column">
-                              <h5 class="fw-semibold mb-1 text-white">
-                                Trainer name
-                              </h5>
-                              <h6 class="small opacity-75 text-white">
-                                Trainer
-                              </h6>
-                            </div>
-                          </div>
-                          <h2 class="text-white">SAR 150</h2>
-                        </div>
-                      </div>
-
-                      <!-- Body Section (Bottom 50% height of card) -->
-                      <div
-                        class="card-body p-5 d-flex flex-column justify-content-between"
-                        style="
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div>
-                          <h3 class="fs-5 fw-semibold text-dark mb-2">
-                            Essentials of Internal Auditing- CIA1
-                          </h3>
-                          <p class="text-muted mb-3 small">
-                            7 lectures, 3 quizzes and 3 assessments are
-                            deliverable.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-3 align-items-center">
-                          <div
-                            class="d-flex align-items-center justify-content-center text-white"
-                            style="width: 40px; height: 40px"
-                          >
-                            <img src="../images/ic-clock.svg" alt="Calendar" />
-                          </div>
-                          <div>
-                            <div class="small text-primary">Starts on</div>
-                            <div class="fw-semibold text-dark">
-                              3 April, 08:00 PM
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div
-                        class="card h-100 p-0 d-flex flex-column"
-                        style="min-height: 300px; overflow: hidden; cursor: pointer;"
-                      >
-                    
-                      <!-- Header Section (Top 50% height of card) -->
-                      <div
-                        class="card-header bg-dark text-white p-5 position-relative d-flex flex-column justify-content-between"
-                        style="
-                          background: linear-gradient(
-                              rgba(0, 0, 0, 0.6),
-                              rgba(0, 0, 0, 0.6)
-                            ),
-                            url('../images/ic-course.svg');
-                          background-size: cover;
-                          background-position: center;
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div
-                          class="d-flex justify-content-between align-items-end h-100"
-                        >
-                          <div class="d-flex">
-                            <img
-                              src="../images/ic-profile.svg"
-                              alt="Trainer"
-                              class="rounded-2 me-3"
-                              width="50"
-                              height="50"
-                            />
-                            <div class="d-flex flex-column">
-                              <h5 class="fw-semibold mb-1 text-white">
-                                Trainer name
-                              </h5>
-                              <h6 class="small opacity-75 text-white">
-                                Trainer
-                              </h6>
-                            </div>
-                          </div>
-                          <h2 class="text-white">SAR 150</h2>
-                        </div>
-                      </div>
-
-                      <!-- Body Section (Bottom 50% height of card) -->
-                      <div
-                        class="card-body p-5 d-flex flex-column justify-content-between"
-                        style="
-                          flex: 1 1 0;
-                          min-height: 0;
-                          height: 50%;
-                          max-height: 50%;
-                        "
-                      >
-                        <div>
-                          <h3 class="fs-5 fw-semibold text-dark mb-2">
-                            Essentials of Internal Auditing- CIA1
-                          </h3>
-                          <p class="text-muted mb-3 small">
-                            7 lectures, 3 quizzes and 3 assessments are
-                            deliverable.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-3 align-items-center">
-                          <div
-                            class="d-flex align-items-center justify-content-center text-white"
-                            style="width: 40px; height: 40px"
-                          >
-                            <img src="../images/ic-clock.svg" alt="Calendar" />
-                          </div>
-                          <div>
-                            <div class="small text-primary">Starts on</div>
-                            <div class="fw-semibold text-dark">
-                              3 April, 08:00 PM
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Bottom Controls -->
-            <div class="row align-items-center justify-content-between mt-3">
-              <div class="col-md-4">
-                <div class="d-flex align-items-center">
-                  <span class="me-2">Show</span>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    style="width: 40px"
-                    placeholder="10"
-                  />
-                  <span class="ms-2">Out of 13</span>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <nav aria-label="Page navigation">
-                  <ul class="pagination justify-content-md-end mb-0">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li class="page-item active">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">4</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">5</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
                 </nav>
               </div>
             </div>
           </div>
+
+          <!-- Main Content Area -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Search -->
+                  <div class="position-relative flex-grow-1 me-3 w-100 mw-100">
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <label for="globalSearch" class="visually-hidden"
+                      >Search</label
+                    >
+                    <input
+                      id="globalSearch"
+                      type="text"
+                      class="form-control ps-9 rounded-pill"
+                      placeholder="Search anything"
+                      aria-label="Search site"
+                      aria-describedby="globalSearchHelp"
+                    />
+                    <div id="globalSearchHelp" class="visually-hidden">
+                      Type and press Enter to search the site
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown -->
+                  <div class="dropdown d-none d-sm-block">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                    >
+                      English
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitem"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          data-lang="ar"
+                          role="menuitem"
+                        >
+                          العربية
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Courses Card -->
+            <section
+              class="card border-0 shadow-sm p-3 p-md-4 p-lg-6"
+              role="region"
+              aria-labelledby="coursesHeading"
+            >
+              <div class="row align-items-center mb-6 g-3">
+                <div class="col-12 col-lg-6">
+                  <h2 id="coursesHeading" class="h2 h-md-3 h-lg-2 mb-2">
+                    Courses
+                  </h2>
+                  <p class="mb-0">View and manage your courses</p>
+                </div>
+
+                <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="enrolled-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#enrolled"
+                      role="tab"
+                      aria-controls="enrolled"
+                      aria-selected="true"
+                    >
+                      Enrolled Courses
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="available-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#available"
+                      role="tab"
+                      aria-controls="available"
+                      aria-selected="false"
+                    >
+                      Available Courses
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content d-block d-lg-flex" id="myTabContent">
+                  <!-- Enrolled Tab -->
+                  <div
+                    class="tab-pane fade show active w-100"
+                    id="enrolled"
+                    role="tabpanel"
+                    aria-labelledby="enrolled-tab"
+                  >
+                    <!-- Courses Table -->
+                    <div
+                      class="table-responsive"
+                      role="region"
+                      aria-label="Courses table container"
+                    >
+                      <!-- Status live region for dynamic updates -->
+                      <div
+                        id="resultsStatus"
+                        aria-live="polite"
+                        class="visually-hidden"
+                      ></div>
+
+                      <table
+                        class="table"
+                        role="table"
+                        aria-describedby="tableCaption"
+                      >
+                        <caption id="tableCaption" class="visually-hidden">
+                          List of courses
+                        </caption>
+                        <thead role="rowgroup">
+                          <tr role="row">
+                            <th scope="col" aria-sort="none">Sr.#</th>
+                            <th scope="col" aria-sort="none">Course Title</th>
+                            <th scope="col" aria-sort="none">Code</th>
+                            <th scope="col" aria-sort="none">Format</th>
+                            <th scope="col" aria-sort="none">Type</th>
+                            <th scope="col" aria-sort="none">Schedule</th>
+                            <th scope="col" aria-sort="none">Time</th>
+                            <th scope="col" aria-sort="none">Duration</th>
+                            <th scope="col" aria-sort="none">Location</th>
+                            <th scope="col" aria-sort="none">Trainer</th>
+                            <th scope="col" aria-sort="none">Attendance</th>
+                          </tr>
+                        </thead>
+                        <tbody role="rowgroup">
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>Soft Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed &amp; Ali</td>
+                            <td>
+                              <button class="btn btn-primary">Check in</button>
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1235</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Recorded</td>
+                            <td>Professional Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>6 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed</td>
+                            <td>
+                              <span class="badge-publish" aria-label="Published"
+                                >Today 10:05 to12:00</span
+                              >
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1239</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>CIA</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed</td>
+                            <td>
+                              <span
+                                class="badge-complete"
+                                aria-label="Completed"
+                                >Today 10:05 to12:00</span
+                              >
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1240</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>Soft Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed</td>
+                            <td>
+                              <span
+                                class="badge-complete"
+                                aria-label="Completed"
+                                >Today 10:05 to12:00</span
+                              >
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>Soft Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed &amp; Ali</td>
+                            <td>
+                              <span class="badge-publish" aria-label="Published"
+                                >Today 10:05 to12:00</span
+                              >
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1235</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Recorded</td>
+                            <td>Professional Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>6 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed</td>
+                            <td>
+                              <button class="btn btn-primary">Check in</button>
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1240</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>Soft Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed</td>
+                            <td>
+                              <span
+                                class="badge-complete"
+                                role="status"
+                                aria-label="Completed"
+                                >Today 10:05 to12:00</span
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Bottom Controls -->
+                    <div
+                      class="row align-items-center justify-content-between mt-3 mt-md-4 g-3"
+                    >
+                      <div class="col-6 col-lg-4">
+                        <div
+                          class="d-flex align-items-center justify-content-md-start"
+                        >
+                          <label class="me-2 small" for="showCount">Show</label>
+                          <input
+                            id="showCount"
+                            type="text"
+                            class="form-control form-control-sm"
+                            style="width: 50px"
+                            placeholder="10"
+                            aria-label="Number of records to show"
+                            aria-describedby="showCountHelp showCountError"
+                          />
+                          <div id="showCountHelp" class="visually-hidden">
+                            Enter number of records to display per page
+                          </div>
+                          <div
+                            id="showCountError"
+                            class="visually-hidden"
+                            role="alert"
+                          ></div>
+                          <span class="ms-2 small">Out of 13</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-lg-8">
+                        <nav aria-label="Page navigation">
+                          <ul
+                            class="pagination justify-content-end mb-0 flex-wrap"
+                          >
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Previous page"
+                              >
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item d-none d-sm-inline-block">
+                              <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item d-none d-sm-inline-block">
+                              <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Next page"
+                              >
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Available Tab-->
+                  <div
+                    class="tab-pane fade w-100"
+                    id="available"
+                    role="tabpanel"
+                    aria-labelledby="available-tab"
+                  >
+                    <!-- Courses Table -->
+                    <div
+                      class="table-responsive"
+                      role="region"
+                      aria-label="Courses table container"
+                    >
+                      <!-- Status live region for dynamic updates -->
+                      <div
+                        id="resultsStatus"
+                        aria-live="polite"
+                        class="visually-hidden"
+                      ></div>
+
+                      <table
+                        class="table"
+                        role="table"
+                        aria-describedby="tableCaption"
+                      >
+                        <caption id="tableCaption" class="visually-hidden">
+                          List of courses
+                        </caption>
+                        <thead role="rowgroup">
+                          <tr role="row">
+                            <th scope="col" aria-sort="none">Sr.#</th>
+                            <th scope="col" aria-sort="none">Course Title</th>
+                            <th scope="col" aria-sort="none">Code</th>
+                            <th scope="col" aria-sort="none">Format</th>
+                            <th scope="col" aria-sort="none">Type</th>
+                            <th scope="col" aria-sort="none">Schedule</th>
+                            <th scope="col" aria-sort="none">Time</th>
+                            <th scope="col" aria-sort="none">Duration</th>
+                            <th scope="col" aria-sort="none">Location</th>
+                            <th scope="col" aria-sort="none">Trainer</th>
+                            <th scope="col" aria-sort="none">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody role="rowgroup">
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>Soft Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed &amp; Ali</td>
+                            <td>
+                              <span
+                                class="badge-publish"
+                                role="status"
+                                aria-label="Published"
+                                >Publish</span
+                              >
+                            </td>
+                          </tr>
+
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>Soft Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed &amp; Ali</td>
+                            <td>
+                              <span
+                                class="badge-publish"
+                                role="status"
+                                aria-label="Published"
+                                >Publish</span
+                              >
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1235</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Recorded</td>
+                            <td>Professional Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>6 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed</td>
+                            <td>
+                              <span
+                                class="badge-publish"
+                                role="status"
+                                aria-label="Published"
+                                >Publish</span
+                              >
+                            </td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1240</td>
+                            <td>
+                              <a href="#"
+                                >Essentials of Internal Auditing-101</a
+                              >
+                            </td>
+                            <td>MCC123 XYZ</td>
+                            <td>Online Live</td>
+                            <td>Soft Skills</td>
+                            <td>Sat to Thu</td>
+                            <td>09:00 to 10:00</td>
+                            <td>3 months</td>
+                            <td><a href="#" class="zoom-link">Zoom Link</a></td>
+                            <td>Ahmed</td>
+                            <td>
+                              <span
+                                class="badge-complete"
+                                role="status"
+                                aria-label="Completed"
+                                >Complete</span
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Bottom Controls -->
+                    <div
+                      class="row align-items-center justify-content-between mt-3 mt-md-4 g-3"
+                    >
+                      <div class="col-6 col-lg-4">
+                        <div
+                          class="d-flex align-items-center justify-content-md-start"
+                        >
+                          <label class="me-2 small" for="showCount">Show</label>
+                          <input
+                            id="showCount"
+                            type="text"
+                            class="form-control form-control-sm"
+                            style="width: 50px"
+                            placeholder="10"
+                            aria-label="Number of records to show"
+                            aria-describedby="showCountHelp showCountError"
+                          />
+                          <div id="showCountHelp" class="visually-hidden">
+                            Enter number of records to display per page
+                          </div>
+                          <div
+                            id="showCountError"
+                            class="visually-hidden"
+                            role="alert"
+                          ></div>
+                          <span class="ms-2 small">Out of 13</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-lg-8">
+                        <nav aria-label="Page navigation">
+                          <ul
+                            class="pagination justify-content-end mb-0 flex-wrap"
+                          >
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Previous page"
+                              >
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item d-none d-sm-inline-block">
+                              <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item d-none d-sm-inline-block">
+                              <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Next page"
+                              >
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="visually-hidden" aria-label="Back to top">
+      Top
+    </button>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript for Filter Toggle -->
     <script>
-      // Toggle filter form visibility
+      // ====== Accessibility & DGA-focused JS Enhancements ======
+
+      // 1) Make decorative icons aria-hidden when they are purely presentational
+      document.querySelectorAll(".bi").forEach(function (icon) {
+        // If the icon is inside an element that already has visible text OR it's inside a button/link with an aria-label, mark it decorative
+        var parent = icon.parentElement;
+        var hasVisibleText =
+          parent &&
+          parent.textContent &&
+          parent.textContent.trim().length > 0 &&
+          parent.querySelector(".bi") &&
+          parent.querySelector(".bi").textContent.trim().length === 0;
+        if (
+          parent &&
+          (parent.getAttribute("aria-label") || parent.querySelector("span"))
+        ) {
+          icon.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      // 2) Filter toggle - update live region to notify screen reader users
       document
         .getElementById("filterBtn")
         .addEventListener("click", function () {
           const filterForm = document.getElementById("filterForm");
-          if (filterForm.classList.contains("d-block")) {
-            filterForm.classList.remove("d-block");
-            filterForm.classList.add("d-none");
-          } else {
-            filterForm.classList.remove("d-none");
-            filterForm.classList.add("d-block");
+          filterForm.classList.toggle("d-none");
+          filterForm.classList.toggle("d-block");
+
+          const expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", !expanded);
+
+          // announce
+          const status = document.getElementById("resultsStatus");
+          status.textContent = filterForm.classList.contains("d-none")
+            ? "Filters closed"
+            : "Filters opened";
+        });
+
+      // 3) Make offcanvas focusable and trap focus when opened + return focus on close
+      const offcanvasEl = document.getElementById("mobileSidebar");
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      if (offcanvasEl) {
+        offcanvasEl.addEventListener("shown.bs.offcanvas", function () {
+          // focus first focusable child
+          const focusable = offcanvasEl.querySelector("button, a, [tabindex]");
+          if (focusable) focusable.focus();
+        });
+
+        offcanvasEl.addEventListener("hidden.bs.offcanvas", function () {
+          // return focus to hamburger
+          if (hamburgerBtn) hamburgerBtn.focus();
+        });
+
+        // allow ESC key to close offcanvas (Bootstrap typically does this, but ensure it)
+        offcanvasEl.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            var bs = bootstrap.Offcanvas.getInstance(offcanvasEl);
+            if (bs) bs.hide();
           }
         });
+      }
+
+      // 4) Basic validation and accessible error handling for showCount
+      const showCount = document.getElementById("showCount");
+      const showCountError = document.getElementById("showCountError");
+      function validateShowCount() {
+        const val = showCount.value.trim();
+        if (!/^[0-9]+$/.test(val) || Number(val) < 1) {
+          showCountError.textContent = "Please enter a valid positive number";
+          showCountError.classList.remove("visually-hidden");
+          showCount.setAttribute("aria-invalid", "true");
+          return false;
+        }
+        showCountError.textContent = "";
+        showCountError.classList.add("visually-hidden");
+        showCount.removeAttribute("aria-invalid");
+        return true;
+      }
+      showCount.addEventListener("input", validateShowCount);
+
+      // 5) Update live region after table updates (placeholder example)
+      function announceTableCount(count) {
+        const status = document.getElementById("resultsStatus");
+        status.textContent = count + " results displayed.";
+      }
+
+      // Example: announce initial table rows count
+      announceTableCount(document.querySelectorAll("table tbody tr").length);
+
+      // 6) Back-to-top behavior + visible on scroll
+      const backToTop = document.getElementById("backToTop");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          backToTop.style.display = "inline-block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+      backToTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        // announce
+        const status = document.getElementById("resultsStatus");
+        status.textContent = "Returned to top of page.";
+      });
+
+      document.querySelectorAll("[data-lang]").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const lang = btn.getAttribute("data-lang");
+          document.documentElement.lang = lang;
+
+          if (lang === "ar") {
+            document.documentElement.dir = "rtl";
+            document.getElementById("bootstrap-style").href =
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
+            document.getElementById("langButton").textContent = "العربية";
+          } else {
+            document.documentElement.dir = "ltr";
+            document.getElementById("bootstrap-style").href =
+              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+            document.getElementById("langButton").textContent = "English";
+          }
+        })
+      );
+
+      // 9) Improve keyboard navigation for pagination links
+      document
+        .querySelectorAll(".pagination a.page-link")
+        .forEach(function (link) {
+          link.setAttribute("role", "button");
+          link.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              this.click();
+            }
+          });
+        });
+
+      // 10) Add aria-sort toggle example if future sorting implemented
+      document.querySelectorAll('th[scope="col"]').forEach(function (th) {
+        th.setAttribute("tabindex", "0");
+        th.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            // simple toggle example
+            var current = th.getAttribute("aria-sort") || "none";
+            var next =
+              current === "none"
+                ? "ascending"
+                : current === "ascending"
+                ? "descending"
+                : "none";
+            th.setAttribute("aria-sort", next);
+            announceTableCount(
+              document.querySelectorAll("table tbody tr").length + " (sorted)"
+            );
+          }
+        });
+      });
+
+      // Small safeguard: ensure links with only visual text have accessible names
+      document.querySelectorAll("a").forEach(function (a) {
+        if (
+          !a.getAttribute("aria-label") &&
+          a.textContent.trim().length === 0
+        ) {
+          a.setAttribute("aria-label", "Link");
+        }
+      });
     </script>
   </body>
 </html>
