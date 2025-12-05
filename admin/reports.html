@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA - Reports</title>
+
+    <meta
+      name="description"
+      content="Comprehensive dashboard for managing courses, programs, assessments, and training administration"
+    />
+
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Skip to content link -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div
+        class="container-fluid px-3 px-md-5 py-3 py-md-5"
+        style="width: 100% !important"
+      >
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5 w-100">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
+          >
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
+            </div>
+
+            <!-- Navigation -->
+
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAIN CONTENT -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Search -->
+                  <div
+                    class="position-relative flex-grow-1 me-3 w-100 mw-100"
+                    role="search"
+                    aria-label="Global site search"
+                  >
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <form
+                      action="#"
+                      method="get"
+                      class="w-100"
+                      aria-label="Global search form"
+                      role="search"
+                    >
+                      <label for="globalSearch" class="visually-hidden"
+                        >Search</label
+                      >
+                      <input
+                        id="globalSearch"
+                        name="q"
+                        type="text"
+                        class="form-control ps-9 rounded-pill"
+                        placeholder="Search anything"
+                        aria-label="Search site"
+                        aria-describedby="globalSearchHelp"
+                      />
+                      <div id="globalSearchHelp" class="visually-hidden">
+                        Type and press Enter to search the site
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown (kept but English-only, non-interactive for this page) -->
+                  <div class="dropdown d-none d-sm-block" aria-hidden="true">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                      aria-haspopup="true"
+                      disabled
+                    >
+                      English
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      role="menu"
+                      aria-label="Language options"
+                    >
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitemradio"
+                          aria-checked="true"
+                          aria-pressed="true"
+                        >
+                          English
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Report Card -->
+            <section
+              class="card border-0 shadow-sm p-3 p-md-4 p-lg-6"
+              role="region"
+              aria-labelledby="coursesHeading"
+            >
+              <!-- Header Search and Filter Section -->
+              <div
+                class="membership d-flex flex-column flex-xl-row justify-content-between mb-4 mb-lg-5 g-3"
+              >
+                <div>
+                  <h2 id="coursesHeading" class="h3 h-lg-2 mb-2">Reports</h2>
+                  <p class="mb-0">View and manage reports</p>
+                </div>
+
+                <div class="report-actions d-flex justify-content-lg-end gap-2">
+                  <div class="report-search position-relative search-input">
+                    <label for="reportSearch" class="visually-hidden"
+                      >Search reports</label
+                    >
+                    <input
+                      id="reportSearch"
+                      name="reportSearch"
+                      type="text"
+                      class="form-control pe-8"
+                      placeholder="Search here..."
+                      aria-label="Search reports"
+                      aria-describedby="reportSearchHelp"
+                    />
+                    <div id="reportSearchHelp" class="visually-hidden">
+                      Search reports by title
+                    </div>
+                    <span
+                      class="position-absolute top-50 end-0 translate-middle-y me-3"
+                      aria-hidden="true"
+                    >
+                      <i class="bi bi-search" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <button
+                    class="btn btn-outline-primary"
+                    id="filterBtn"
+                    aria-expanded="false"
+                    aria-controls="filterForm"
+                  >
+                    <i class="bi bi-funnel" aria-hidden="true"></i>Filter
+                  </button>
+
+                  <button class="btn btn-primary">
+                    <i
+                      class="bi bi-file-earmark-arrow-down me-2"
+                      aria-hidden="true"
+                    ></i
+                    >Export CSV
+                  </button>
+                </div>
+              </div>
+
+              <!-- Filter Form -->
+              <form
+                id="filterForm"
+                class="py-3"
+                role="region"
+                aria-label="Filter options"
+              >
+                <div class="row g-3">
+                  <!-- By Course Code -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="courseCode" class="form-label small mb-1"
+                      >By Course Code</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="courseCode"
+                      placeholder="Course code here"
+                    />
+                  </div>
+
+                  <!-- Course Format -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="courseFormat" class="form-label small mb-1"
+                      >Course Format</label
+                    >
+                    <select class="form-select" id="courseFormat">
+                      <option selected>In-person</option>
+                      <option value="online">Online</option>
+                      <option value="hybrid">Hybrid</option>
+                    </select>
+                  </div>
+
+                  <!-- Trainee Status -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="traineeStatus" class="form-label small mb-1"
+                      >Trainee Status</label
+                    >
+                    <select class="form-select" id="traineeStatus">
+                      <option selected>Registered</option>
+                      <option value="completed">Completed</option>
+                      <option value="in-progress">In Progress</option>
+                      <option value="dropped">Dropped</option>
+                    </select>
+                  </div>
+
+                  <!-- Start Date -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="startDate" class="form-label small mb-1"
+                      >Start Date</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="startDate"
+                      placeholder="DD/MM/YY"
+                    />
+                  </div>
+
+                  <!-- End Date -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="endDate" class="form-label small mb-1"
+                      >End Date</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="endDate"
+                      placeholder="DD/MM/YY"
+                    />
+                  </div>
+
+                  <!-- Course Evaluation -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="courseEvaluation" class="form-label small mb-1"
+                      >Course Evaluation</label
+                    >
+                    <select class="form-select" id="courseEvaluation">
+                      <option selected>Trainer performance</option>
+                      <option value="content-quality">Content Quality</option>
+                      <option value="materials">Materials</option>
+                      <option value="facilities">Facilities</option>
+                    </select>
+                  </div>
+
+                  <!-- Performance (Past comparison) -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="performance" class="form-label small mb-1"
+                      >Performance (Past comparison)</label
+                    >
+                    <select class="form-select" id="performance">
+                      <option selected>Fail to Pass</option>
+                      <option value="pass-to-fail">Pass to Fail</option>
+                      <option value="consistent-pass">Consistent Pass</option>
+                      <option value="consistent-fail">Consistent Fail</option>
+                    </select>
+                  </div>
+
+                  <!-- Course Status -->
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <label for="courseStatus" class="form-label small mb-1"
+                      >Course Status</label
+                    >
+                    <select class="form-select" id="courseStatus">
+                      <option selected>Active</option>
+                      <option value="completed">Completed</option>
+                      <option value="cancelled">Cancelled</option>
+                      <option value="pending">Pending</option>
+                    </select>
+                  </div>
+
+                  <!-- Engagements -->
+                  <div class="col-12 col-md-6 col-lg-2">
+                    <label for="engagements" class="form-label small mb-1"
+                      >Engagements</label
+                    >
+                    <select class="form-select" id="engagements">
+                      <option selected>Choose</option>
+                      <option value="high">High</option>
+                      <option value="medium">Medium</option>
+                      <option value="low">Low</option>
+                    </select>
+                  </div>
+
+                  <!-- Apply Button -->
+                  <div class="col-12 col-md-6 col-lg-1 d-flex align-items-end">
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100"
+                      aria-label="Apply filters"
+                    >
+                      <i class="bi bi-funnel me-1" aria-hidden="true"></i>Apply
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- MEMBERSHIP -->
+              <div class="mt-6">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link btn-sm active"
+                      id="courses-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#courses"
+                      type="button"
+                      role="tab"
+                      aria-controls="courses"
+                      aria-selected="true"
+                    >
+                      <span>Courses</span>
+                    </button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link btn-sm"
+                      id="certificates-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#certificates"
+                      type="button"
+                      role="tab"
+                      aria-controls="certificates"
+                      aria-selected="false"
+                    >
+                      <span>Certificates</span>
+                    </button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link btn-sm"
+                      id="memberships-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#memberships"
+                      type="button"
+                      role="tab"
+                      aria-controls="memberships"
+                      aria-selected="false"
+                    >
+                      <span>Memberships</span>
+                    </button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link btn-sm"
+                      id="user-system-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#user-system"
+                      type="button"
+                      role="tab"
+                      aria-controls="user-system"
+                      aria-selected="false"
+                    >
+                      <span>User and System</span>
+                    </button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link btn-sm"
+                      id="statistical-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#statistical"
+                      type="button"
+                      role="tab"
+                      aria-controls="statistical"
+                      aria-selected="false"
+                    >
+                      <span>Statistical and Time-base</span>
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="myTabContent">
+                  <!-- COURSES TAB -->
+                  <div
+                    class="tab-pane fade show active w-100"
+                    id="courses"
+                    role="tabpanel"
+                    aria-labelledby="courses-tab"
+                    tabindex="0"
+                  >
+                    <!-- Courses Table -->
+                    <div
+                      class="table-responsive"
+                      role="region"
+                      aria-label="Courses table container"
+                    >
+                      <!-- Status live region for dynamic updates -->
+                      <div
+                        id="resultsStatus"
+                        aria-live="polite"
+                        class="visually-hidden"
+                      ></div>
+
+                      <table
+                        class="table"
+                        role="table"
+                        aria-describedby="tableCaption"
+                      >
+                        <caption id="tableCaption" class="visually-hidden">
+                          List of courses with reports
+                        </caption>
+                        <thead role="rowgroup">
+                          <tr role="row">
+                            <th scope="col" aria-sort="none">Sr. #</th>
+                            <th scope="col" aria-sort="none">Course Title</th>
+                            <th scope="col" aria-sort="none">Course Code</th>
+                            <th scope="col" aria-sort="none">
+                              Course Schedule (in-person)
+                            </th>
+                            <th scope="col" aria-sort="none">
+                              Trainee (Registered)
+                            </th>
+                            <th scope="col" aria-sort="none">
+                              Course Evaluation (Trainer Performance)
+                            </th>
+                            <th scope="col" aria-sort="none">
+                              Performance (Fail to Pass)
+                            </th>
+                            <th scope="col" aria-sort="none">
+                              Activity Status (Active)
+                            </th>
+                            <th scope="col" aria-sort="none">Engagements</th>
+                          </tr>
+                        </thead>
+                        <tbody role="rowgroup">
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                          <tr role="row" tabindex="0">
+                            <td>1234</td>
+                            <td>
+                              <a href="#">Course name</a>
+                            </td>
+                            <td>MC123XYZ</td>
+                            <td>In-person</td>
+                            <td>Registered: 55</td>
+                            <td>Trainer 4.1 <i class="bi bi-star-fill"></i></td>
+                            <td class="text-wrap" style="width: 240px">
+                              Previous: 55 Pass, Current: 60 Pass, Improvement:
+                              9.09%
+                            </td>
+                            <td>
+                              <span
+                                class="membership-status-badge badge-approved"
+                                ><i class="bi bi-check-square me-1"></i
+                                >Active</span
+                              >
+                            </td>
+                            <td>Login: 55, Time: 55 hrs, Activity done: 10</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Bottom Controls -->
+                    <div
+                      class="row align-items-center justify-content-between mt-3 mt-md-4 g-3"
+                    >
+                      <div class="col-6 col-lg-4">
+                        <div
+                          class="d-flex align-items-center justify-content-md-start"
+                        >
+                          <label class="me-2 small" for="showCount">Show</label>
+                          <input
+                            id="showCount"
+                            type="text"
+                            class="form-control form-control-sm"
+                            style="width: 50px"
+                            placeholder="10"
+                            aria-label="Number of records to show"
+                            aria-describedby="showCountHelp showCountError"
+                          />
+                          <div id="showCountHelp" class="visually-hidden">
+                            Enter number of records to display per page
+                          </div>
+                          <div
+                            id="showCountError"
+                            class="visually-hidden"
+                            role="alert"
+                          ></div>
+                          <span class="ms-2 small">Out of 13</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-lg-8">
+                        <nav aria-label="Page navigation">
+                          <ul
+                            class="pagination justify-content-end mb-0 flex-wrap"
+                          >
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Previous page"
+                              >
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item d-none d-sm-inline-block">
+                              <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item d-none d-sm-inline-block">
+                              <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Next page"
+                              >
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CERTIFICATES TAB -->
+                  <div
+                    class="tab-pane fade w-100"
+                    id="certificates"
+                    role="tabpanel"
+                    aria-labelledby="certificates-tab"
+                    tabindex="0"
+                  >
+                    <section class="d-flex flex-column gap-4">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Certificates Content
+                          </h4>
+                          <p class="text-muted">
+                            Certificate management content goes here...
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+
+                  <!-- MEMBERSHIPS TAB -->
+                  <div
+                    class="tab-pane fade w-100"
+                    id="memberships"
+                    role="tabpanel"
+                    aria-labelledby="memberships-tab"
+                    tabindex="0"
+                  >
+                    <section class="d-flex flex-column gap-4">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Memberships Content
+                          </h4>
+                          <p class="text-muted">
+                            Membership management content goes here...
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+
+                  <!-- USER AND SYSTEM TAB -->
+                  <div
+                    class="tab-pane fade w-100"
+                    id="user-system"
+                    role="tabpanel"
+                    aria-labelledby="user-system-tab"
+                    tabindex="0"
+                  >
+                    <section class="d-flex flex-column gap-4">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            User and System Content
+                          </h4>
+                          <p class="text-muted">
+                            User and system settings content goes here...
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+
+                  <!-- STATISTICAL AND TIME-BASE TAB -->
+                  <div
+                    class="tab-pane fade w-100"
+                    id="statistical"
+                    role="tabpanel"
+                    aria-labelledby="statistical-tab"
+                    tabindex="0"
+                  >
+                    <section class="d-flex flex-column gap-4">
+                      <div class="card p-3 p-md-4 p-lg-5">
+                        <div class="card-body d-flex flex-column gap-3">
+                          <h4 class="card-title text-black mb-3">
+                            Statistical and Time-base Content
+                          </h4>
+                          <p class="text-muted">
+                            Statistical reports and time-based data goes here...
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Filter toggle functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtn = document.getElementById("filterBtn");
+        const filterForm = document.getElementById("filterForm");
+
+        if (filterBtn && filterForm) {
+          // Initially hide the filter form
+          filterForm.style.display = "none";
+
+          filterBtn.addEventListener("click", function () {
+            // Toggle the display
+            if (filterForm.style.display === "none") {
+              filterForm.style.display = "block";
+              filterBtn.setAttribute("aria-expanded", "true");
+            } else {
+              filterForm.style.display = "none";
+              filterBtn.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

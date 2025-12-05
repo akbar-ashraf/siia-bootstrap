@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA - Payment</title>
+
+    <meta
+      name="description"
+      content="Comprehensive dashboard for managing courses, programs, assessments, and training administration"
+    />
+
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Skip to content link -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div
+        class="container-fluid px-3 px-md-5 py-3 py-md-5"
+        style="width: 100% !important"
+      >
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5 w-100">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
+          >
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
+            </div>
+
+            <!-- Navigation -->
+
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAIN CONTENT -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Search -->
+                  <div class="position-relative flex-grow-1 me-3 w-100 mw-100">
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <label for="globalSearch" class="visually-hidden"
+                      >Search</label
+                    >
+                    <input
+                      id="globalSearch"
+                      type="text"
+                      class="form-control ps-9 rounded-pill"
+                      placeholder="Search anything"
+                      aria-label="Search site"
+                      aria-describedby="globalSearchHelp"
+                    />
+                    <div id="globalSearchHelp" class="visually-hidden">
+                      Type and press Enter to search the site
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown -->
+                  <div class="dropdown d-none d-sm-block">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                    >
+                      English
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitem"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          data-lang="ar"
+                          role="menuitem"
+                        >
+                          العربية
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Main Content -->
+            <div
+              class="card border-0 shadow-sm p-6 gap-10"
+              role="region"
+              aria-labelledby="paymentTitle"
+            >
+              <div class="row align-items-center mb-6 g-3">
+                <div class="col-12 col-sm-6">
+                  <h2 id="paymentTitle" class="h2 h-md-3 h-lg-2 mb-2">
+                    Add Payment
+                  </h2>
+                  <p class="mb-0">View and manage payments</p>
+                </div>
+
+                <div
+                  class="col-12 col-sm-6 d-flex flex-column flex-sm-row justify-content-end gap-2"
+                >
+                  <div class="position-relative flex-grow-1 flex-sm-grow-0">
+                    <label for="paymentSearch" class="visually-hidden"
+                      >Search payments</label
+                    >
+                    <input
+                      id="paymentSearch"
+                      type="text"
+                      class="form-control w-100"
+                      placeholder="Search here..."
+                      aria-label="Search payments"
+                      aria-describedby="courseSearchHelp"
+                    />
+                    <div id="paymentSearchHelp" class="visually-hidden">
+                      Search for payments by title or code
+                    </div>
+                    <span
+                      class="position-absolute top-50 end-0 translate-middle-y me-3"
+                      aria-hidden="true"
+                    >
+                      <i class="bi bi-search" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment Detail-->
+              <section>
+                <div>
+                  <!-- Tabs -->
+                  <ul
+                    class="nav nav-tabs custom-tabs"
+                    id="myTab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="all-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#all"
+                        type="button"
+                        role="tab"
+                        aria-controls="all"
+                        aria-selected="true"
+                      >
+                        All
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="courses-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#courses"
+                        type="button"
+                        role="tab"
+                        aria-controls="courses"
+                        aria-selected="false"
+                      >
+                        Courses
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="programs-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#programs"
+                        type="button"
+                        role="tab"
+                        aria-controls="programs"
+                        aria-selected="false"
+                      >
+                        Programs
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="library-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#library"
+                        type="button"
+                        role="tab"
+                        aria-controls="library"
+                        aria-selected="false"
+                      >
+                        Library
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="memberships-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#memberships"
+                        type="button"
+                        role="tab"
+                        aria-controls="memberships"
+                        aria-selected="false"
+                      >
+                        Memberships
+                      </button>
+                    </li>
+                  </ul>
+
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="myTabContent">
+                    <div
+                      class="tab-pane fade show active w-100"
+                      id="all"
+                      role="tabpanel"
+                      aria-labelledby="all-tab"
+                      tabindex="0"
+                    >
+                      <!-- Switch Button-->
+                      <div
+                        class="btn-group py-4"
+                        role="group"
+                        aria-label="Tab switch"
+                      >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="tabSwitch"
+                          id="individual"
+                          autocomplete="off"
+                          checked
+                        />
+                        <label class="btn bg-black text-white" for="individual"
+                          >Individual</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="tabSwitch"
+                          id="corporate"
+                          autocomplete="off"
+                        />
+                        <label class="btn bg-light text-dark" for="corporate"
+                          >Corporate</label
+                        >
+                      </div>
+                      <div class="row g-3">
+                        <!-- Membership -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                          <label
+                            for="membership"
+                            class="form-label text-secondary small"
+                            >Membership</label
+                          >
+                          <select class="form-select" id="membership">
+                            <option selected>Choose</option>
+                            <option value="1">Student Membership</option>
+                            <option value="2">Professional Membership</option>
+                            <option value="3">Corporate Membership</option>
+                          </select>
+                        </div>
+
+                        <!-- Paid By -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                          <label
+                            for="paidBy"
+                            class="form-label text-secondary small"
+                            >Paid By</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="paidBy"
+                            placeholder="Name here"
+                          />
+                        </div>
+
+                        <!-- Amount -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                          <label
+                            for="amount"
+                            class="form-label text-secondary small"
+                            >Amount</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="amount"
+                            placeholder="eg. SAR 150"
+                          />
+                        </div>
+
+                        <!-- Payments date -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                          <label
+                            for="paymentsDate"
+                            class="form-label text-secondary small"
+                            >Payments date</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="paymentsDate"
+                            placeholder="06/06/25"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row g-3 mt-2">
+                        <!-- Transaction ID -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                          <label
+                            for="transactionId"
+                            class="form-label text-secondary small"
+                            >Transaction ID</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="transactionId"
+                            placeholder="Payment ID"
+                          />
+                        </div>
+
+                        <!-- Payment Type -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                          <label
+                            for="paymentType"
+                            class="form-label text-secondary small"
+                            >Payment Type</label
+                          >
+                          <select class="form-select" id="paymentType">
+                            <option selected>Online / Wire Transfer</option>
+                            <option value="1">Credit Card</option>
+                            <option value="2">Debit Card</option>
+                            <option value="3">Cash</option>
+                            <option value="4">Bank Transfer</option>
+                          </select>
+                        </div>
+
+                        <!-- Upload Invoice -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                          <label
+                            for="uploadInvoice"
+                            class="form-label text-secondary small"
+                            >Upload Invoice</label
+                          >
+                          <div>
+                            <button
+                              type="button"
+                              class="btn bg-black text-white"
+                            >
+                              Upload File
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Action Buttons -->
+                      <div class="row mt-48">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-end gap-2">
+                            <button type="button" class="btn btn-danger px-4">
+                              Discard Changes
+                            </button>
+                            <button type="button" class="btn btn-primary px-4">
+                              Save Changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Classes Tab -->
+                    <div
+                      class="tab-pane fade"
+                      id="courses"
+                      role="tabpanel"
+                      aria-labelledby="courses-tab"
+                      tabindex="0"
+                    >
+                      <p>Courses</p>
+                    </div>
+
+                    <!-- Programs Tab -->
+                    <div
+                      class="tab-pane fade"
+                      id="programs"
+                      role="tabpanel"
+                      aria-labelledby="programs-tab"
+                      tabindex="0"
+                    >
+                      <p>Programs</p>
+                    </div>
+
+                    <!-- Library Tab -->
+                    <div
+                      class="tab-pane fade"
+                      id="library"
+                      role="tabpanel"
+                      aria-labelledby="library-tab"
+                      tabindex="0"
+                    >
+                      <p>Library</p>
+                    </div>
+
+                    <!-- Memberships Tab -->
+                    <div
+                      class="tab-pane fade"
+                      id="memberships"
+                      role="tabpanel"
+                      aria-labelledby="memberships-tab"
+                      tabindex="0"
+                    >
+                      <p>Memberships</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll('input[name="tabSwitch"]').forEach((input) => {
+        input.addEventListener("change", function () {
+          // Reset all labels to light background
+          document
+            .querySelectorAll('label[for="individual"], label[for="corporate"]')
+            .forEach((label) => {
+              label.classList.remove("bg-black", "text-white");
+              label.classList.add("bg-light", "text-dark");
+            });
+
+          // Set the checked one to dark background
+          if (this.checked) {
+            const label = document.querySelector(`label[for="${this.id}"]`);
+            label.classList.remove("bg-light", "text-dark");
+            label.classList.add("bg-black", "text-white");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
