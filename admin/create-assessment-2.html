@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA - Assessments</title>
+
+    <meta
+      name="description"
+      content="Comprehensive dashboard for managing courses, programs, assessments, and training administration"
+    />
+
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Skip to content link -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div
+        class="container-fluid px-3 px-md-5 py-3 py-md-5"
+        style="width: 100% !important"
+      >
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5 w-100">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
+          >
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
+            </div>
+
+            <!-- Navigation -->
+
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-ouline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAIN CONTENT -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Search -->
+                  <div
+                    class="position-relative flex-grow-1 me-3 w-100 mw-100"
+                    role="search"
+                    aria-label="Global site search"
+                  >
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <form
+                      action="#"
+                      method="get"
+                      class="w-100"
+                      aria-label="Global search form"
+                      role="search"
+                    >
+                      <label for="globalSearch" class="visually-hidden"
+                        >Search</label
+                      >
+                      <input
+                        id="globalSearch"
+                        name="q"
+                        type="text"
+                        class="form-control ps-9 rounded-pill"
+                        placeholder="Search anything"
+                        aria-label="Search site"
+                        aria-describedby="globalSearchHelp"
+                      />
+                      <div id="globalSearchHelp" class="visually-hidden">
+                        Type and press Enter to search the site
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown (kept but English-only, non-interactive for this page) -->
+                  <div class="dropdown d-none d-sm-block" aria-hidden="true">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                      aria-haspopup="true"
+                      disabled
+                    >
+                      English
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      role="menu"
+                      aria-label="Language options"
+                    >
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitemradio"
+                          aria-checked="true"
+                          aria-pressed="true"
+                        >
+                          English
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Assessment Card -->
+            <section
+              class="card border-0 shadow-sm p-3 p-md-4 p-lg-5"
+              role="region"
+              aria-labelledby="assessmentHeading"
+            >
+              <!-- Header -->
+              <div class="mb-4 mb-lg-5">
+                <h2 id="assessmentHeading" class="h2 h-md-3 h-lg-2 mb-2">
+                  Assessment Name
+                </h2>
+              </div>
+              <!-- Assessment Form -->
+              <section aria-labelledby="mcqSectionHeading">
+                <h4 class="mb-4 mb-lg-5" id="mcqSectionHeading">MCQs</h4>
+
+                <!-- MCQ Question 1 -->
+                <div class="mb-5" role="group" aria-labelledby="q1Heading">
+                  <h6 id="q1Heading" class="mb-3">1. What is phishing?</h6>
+
+                  <fieldset class="d-flex flex-wrap gap-3 mb-4">
+                    <legend class="visually-hidden">
+                      Select correct answer for question 1
+                    </legend>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input bg-dark border-dark"
+                        type="radio"
+                        name="q1a"
+                        id="q1a1"
+                        checked
+                        aria-describedby="q1Heading"
+                      />
+                      <label class="form-check-label" for="q1a1"
+                        >Option 1</label
+                      >
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="q1a"
+                        id="q1a2"
+                        aria-describedby="q1Heading"
+                      />
+                      <label class="form-check-label" for="q1a2"
+                        >Option 2</label
+                      >
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="q1a"
+                        id="q1a3"
+                        aria-describedby="q1Heading"
+                      />
+                      <label class="form-check-label text-secondary" for="q1a3"
+                        >Option 3</label
+                      >
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="q1a"
+                        id="q1a4"
+                        aria-describedby="q1Heading"
+                      />
+                      <label class="form-check-label" for="q1a4"
+                        >Option 4</label
+                      >
+                    </div>
+                  </fieldset>
+                </div>
+
+                <!-- MCQ Question 2 -->
+                <div class="mb-5" role="group" aria-labelledby="q2Heading">
+                  <h6 id="q2Heading" class="mb-3">2. What is phishing?</h6>
+
+                  <fieldset class="d-flex flex-wrap gap-3 mb-4">
+                    <legend class="visually-hidden">
+                      Select correct answer for question 2
+                    </legend>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input bg-primary border-primary"
+                        type="radio"
+                        name="q1b"
+                        id="q1b1"
+                        checked
+                        aria-describedby="q2Heading"
+                      />
+                      <label class="form-check-label text-primary" for="q1b1"
+                        >Option 1</label
+                      >
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="q1b"
+                        id="q1b2"
+                        aria-describedby="q2Heading"
+                      />
+                      <label class="form-check-label" for="q1b2"
+                        >Option 2</label
+                      >
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="q1b"
+                        id="q1b3"
+                        aria-describedby="q2Heading"
+                      />
+                      <label class="form-check-label" for="q1b3"
+                        >Option 3</label
+                      >
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="q1b"
+                        id="q1b4"
+                        aria-describedby="q2Heading"
+                      />
+                      <label class="form-check-label" for="q1b4"
+                        >Option 4</label
+                      >
+                    </div>
+                  </fieldset>
+                </div>
+
+                <!-- Instructions Box -->
+                <div
+                  class="alert alert-info border-info shadow-lg d-flex align-items-center mb-5"
+                  role="alert"
+                  style="width: fit-content"
+                  aria-labelledby="instructionsHeading"
+                >
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex align-items-center">
+                      <i
+                        class="bi bi-info-circle-fill me-2"
+                        aria-hidden="true"
+                      ></i>
+                      <span id="instructionsHeading" class="fw-bold"
+                        >Instructions</span
+                      >
+                    </div>
+
+                    <div class="d-flex ms-4 gap-4">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="form-check" aria-hidden="true">
+                          <input
+                            class="form-check-input bg-primary border-primary"
+                            type="radio"
+                            checked
+                            tabindex="-1"
+                          />
+                          <label class="form-check-label small"
+                            >Correct Selected</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="form-check" aria-hidden="true">
+                          <input
+                            class="form-check-input bg-black border-black"
+                            type="radio"
+                            checked
+                            tabindex="-1"
+                          />
+                          <label class="form-check-label small"
+                            >Wrong Selected</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="form-check" aria-hidden="true">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            tabindex="-1"
+                          />
+                          <label class="form-check-label small text-secondary">
+                            Correct but not selected
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Short Questions -->
+                <h5 class="fw-bold mb-4" id="shortQHeading">Short Questions</h5>
+
+                <div
+                  class="row g-4 mb-5"
+                  role="group"
+                  aria-labelledby="shortQHeading"
+                >
+                  <!-- Question 1 -->
+                  <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="mb-3">
+                      <label class="form-label" for="short1"
+                        >1. What is phishing?</label
+                      >
+                      <textarea
+                        id="short1"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Performed answer shall be placed here."
+                      ></textarea>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <label class="small" for="short1marks"
+                        >Obtained Marks =</label
+                      >
+                      <input
+                        id="short1marks"
+                        type="text"
+                        class="form-control form-control-sm w-auto"
+                        placeholder="Obtained out of 5"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Question 2 -->
+                  <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="mb-3">
+                      <label class="form-label" for="short2"
+                        >2. What is phishing?</label
+                      >
+                      <textarea
+                        id="short2"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Performed answer shall be placed here."
+                      ></textarea>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <label class="small" for="short2marks"
+                        >Obtained Marks =</label
+                      >
+                      <input
+                        id="short2marks"
+                        type="text"
+                        class="form-control form-control-sm w-auto"
+                        placeholder="Obtained out of 5"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Question 3 -->
+                  <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="mb-3">
+                      <label class="form-label" for="short3"
+                        >3. What is phishing?</label
+                      >
+                      <textarea
+                        id="short3"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Performed answer shall be placed here."
+                      ></textarea>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <label class="small" for="short3marks"
+                        >Obtained Marks =</label
+                      >
+                      <input
+                        id="short3marks"
+                        type="text"
+                        class="form-control form-control-sm w-auto"
+                        placeholder="Obtained out of 5"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Subjective Questions -->
+                <h5 class="fw-bold mb-4" id="subjQHeading">
+                  Subjective Questions
+                </h5>
+
+                <div
+                  class="row g-4 mb-5"
+                  role="group"
+                  aria-labelledby="subjQHeading"
+                >
+                  <!-- Question 1 -->
+                  <div class="col-12 col-md-6">
+                    <div class="mb-3">
+                      <label class="form-label" for="subj1"
+                        >1. What is phishing?</label
+                      >
+                      <textarea
+                        id="subj1"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Performed answer shall be placed here."
+                      ></textarea>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <label class="small" for="subj1marks"
+                        >Obtained Marks =</label
+                      >
+                      <input
+                        id="subj1marks"
+                        type="text"
+                        class="form-control form-control-sm w-auto"
+                        placeholder="Obtained out of 10"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Question 2 -->
+                  <div class="col-12 col-md-6">
+                    <div class="mb-3">
+                      <label class="form-label" for="subj2"
+                        >2. What is phishing?</label
+                      >
+                      <textarea
+                        id="subj2"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Performed answer shall be placed here."
+                      ></textarea>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <label class="small" for="subj2marks"
+                        >Obtained Marks =</label
+                      >
+                      <input
+                        id="subj2marks"
+                        type="text"
+                        class="form-control form-control-sm w-auto"
+                        placeholder="Obtained out of 10"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Results -->
+                <h5 class="fw-bold mb-4" id="resultHeading">Result</h5>
+
+                <div
+                  class="row g-3 mb-4"
+                  role="group"
+                  aria-labelledby="resultHeading"
+                >
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">Quiz attempted</div>
+                    <div>4 / 10</div>
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">Correct answers</div>
+                    <div>2/4</div>
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">
+                      Session start time
+                    </div>
+                    <div>09:00</div>
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">
+                      Required Passing %
+                    </div>
+                    <div>70 %</div>
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">
+                      Obtained Marks %
+                    </div>
+                    <div>80 %</div>
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">Result</div>
+                    <div class="text-success">Pass</div>
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">
+                      Attendance passing %
+                    </div>
+                    <div>70%</div>
+                  </div>
+
+                  <div class="col-6 col-md-3 col-lg">
+                    <div class="small text-secondary mb-2">Review By</div>
+                    <div>Ahmed Ali</div>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-end gap-2"
+                >
+                  <button
+                    class="btn btn-danger px-4 py-2"
+                    aria-label="Discard assessment review"
+                  >
+                    Discard
+                  </button>
+                  <button
+                    class="btn btn-primary px-4 py-2"
+                    aria-label="Publish assessment result"
+                  >
+                    Publish Result
+                  </button>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
