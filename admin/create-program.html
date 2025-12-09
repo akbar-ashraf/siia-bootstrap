@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA - Programs</title>
+
+    <meta
+      name="description"
+      content="Comprehensive dashboard for managing courses, programs, assessments, and training administration"
+    />
+
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Skip to content link -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <header role="banner" aria-labelledby="siteTitle">
+      <h1 id="siteTitle" class="visually-hidden">SIIA Admin Dashboard</h1>
+    </header>
+
+    <main id="main-content">
+      <div
+        class="container-fluid px-3 px-md-5 py-3 py-md-5"
+        style="width: 100% !important"
+      >
+        <div class="d-flex flex-column flex-lg-row gap-4 gap-lg-5 w-100">
+          <!-- Sidebar -->
+          <aside
+            class="dashboardSidebar flex-shrink-0 card border-0 shadow-sm p-4 p-lg-6 d-none d-lg-block"
+            role="navigation"
+            aria-label="Main Sidebar Navigation"
+          >
+            <!-- Profile -->
+            <div class="mb-4 text-center">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Admin profile picture"
+                class="w-50 rounded-circle mx-auto mb-3"
+              />
+              <h6>Aster Seawalker</h6>
+              <p class="text-muted small">Admin</p>
+            </div>
+
+            <!-- Navigation -->
+
+            <nav
+              class="dashboardNav d-flex flex-column"
+              aria-label="Dashboard Navigation List"
+            >
+              <a href="#" class="btn btn-outline-primary" aria-current="page">
+                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>Courses</span>
+              </a>
+              <a href="#" class="btn btn-primary active">
+                <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                <span>Programs</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                <span>Assessments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                <span>Events</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                <span>Memberships</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <span>Admins</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-person-check" aria-hidden="true"></i>
+                <span>Trainers</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Trainee &amp; Students</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                <span>Reports</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                <span>Payments</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span>Library</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-patch-check" aria-hidden="true"></i>
+                <span>Certificates</span>
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                <span>Log Out</span>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Mobile Offcanvas Sidebar -->
+          <div
+            class="mobileSidebar offcanvas offcanvas-start w-25"
+            tabindex="-1"
+            id="mobileSidebar"
+            role="dialog"
+            aria-labelledby="mobileSidebarLabel"
+            aria-modal="true"
+          >
+            <div class="offcanvas-header">
+              <h6 id="mobileSidebarLabel" class="visually-hidden">
+                Mobile Sidebar Menu
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="p-4">
+                <div class="mb-4 text-center">
+                  <img
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="Admin profile picture"
+                    class="rounded-circle mb-3"
+                    style="width: 80px"
+                  />
+                  <h6>Aster Seawalker</h6>
+                  <p class="text-muted small">Admin</p>
+                </div>
+
+                <nav
+                  class="dashboardNav d-flex flex-column"
+                  aria-label="Mobile Navigation List"
+                >
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                    <span>Courses</span>
+                  </a>
+                  <a href="#" class="btn btn-primary active">
+                    <i class="bi bi-journal-bookmark" aria-hidden="true"></i>
+                    <span>Programs</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+                    <span>Assessments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-calendar4-week" aria-hidden="true"></i>
+                    <span>Events</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-card-checklist" aria-hidden="true"></i>
+                    <span>Memberships</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person" aria-hidden="true"></i>
+                    <span>Admins</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-person-check" aria-hidden="true"></i>
+                    <span>Trainers</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <span>Trainee &amp; Students</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-pie-chart" aria-hidden="true"></i>
+                    <span>Reports</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+                    <span>Payments</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    <span>Library</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-patch-check" aria-hidden="true"></i>
+                    <span>Certificates</span>
+                  </a>
+                  <a href="#" class="btn btn-outline-primary">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>Log Out</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAIN CONTENT -->
+          <div
+            class="flex-grow-1 d-flex flex-column gap-3 gap-lg-5"
+            role="region"
+            aria-label="Main Content Area"
+          >
+            <!-- Top Bar -->
+            <header
+              class="card border-0 shadow-sm px-2 px-md-3 py-2"
+              role="banner"
+              aria-label="Top bar"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center px-2 px-md-3 py-2"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- Mobile Hamburger -->
+                  <button
+                    class="btn btn-primary px-2 py-0 d-lg-none shadow-lg me-2"
+                    id="hamburgerBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar"
+                    aria-label="Open menu"
+                  >
+                    <i class="bi bi-list fs-2 fw-bold" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Search -->
+                  <div class="position-relative flex-grow-1 me-3 w-100 mw-100">
+                    <i
+                      class="bi bi-search position-absolute start-0 top-50 ms-3 translate-middle-y"
+                      aria-hidden="true"
+                    ></i>
+                    <label for="globalSearch" class="visually-hidden"
+                      >Search</label
+                    >
+                    <input
+                      id="globalSearch"
+                      type="text"
+                      class="form-control ps-9 rounded-pill"
+                      placeholder="Search anything"
+                      aria-label="Search site"
+                      aria-describedby="globalSearchHelp"
+                    />
+                    <div id="globalSearchHelp" class="visually-hidden">
+                      Type and press Enter to search the site
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Messages"
+                  >
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Notifications"
+                  >
+                    <i class="bi bi-bell" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    class="btn p-1 border-0 fs-4 d-none d-sm-inline-block"
+                    aria-label="Help"
+                  >
+                    <i class="bi bi-question-circle" aria-hidden="true"></i>
+                  </button>
+
+                  <!-- Mobile dropdown -->
+                  <div class="dropdown d-sm-none">
+                    <button
+                      class="btn p-1 border-0 fs-4"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Open menu"
+                    >
+                      <i
+                        class="bi bi-three-dots-vertical"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-envelope me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Messages</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-bell me-2" aria-hidden="true"></i>
+                          Notifications</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i
+                            class="bi bi-question-circle me-2"
+                            aria-hidden="true"
+                          ></i>
+                          Help</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Language Dropdown -->
+                  <div class="dropdown d-none d-sm-block">
+                    <button
+                      id="langButton"
+                      class="btn btn-sm btn-outline-secondary dropdown-toggle border"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Select language"
+                    >
+                      English
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <button
+                          class="dropdown-item active"
+                          data-lang="en"
+                          role="menuitem"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          data-lang="ar"
+                          role="menuitem"
+                        >
+                          العربية
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- Main Content -->
+            <div
+              class="card border-0 shadow-sm p-6 gap-10"
+              role="region"
+              aria-labelledby="courseTitle"
+            >
+              <h2 id="courseTitle">Create new Program</h2>
+              <form role="form" aria-label="Create Program Form">
+                <!-- Program Information Section -->
+                <section
+                  role="region"
+                  aria-labelledby="programInfoHeading"
+                  class="mb-3"
+                >
+                  <h3 id="programInfoHeading" class="visually-hidden">
+                    Program Information
+                  </h3>
+
+                  <div class="row g-3 mb-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="programTitle"
+                        class="form-label small text-secondary"
+                        >Program Title</label
+                      >
+                      <input
+                        id="programTitle"
+                        type="text"
+                        class="form-control"
+                        value="Advance Cybersecurity for Beginners"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="collabUniversity"
+                        class="form-label small text-secondary"
+                        >Collaborate University</label
+                      >
+                      <input
+                        id="collabUniversity"
+                        type="text"
+                        class="form-control"
+                        placeholder="University name here"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="programFee"
+                        class="form-label small text-secondary"
+                        >Program Fee</label
+                      >
+                      <input
+                        id="programFee"
+                        type="text"
+                        class="form-control"
+                        placeholder="eg. SAR 25,000"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="assignAdmin"
+                        class="form-label small text-secondary"
+                        >Assign Admin</label
+                      >
+                      <select id="assignAdmin" class="form-select">
+                        <option selected>Choose Admin</option>
+                        <option>Admin 1</option>
+                        <option>Admin 2</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="eligibility"
+                        class="form-label small text-secondary"
+                        >Eligibility</label
+                      >
+                      <select id="eligibility" class="form-select">
+                        <option selected>All Members</option>
+                        <option>Premium Members</option>
+                        <option>Basic Members</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      for="programDescription"
+                      class="form-label small text-secondary"
+                      >Program Description</label
+                    >
+                    <textarea
+                      id="programDescription"
+                      class="form-control"
+                      rows="3"
+                      placeholder="Program description here"
+                    ></textarea>
+                  </div>
+                </section>
+
+                <!-- Program Type & Thumbnail -->
+                <section
+                  role="region"
+                  aria-labelledby="programTypeHeading"
+                  class="mb-3"
+                >
+                  <h5 id="programTypeHeading" class="visually-hidden">
+                    Program Type and Thumbnail
+                  </h5>
+
+                  <div class="row g-3 mb-4">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="programType"
+                        class="form-label small text-secondary"
+                        >Program Type</label
+                      >
+                      <select id="programType" class="form-select">
+                        <option selected>Online (Remote)</option>
+                        <option>In-Person</option>
+                        <option>Hybrid</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="thumbnailUpload"
+                        class="form-label small text-secondary"
+                        >Thumbnail / Cover</label
+                      >
+                      <button
+                        id="thumbnailUpload"
+                        type="button"
+                        class="btn bg-black text-white w-100"
+                        aria-label="Browse file to upload thumbnail"
+                      >
+                        Browse File
+                      </button>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Schedule Section -->
+                <section
+                  role="region"
+                  aria-labelledby="scheduleHeading"
+                  class="mb-3"
+                >
+                  <h3 id="scheduleHeading" class="fw-semibold my-3">
+                    Schedule
+                  </h3>
+
+                  <!-- Schedule Options -->
+                  <div class="row g-4 mb-4">
+                    <!-- Schedule days -->
+                    <div class="col-12 col-xl-6">
+                      <fieldset>
+                        <div class="form-check mb-3">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="scheduleType"
+                            id="scheduleDays"
+                            checked
+                            aria-labelledby="scheduleDaysLegend"
+                          />
+                          <label class="form-check-label" for="scheduleDays"
+                            >Schedule days</label
+                          >
+                        </div>
+
+                        <div
+                          class="row g-2"
+                          role="group"
+                          aria-label="Select schedule days of the week"
+                        >
+                          <!-- repeat for all days -->
+                          <div class="col-6 col-md-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="daySunday"
+                              />
+                              <label class="form-check-label" for="daySunday"
+                                >Sunday</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="dayMonday"
+                              />
+                              <label class="form-check-label" for="dayMonday"
+                                >Monday</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="dayTuesday"
+                              />
+                              <label class="form-check-label" for="dayTuesday"
+                                >Tuesday</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="dayWednesday"
+                              />
+                              <label class="form-check-label" for="dayWednesday"
+                                >Wednesday</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="dayThursday"
+                              />
+                              <label class="form-check-label" for="dayThursday"
+                                >Thursday</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="dayFriday"
+                              />
+                              <label class="form-check-label" for="dayFriday"
+                                >Friday</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="daySaturday"
+                              />
+                              <label class="form-check-label" for="daySaturday"
+                                >Saturday</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <!-- Sessions per week -->
+                    <div class="col-12 col-xl-6">
+                      <fieldset>
+                        <div class="form-check mb-3">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="scheduleType"
+                            id="sessionsPerWeek"
+                            aria-labelledby="sessionsWeeklyLegend"
+                          />
+                          <label class="form-check-label" for="sessionsPerWeek"
+                            >Number of Sessions per week</label
+                          >
+                        </div>
+
+                        <div
+                          class="row g-2"
+                          role="group"
+                          aria-label="Choose number of sessions"
+                        >
+                          <div class="col-6">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="sessionOne"
+                              />
+                              <label class="form-check-label" for="sessionOne"
+                                >One session per week</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="sessionTwo"
+                              />
+                              <label class="form-check-label" for="sessionTwo"
+                                >Two sessions per week</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="sessionThree"
+                              />
+                              <label class="form-check-label" for="sessionThree"
+                                >Three sessions per week</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="monthOne"
+                              />
+                              <label class="form-check-label" for="monthOne"
+                                >One session per month</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="monthTwo"
+                              />
+                              <label class="form-check-label" for="monthTwo"
+                                >Two sessions per month</label
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="monthThree"
+                              />
+                              <label class="form-check-label" for="monthThree"
+                                >Three sessions per month</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Time and Duration -->
+                <section
+                  role="region"
+                  aria-labelledby="timeDurationHeading"
+                  class="mb-3"
+                >
+                  <h5 id="timeDurationHeading" class="visually-hidden">
+                    Time and Duration
+                  </h5>
+
+                  <div class="row g-3 mb-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="timeFrom"
+                        class="form-label small text-secondary"
+                        >Schedule Time (From)</label
+                      >
+                      <select id="timeFrom" class="form-select">
+                        <option selected>09:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="timeTo"
+                        class="form-label small text-secondary"
+                        >Schedule Time (To)
+                        <span class="text-muted">Optional</span></label
+                      >
+                      <select id="timeTo" class="form-select">
+                        <option selected>09:30 AM</option>
+                        <option>10:30 AM</option>
+                        <option>11:30 AM</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="duration"
+                        class="form-label small text-secondary"
+                        >Duration</label
+                      >
+                      <input
+                        id="duration"
+                        type="text"
+                        class="form-control"
+                        placeholder="6 Months"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="programStart"
+                        class="form-label small text-secondary"
+                        >Program Start Date</label
+                      >
+                      <input
+                        id="programStart"
+                        type="date"
+                        class="form-control"
+                        placeholder="DD/MM/YY"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="programEnd"
+                        class="form-label small text-secondary"
+                        >Program End Date</label
+                      >
+                      <input
+                        id="programEnd"
+                        type="date"
+                        class="form-control"
+                        placeholder="DD/MM/YY"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="regStart"
+                        class="form-label small text-secondary"
+                        >Registration Start Date</label
+                      >
+                      <input
+                        id="regStart"
+                        type="date"
+                        class="form-control"
+                        placeholder="DD/MM/YY"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="regEnd"
+                        class="form-label small text-secondary"
+                        >Registration End Date</label
+                      >
+                      <input
+                        id="regEnd"
+                        type="date"
+                        class="form-control"
+                        placeholder="DD/MM/YY"
+                      />
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Required Documents -->
+                <section
+                  role="region"
+                  aria-labelledby="documentsHeading"
+                  class="mb-3"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h3 id="documentsHeading" class="fw-semibold my-3">
+                      Required Documents
+                      <span class="text-muted small fw-normal">Optional</span>
+                    </h3>
+
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="requiredDocsToggle"
+                        checked
+                        aria-label="Toggle required documents section"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row g-3 mb-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label
+                        for="document1"
+                        class="form-label small text-secondary"
+                        >Document 1</label
+                      >
+                      <input
+                        id="document1"
+                        type="text"
+                        class="form-control"
+                        placeholder="Name of the document"
+                      />
+                    </div>
+
+                    <div
+                      class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex align-items-end"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-secondary-subtle text-secondary w-100"
+                        aria-label="Add more documents"
+                      >
+                        + Add More
+                      </button>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Eligibility Criteria -->
+                <section
+                  role="region"
+                  aria-labelledby="eligibilityHeading"
+                  class="mb-3"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h3 id="eligibilityHeading" class="fw-semibold my-3">
+                      Eligibility Criteria
+                      <span class="text-muted small fw-normal">Optional</span>
+                    </h3>
+
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="eligibilityToggle"
+                        checked
+                        aria-label="Toggle eligibility criteria section"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row g-3 mb-5">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <label for="rule1" class="form-label small text-secondary"
+                        >Rule 1</label
+                      >
+                      <input
+                        id="rule1"
+                        type="text"
+                        class="form-control"
+                        placeholder="Rule here"
+                      />
+                    </div>
+
+                    <div
+                      class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex align-items-end"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-secondary-subtle text-secondary w-100"
+                        aria-label="Add more eligibility rules"
+                      >
+                        + Add More
+                      </button>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Action Buttons -->
+                <div class="d-flex justify-content-end gap-2" class="mb-3">
+                  <button
+                    type="button"
+                    class="btn btn-danger px-4"
+                    aria-label="Discard program form"
+                  >
+                    Discard
+                  </button>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary px-4"
+                    aria-label="Create program"
+                  >
+                    Create Program
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- LANGUAGE SWITCH SCRIPT -->
+    <script></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
